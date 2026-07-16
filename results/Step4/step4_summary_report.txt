@@ -1,0 +1,152 @@
+======================================================================
+  STEP 4: PLANNING OUTCOME COMPARISON — SUMMARY REPORT
+  Generated: 2026-02-26 15:58
+======================================================================
+
+1. PROFIT COMPARISON (RP vs EEV)
+--------------------------------------------------
+
+  Exp A (FE only)  (BE spread fixed at 0.20)
+    Spread range:        0.02 to 0.50
+    VSS range:           $92.16 to $193.99
+    %VSS range:          1.44% to 3.04%
+    Max VSS at spread:   0.50
+    RP profit range:     $6375.15 to $6382.14
+    EEV profit range:    $6181.15 to $6288.50
+
+  Exp B (BE only)  (FE spread fixed at 0.15)
+    Spread range:        0.02 to 0.50
+    VSS range:           $84.81 to $119.49
+    %VSS range:          1.37% to 1.82%
+    Max VSS at spread:   0.04
+    RP profit range:     $5940.43 to $6565.28
+    EEV profit range:    $5855.62 to $6445.79
+
+  Exp C (both)  (FE and BE spread move together)
+    Spread range:        0.02 to 0.50
+    VSS range:           $95.47 to $176.82
+    %VSS range:          1.49% to 2.98%
+    Max VSS at spread:   0.50
+    RP profit range:     $5934.91 to $6566.76
+    EEV profit range:    $5758.10 to $6445.79
+
+
+2. SERVICE LEVEL COMPARISON (Unmet Demand)
+--------------------------------------------------
+
+  Exp A (FE only)  (BE spread fixed at 0.20)
+    RP unmet demand:     30.00 to 30.00 units
+    EEV unmet demand:    30.00 to 35.05 units
+    Service gap range:   0.00 to 5.05 extra units unmet under EV
+    RP fill rate:        96.0% to 96.0%
+    EEV fill rate:       95.3% to 96.0%
+    Gap first exceeds 0.5 units at spread = 0.35
+
+  Exp B (BE only)  (FE spread fixed at 0.15)
+    RP unmet demand:     15.00 to 63.75 units
+    EEV unmet demand:    15.00 to 63.75 units
+    Service gap range:   0.00 to 0.00 extra units unmet under EV
+    RP fill rate:        91.5% to 98.0%
+    EEV fill rate:       91.5% to 98.0%
+    Gap stays below 0.5 units across all spreads
+
+  Exp C (both)  (FE and BE spread move together)
+    RP unmet demand:     15.00 to 63.75 units
+    EEV unmet demand:    15.00 to 66.44 units
+    Service gap range:   0.00 to 2.69 extra units unmet under EV
+    RP fill rate:        91.5% to 98.0%
+    EEV fill rate:       91.1% to 98.0%
+    Gap first exceeds 0.5 units at spread = 0.35
+
+
+3. INVENTORY COMPARISON (Die-Bank)
+--------------------------------------------------
+  Across all 45 experiments:
+    RP die-bank inventory range:   0.00 to 0.00
+    EEV die-bank inventory range:  0.00 to 0.00
+    Inventory gap range:           0.00 to 0.00
+
+  Interpretation: With the current cost structure (shortage
+  penalty $3/unit vs inventory holding $0.05/unit, a 60:1 ratio),
+  neither planning approach holds significant die-bank inventory.
+  The Die Bank functions as a pass-through, not a strategic buffer.
+  Hedging occurs at the wafer start level, not the inventory level.
+
+
+4. DECISION DIVERGENCE (Wafer Allocation)
+--------------------------------------------------
+
+  Exp A (FE only)  (BE spread fixed at 0.20)
+    FE2 gap range:       1.85 to 5.72 extra wafers at FE2 under RP
+    Total starts gap:    1.85 to 5.72 extra total wafers under RP
+    Hedging cost range:  $2.78 to $8.58 in extra FE wafer costs
+
+  Exp B (BE only)  (FE spread fixed at 0.15)
+    FE2 gap range:       2.56 to 2.84 extra wafers at FE2 under RP
+    Total starts gap:    2.56 to 2.84 extra total wafers under RP
+    Hedging cost range:  $3.84 to $4.26 in extra FE wafer costs
+
+  Exp C (both)  (FE and BE spread move together)
+    FE2 gap range:       1.85 to 5.43 extra wafers at FE2 under RP
+    Total starts gap:    1.85 to 5.43 extra total wafers under RP
+    Hedging cost range:  $2.78 to $8.14 in extra FE wafer costs
+
+
+5. CROSS-CUTTING FINDINGS
+--------------------------------------------------
+
+  VSS sensitivity ($ per unit of spread):
+    Exp A (FE only):    209.07 $/unit-spread
+    Exp B (BE only):    -72.25 $/unit-spread
+    Exp C (both):       116.35 $/unit-spread
+
+  Unmet demand sensitivity (units per unit of spread):
+    Exp A (FE only):     10.52 units/unit-spread
+    Exp B (BE only):      0.00 units/unit-spread
+    Exp C (both):         5.60 units/unit-spread
+
+  FE2 hedging sensitivity (wafers per unit of spread):
+    Exp A (FE only):      8.06 wafers/unit-spread
+    Exp B (BE only):     -0.58 wafers/unit-spread
+    Exp C (both):         7.44 wafers/unit-spread
+
+
+6. KEY TAKEAWAYS FOR STEP 5
+--------------------------------------------------
+
+  a) Profit gap (VSS) grows primarily with FE uncertainty.
+     FE spread drives the economic case for stochastic planning.
+
+  b) Service level gap (unmet demand) follows a similar pattern:
+     deterministic planning falls behind on service primarily
+     when FE uncertainty grows.  BE uncertainty hurts both
+     approaches equally (the 'no recourse' effect).
+
+  c) Die-bank inventory is near zero for both approaches
+     across all experiments.  The hedging mechanism operates
+     through wafer allocation (more FE2 starts), not through
+     inventory buffering.  This is driven by the 60:1 ratio
+     of shortage penalty to inventory holding cost.
+
+  d) Decision divergence (how differently the two approaches
+     plan) scales with FE uncertainty.  The FE2 hedging gap
+     widens steadily as FE spread increases, which is the
+     operational mechanism that produces the profit and
+     service advantages.
+
+  e) These results set up Step 5 (failure point identification):
+     the service gap data from Experiment A shows a breakpoint
+     where deterministic planning's service level starts
+     degrading faster, which will be formally quantified
+     in the next step.
+
+  Connection to Rashidi et al.:
+    - Rashidi found BE yield and demand uncertainty hurt profit most.
+    - Our results are consistent: BE uncertainty does hurt absolute
+      profit significantly (both RP and EEV profit decline).
+    - However, the DIFFERENCE between RP and EEV (which is what
+      VSS measures) is driven by FE uncertainty, because FE is
+      where recourse actions (hedging via wafer allocation) exist.
+    - This is a nuanced finding that extends the literature: the
+      question 'what hurts profit?' has a different answer from
+      'what makes your planning approach matter?'

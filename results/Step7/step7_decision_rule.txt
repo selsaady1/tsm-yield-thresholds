@@ -1,0 +1,51 @@
+======================================================================
+  PRACTITIONER DECISION RULE
+  When should you invest in stochastic planning?
+======================================================================
+
+  DECISION RULE (primary):
+  ─────────────────────────────────────────────────────
+  If your Front-End yield spread exceeds 0.17,
+  invest in stochastic (uncertainty-aware) planning.
+  Otherwise, average-yield planning is sufficient.
+  ─────────────────────────────────────────────────────
+
+  WHAT THIS MEANS IN PRACTICE:
+
+  'Front-End yield spread' is the difference between
+  your best-case and worst-case FE yield outcomes.
+  For example:
+    Spread = 0.17 means yields range from 79.0% to 96.0%
+    Spread = 0.10 means yields range from 82.5% to 92.5% (narrow — deterministic is fine)
+    Spread = 0.30 means yields range from 72.5% to 100.0% (wide — stochastic is essential)
+
+  REFINED RULE (accounting for cost structure):
+  ─────────────────────────────────────────────────────
+  The threshold depends on your shortage penalty:
+
+  Penalty/Price Ratio    Switch when FE spread exceeds
+  ───────────────────    ─────────────────────────────
+       10%                    0.18   (yields wider than [78.4%, 96.6%])
+       30%                    0.18   (yields wider than [78.6%, 96.4%])
+       50%                    0.17   (yields wider than [78.8%, 96.2%])
+       80%                    0.17   (yields wider than [78.9%, 96.1%])
+  ───────────────────    ─────────────────────────────
+
+  INTERPRETATION:
+    - Higher shortage penalties → switch sooner
+      (threshold moves from 0.18 down to 0.17)
+    - The range is narrow (0.17–0.18), meaning the
+      threshold is robust: cost structure shifts it
+      only slightly.
+
+  IMPORTANT CAVEATS:
+    - Back-End yield uncertainty does NOT drive the
+      planning approach choice. If your main uncertainty
+      is at the Back-End, focus on quality improvement,
+      not planning methodology.
+    - These thresholds are based on a model with
+      FE mean yield of 87.5% and BE mean yield of 80%.
+      Different mean yields may shift the thresholds.
+    - The model assumes a single product type. Multi-
+      product supply chains may have lower thresholds
+      due to additional allocation complexity.

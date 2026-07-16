@@ -1,0 +1,21 @@
+scenario,penalty_dollar,penalty_ratio_pct,criterion,criterion_label,severity,threshold_fe_spread,yield_lo,yield_hi,recommendation
+S1,1.0,10,pct_vss_2pct,%VSS > 2% (critical),critical,0.1817,0.6933,1.0000,Stochastic planning needed
+S2,3.0,30,pct_vss_2pct,%VSS > 2% (critical),critical,0.1778,0.6972,1.0000,Stochastic planning needed
+S3,5.0,50,pct_vss_2pct,%VSS > 2% (critical),critical,0.1747,0.7003,1.0000,Stochastic planning needed
+S4,8.0,80,pct_vss_2pct,%VSS > 2% (critical),critical,0.1712,0.7038,1.0000,Stochastic planning needed
+S1,1.0,10,pct_vss_1.5pct,%VSS > 1.5% (warning),warning,0.1037,0.7713,0.9787,Stochastic planning needed
+S2,3.0,30,pct_vss_1.5pct,%VSS > 1.5% (warning),warning,0.1008,0.7742,0.9758,Stochastic planning needed
+S3,5.0,50,pct_vss_1.5pct,%VSS > 1.5% (warning),warning,0.0964,0.7786,0.9714,Stochastic planning needed
+S4,8.0,80,pct_vss_1.5pct,%VSS > 1.5% (warning),warning,0.0891,0.7859,0.9641,Stochastic planning needed
+S1,1.0,10,service_gap_1,Service gap > 1 unit (warning),warning,0.1792,0.6958,1.0000,Stochastic planning needed
+S2,3.0,30,service_gap_1,Service gap > 1 unit (warning),warning,0.1792,0.6958,1.0000,Stochastic planning needed
+S3,5.0,50,service_gap_1,Service gap > 1 unit (warning),warning,0.1792,0.6958,1.0000,Stochastic planning needed
+S4,8.0,80,service_gap_1,Service gap > 1 unit (warning),warning,0.1792,0.6958,1.0000,Stochastic planning needed
+S1,1.0,10,service_gap_3,Service gap > 3 units (critical),critical,0.2149,0.6601,1.0000,Monitor — approaching threshold
+S2,3.0,30,service_gap_3,Service gap > 3 units (critical),critical,0.2149,0.6601,1.0000,Monitor — approaching threshold
+S3,5.0,50,service_gap_3,Service gap > 3 units (critical),critical,0.2149,0.6601,1.0000,Monitor — approaching threshold
+S4,8.0,80,service_gap_3,Service gap > 3 units (critical),critical,0.2149,0.6601,1.0000,Monitor — approaching threshold
+S1,1.0,10,vss_150,VSS > $150 (critical),critical,0.2086,0.6664,1.0000,Monitor — approaching threshold
+S2,3.0,30,vss_150,VSS > $150 (critical),critical,0.2028,0.6722,1.0000,Monitor — approaching threshold
+S3,5.0,50,vss_150,VSS > $150 (critical),critical,0.1983,0.6767,1.0000,Stochastic planning needed
+S4,8.0,80,vss_150,VSS > $150 (critical),critical,0.1931,0.6819,1.0000,Stochastic planning needed

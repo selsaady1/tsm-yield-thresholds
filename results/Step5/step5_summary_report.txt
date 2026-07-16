@@ -1,0 +1,171 @@
+======================================================================
+  STEP 5: FAILURE POINT IDENTIFICATION — SUMMARY REPORT
+  Generated: 2026-02-26 21:30
+======================================================================
+
+1. WHAT THIS STEP DOES
+--------------------------------------------------
+
+  Step 5 identifies the precise yield spread values where
+  deterministic (average-yield) planning starts to perform
+  poorly enough that a practitioner should consider switching
+  to stochastic planning.
+
+  Method: 150 experiments (50 spread levels × 3 experiments)
+  with 5 failure criteria applied to each, using linear
+  interpolation for sub-grid-point precision.
+
+
+2. THRESHOLD RESULTS — EXPERIMENT A (FE UNCERTAINTY ONLY)
+--------------------------------------------------
+  This is the most important experiment because FE uncertainty
+  is the primary driver of planning approach differences.
+
+  %VSS > 2%:
+    Triggered at FE spread = 0.3556
+    Between spread 0.3500 (value=1.9615) and 0.3600 (value=2.0307)
+    Degradation rate to end of range: 7.22 per unit spread
+
+  %VSS > 1.5%:
+    Triggered at FE spread = 0.2021
+    Between spread 0.2000 (value=1.4963) and 0.2100 (value=1.5137)
+    Degradation rate to end of range: 5.18 per unit spread
+
+  Service gap > 1 unit:
+    Triggered at FE spread = 0.3583
+    Between spread 0.3500 (value=0.7721) and 0.3600 (value=1.0454)
+    Degradation rate to end of range: 28.57 per unit spread
+
+  Service gap > 3 units:
+    Triggered at FE spread = 0.4298
+    Between spread 0.4200 (value=2.7196) and 0.4300 (value=3.0045)
+    Degradation rate to end of range: 29.17 per unit spread
+
+  VSS > $150:
+    Triggered at FE spread = 0.4057
+    Between spread 0.4000 (value=147.4176) and 0.4100 (value=151.9571)
+    Degradation rate to end of range: 466.51 per unit spread
+
+
+3. THRESHOLD RESULTS — EXPERIMENT B (BE UNCERTAINTY ONLY)
+--------------------------------------------------
+  BE uncertainty should NOT trigger failure criteria (or trigger
+  them only at the baseline level), confirming the no-recourse
+  finding from Steps 3-4.
+
+  %VSS > 2%: NOT triggered
+  %VSS > 1.5%: Triggered at spread = 0.0100
+  Service gap > 1 unit: NOT triggered
+  Service gap > 3 units: NOT triggered
+  VSS > $150: NOT triggered
+
+  Note: Any triggers here are from the baseline FE spread (0.15),
+  not from BE uncertainty changes.
+
+
+4. THRESHOLD RESULTS — EXPERIMENT C (BOTH TOGETHER)
+--------------------------------------------------
+  %VSS > 2%: Triggered at spread = 0.3413
+  %VSS > 1.5%: Triggered at spread = 0.0100
+  Service gap > 1 unit: Triggered at spread = 0.3632
+  Service gap > 3 units: NOT triggered
+  VSS > $150: Triggered at spread = 0.4065
+
+
+5. THE FAILURE ZONE — KEY FINDING
+--------------------------------------------------
+
+  For FE uncertainty (Experiment A):
+    Earliest warning:   spread = 0.2021  (%VSS > 1.5%)
+    Latest critical:    spread = 0.4298  (Service gap > 3 units)
+
+  The failure zone for FE uncertainty spans approximately:
+    Warning zone:       spread ≈ 0.20 to 0.43
+    Critical zone:      spread > 0.43
+
+  In yield terms (FE mean = 0.875):
+    Warning when FE yields range wider than [0.774, 0.976]
+    Critical when FE yields range wider than [0.660, 1.000]
+
+
+6. DEGRADATION ANALYSIS
+--------------------------------------------------
+
+  Once the threshold is crossed, how fast does performance
+  degrade? (Based on Experiment A — FE uncertainty only)
+
+  %VSS > 2%:
+    At threshold:      pct_vss = 2.00
+    At end of range:   pct_vss = 3.04
+    Degradation rate:  7.22 per unit spread
+    Rate at +0.05:     7.03 per unit spread
+
+  %VSS > 1.5%:
+    At threshold:      pct_vss = 1.50
+    At end of range:   pct_vss = 3.04
+    Degradation rate:  5.18 per unit spread
+    Rate at +0.05:     2.84 per unit spread
+
+  Service gap > 1 unit:
+    At threshold:      unmet_gap = 1.00
+    At end of range:   unmet_gap = 5.05
+    Degradation rate:  28.57 per unit spread
+    Rate at +0.05:     27.77 per unit spread
+
+  Service gap > 3 units:
+    At threshold:      unmet_gap = 3.00
+    At end of range:   unmet_gap = 5.05
+    Degradation rate:  29.17 per unit spread
+    Rate at +0.05:     28.99 per unit spread
+
+  VSS > $150:
+    At threshold:      vss = 150.00
+    At end of range:   vss = 193.99
+    Degradation rate:  466.51 per unit spread
+    Rate at +0.05:     460.71 per unit spread
+
+
+7. IMPLICATIONS FOR STEPS 6 AND 7
+--------------------------------------------------
+
+  The threshold values identified above are specific to the
+  current cost structure (penalty = $3/device, price = $10/device,
+  FE cost = $1.50/wafer). Step 6 will test whether these
+  thresholds shift when costs change:
+
+  - Higher shortage penalty ($5 or $10) → thresholds should move
+    LEFT (lower FE spread), meaning stochastic planning becomes
+    necessary sooner.
+  - Lower shortage penalty ($1) → thresholds should move RIGHT
+    (higher FE spread), meaning deterministic planning is adequate
+    for a wider range of uncertainty.
+  - Different capacity constraints → may change the hedging
+    mechanism and shift thresholds.
+
+  Step 7 will synthesize the threshold values from Steps 5 and 6
+  into practitioner guidance of the form:
+    'If your FE yield spread exceeds X and your shortage penalty
+     is at least Y% of selling price, invest in stochastic planning.
+     Otherwise, average-yield planning is sufficient.'
+
+  The thresholds from this step provide the X values for the
+  current cost structure. Step 6 will show how X changes with Y.
+
+
+8. CONNECTION TO THE LITERATURE
+--------------------------------------------------
+
+  Rashidi et al. (Figure 7) show that %VSS increases with
+  deviation level, but do not identify specific breakpoints.
+  They treat the uncertainty-to-VSS relationship as a continuous
+  curve and note that it grows, without specifying where it
+  becomes 'large enough to matter.'
+
+  Our Step 5 fills this gap by defining what 'large enough'
+  means (the failure criteria) and identifying the precise
+  yield spread values where each criterion triggers.
+
+  This is the core contribution the ITC 2026 paper provides:
+  not just 'VSS grows with uncertainty' (which is known), but
+  'here is exactly when it starts to matter, and here is how
+  fast it gets worse once it does.'

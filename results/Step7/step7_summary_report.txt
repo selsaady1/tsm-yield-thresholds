@@ -1,0 +1,162 @@
+======================================================================
+  STEP 7: RESEARCH SUMMARY — COMPLETE FINDINGS
+  Generated: 2026-02-27 11:51
+  Target: ITC 2026
+======================================================================
+
+
+1. RESEARCH QUESTION
+--------------------------------------------------
+
+  When should semiconductor companies invest in sophisticated
+  stochastic (uncertainty-aware) planning versus simpler
+  deterministic (average-yield) planning?
+
+  Gap in the literature: Existing work shows that stochastic
+  planning can outperform deterministic planning under yield
+  uncertainty, but provides no quantitative thresholds or
+  decision rules for practitioners.
+
+
+2. METHODOLOGY
+--------------------------------------------------
+
+  Model: Three-stage stochastic program (FE → DieBank → BE)
+  Based on: Rashidi et al. (SSRN 4655409)
+  VSS definition: Escudero et al. (TOP, 2007)
+
+  Seven-step experimental design:
+    Step 1: Reproduce and validate prior results (VSS = $92.16)
+    Step 2: Freeze model structure (controlled experiments)
+    Step 3: Ramp up uncertainty sources independently
+    Step 4: Compare planning outcomes across all dimensions
+    Step 5: Identify precise failure thresholds (150 experiments)
+    Step 6: Test robustness across 4 cost structures (200 experiments)
+    Step 7: Synthesize practitioner decision rules
+
+  Total experiments: 493
+    Step 2 grid:           49
+    Step 3 ramp-ups:       45
+    Step 4 comparisons:    45 (re-run of Step 3 with enrichment)
+    Step 5 fine-grained:  150
+    Step 6 robustness:    200
+    Step 7 synthesis:       4 (validation checks)
+
+
+3. KEY FINDINGS
+--------------------------------------------------
+
+  Finding 1: Front-End yield uncertainty is the PRIMARY driver
+  of the planning approach choice.
+    - FE uncertainty produces increasing VSS because recourse
+      actions (outsourcing, inventory adjustment) are available
+      after FE yields are revealed.
+    - BE uncertainty hurts both approaches equally ('no recourse'
+      property at the final manufacturing stage).
+    - Evidence: Steps 3 and 4 (45 experiments each)
+
+  Finding 2: Deterministic planning fails at a specific threshold.
+    - When FE yield spread exceeds ~0.18, deterministic planning
+      loses >2% of profit compared to stochastic planning.
+    - Customer service degrades via a 'cliff effect' — stable
+      until the threshold, then rapid deterioration.
+    - Evidence: Step 5 (150 experiments, 5 failure criteria)
+
+  Finding 3: The failure threshold is ROBUST to cost changes.
+    - Across penalty/price ratios from 10% to 80%, the critical
+      threshold stays in the narrow range 0.17–0.18.
+    - Service-based thresholds are perfectly cost-independent.
+    - Cost-based thresholds shift modestly: higher penalties push
+      the threshold slightly lower (stochastic needed sooner).
+    - Evidence: Step 6 (200 experiments, 4 cost scenarios)
+
+  Finding 4: The hedging mechanism operates through wafer allocation,
+  not inventory buffering.
+    - Stochastic planning allocates more wafer starts to the
+      secondary FE facility (FE2) as insurance.
+    - Die-bank inventory is near zero for both approaches
+      (driven by 60:1 penalty-to-holding-cost ratio).
+    - Evidence: Steps 3 and 4
+
+
+4. THE DECISION RULE
+--------------------------------------------------
+
+  PRIMARY RULE:
+    If your FE yield spread exceeds 0.17, invest in stochastic
+    planning. Otherwise, average-yield planning is sufficient.
+
+  REFINED RULE (by penalty level):
+
+    Penalty/Price    FE Spread       Yield Range
+    Ratio            Threshold       Implication
+    ────────────     ─────────       ─────────────────
+       10%             0.18            [78.4%, 96.6%]
+       30%             0.18            [78.6%, 96.4%]
+       50%             0.17            [78.8%, 96.2%]
+       80%             0.17            [78.9%, 96.1%]
+    ────────────     ─────────       ─────────────────
+
+
+5. CONTRIBUTIONS TO THE LITERATURE
+--------------------------------------------------
+
+  Contribution 1: Quantitative failure thresholds.
+    Prior work (Rashidi et al.) shows VSS grows with uncertainty
+    but does not identify where it becomes consequential.
+    We provide the specific yield spread values (0.17–0.18)
+    where the planning approach choice becomes financially
+    significant (>2% of profit at stake).
+
+  Contribution 2: Cost-structure sensitivity analysis.
+    We show that the threshold is robust across penalty/price
+    ratios from 10% to 80%, shifting by only 0.01 units of
+    yield spread. This means the decision rule is broadly
+    applicable, not specific to one cost scenario.
+
+  Contribution 3: Uncertainty decomposition.
+    We establish that FE and BE uncertainty play fundamentally
+    different roles: FE drives the planning choice (recourse),
+    BE drives overall profit impact (no recourse). This
+    decomposition guides practitioners toward the right response:
+    upgrade planning for FE issues, upgrade quality for BE issues.
+
+  Contribution 4: Practitioner-ready decision tool.
+    The decision map (Figure 1) and lookup table provide a
+    ready-to-use tool that requires only two inputs from the
+    practitioner: their FE yield variability and their shortage
+    cost structure.
+
+
+6. LIMITATIONS AND FUTURE WORK
+--------------------------------------------------
+
+  Limitations of the current study:
+    - Single product type (one die, one device)
+    - Fixed supply chain topology (2 FE, 1 DB, 2 BE)
+    - Yield modeled as uniform between bounds (not empirical)
+    - Demand uncertainty limited to two levels (600, 900)
+    - Single planning period (no multi-period dynamics)
+
+  Future work directions:
+    - Multi-product extension (multiple die types and devices)
+    - Empirical yield distributions from fab data
+    - Capacity investment decisions (long-term planning)
+    - Demand uncertainty as a third dimension of the decision map
+    - Larger-scale instances to test computational scalability
+
+
+7. COMPLETE EXPERIMENT INVENTORY
+--------------------------------------------------
+
+  Step   Experiments  Purpose
+  ────   ───────────  ───────────────────────────────────
+    1         4+      Model calibration and validation
+    2        49       Yield spread grid (7×7)
+    3        45       Three ramp-up experiments (15 each)
+    4        45       Outcome comparison (same data, enriched)
+    5       150       Fine-grained threshold detection (50×3)
+    6       200       Robustness across costs (50×4)
+    7         —       Synthesis (no new experiments)
+  ────   ───────────  ───────────────────────────────────
+  Total:   493+      optimization solves

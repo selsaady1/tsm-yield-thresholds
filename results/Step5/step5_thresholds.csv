@@ -1,0 +1,16 @@
+experiment,criterion,short_label,severity,description,triggered,threshold_spread,spread_before,spread_after,value_before,value_after,degrad_rate_05,degrad_rate_10,degrad_rate_to_end
+A_FE_only,pct_vss_2pct,%VSS > 2%,critical,%VSS exceeds 2% — losing >2% of profit to planning choice,Yes,0.3556,0.3500,0.3600,1.9615,2.0307,7.032075078956144,7.131206384994617,7.222575710977145
+A_FE_only,pct_vss_1.5pct,%VSS > 1.5%,warning,%VSS exceeds 1.5% — early warning level,Yes,0.2021,0.2000,0.2100,1.4963,1.5137,2.839539943907128,2.3080713189573476,5.179388830698555
+A_FE_only,service_gap_1,Service gap > 1 unit,warning,Service gap exceeds 1 unit — measurable customer impact,Yes,0.3583,0.3500,0.3600,0.7721,1.0454,27.770360749999988,28.203580874999993,28.56793401552577
+A_FE_only,service_gap_3,Service gap > 3 units,critical,Service gap exceeds 3 units — serious service degradation,Yes,0.4298,0.4200,0.4300,2.7196,3.0045,28.988024000000028,N/A,29.17487535612538
+A_FE_only,vss_150,VSS > $150,critical,VSS exceeds $150 — large absolute dollar loss,Yes,0.4057,0.4000,0.4100,147.4176,151.9571,460.7097701242526,N/A,466.5094402173858
+B_BE_only,pct_vss_2pct,%VSS > 2%,critical,%VSS exceeds 2% — losing >2% of profit to planning choice,No,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+B_BE_only,pct_vss_1.5pct,%VSS > 1.5%,warning,%VSS exceeds 1.5% — early warning level,Yes,0.0100,N/A,0.0100,N/A,1.8200,6.40248303176878,1.921736282533859,-0.147584693134116
+B_BE_only,service_gap_1,Service gap > 1 unit,warning,Service gap exceeds 1 unit — measurable customer impact,No,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+B_BE_only,service_gap_3,Service gap > 3 units,critical,Service gap exceeds 3 units — serious service degradation,No,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+B_BE_only,vss_150,VSS > $150,critical,VSS exceeds $150 — large absolute dollar loss,No,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+C_both,pct_vss_2pct,%VSS > 2%,critical,%VSS exceeds 2% — losing >2% of profit to planning choice,Yes,0.3413,0.3400,0.3500,1.9908,2.0638,7.34362416715574,6.478235643435055,6.170569609779442
+C_both,pct_vss_1.5pct,%VSS > 1.5%,warning,%VSS exceeds 1.5% — early warning level,Yes,0.0100,N/A,0.0100,N/A,1.8437,6.716024298766463,1.99429443513494,3.0189171368816274
+C_both,service_gap_1,Service gap > 1 unit,warning,Service gap exceeds 1 unit — measurable customer impact,Yes,0.3632,0.3600,0.3700,0.9259,1.1599,19.148128999999997,13.772106499999971,12.330994152046802
+C_both,service_gap_3,Service gap > 3 units,critical,Service gap exceeds 3 units — serious service degradation,No,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+C_both,vss_150,VSS > $150,critical,VSS exceeds $150 — large absolute dollar loss,Yes,0.4065,0.4000,0.4100,148.2432,150.9621,280.09253771251167,N/A,286.81353689840597

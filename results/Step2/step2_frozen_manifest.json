@@ -1,0 +1,63 @@
+{
+  "frozen_date": "2026-02-21T20:29:37.472153",
+  "structure": {
+    "FE_fabs": [
+      "FE1",
+      "FE2"
+    ],
+    "BE_fabs": [
+      "BE1",
+      "BE2"
+    ],
+    "DieBanks": [
+      "DB1"
+    ],
+    "Outsource_FE": [
+      "G1"
+    ],
+    "Outsource_BE": [
+      "A1"
+    ]
+  },
+  "capacities": {
+    "L_F": {
+      "FE1": 10,
+      "FE2": 8
+    },
+    "L_B": {
+      "BE1": 500,
+      "BE2": 400
+    },
+    "L_G": {
+      "G1": 300
+    },
+    "L_A": {
+      "A1": 150
+    }
+  },
+  "costs": {
+    "c_F": 1.5,
+    "c_G": 1.65,
+    "c_B": 0.8,
+    "c_A": 0.9,
+    "c_K": 0.05,
+    "c_D": 0.05
+  },
+  "revenue": {
+    "p_d": 10,
+    "v_d": 3
+  },
+  "demand": {
+    "lo": 600,
+    "hi": 900
+  },
+  "dies_per_wafer": 100,
+  "scenarios": 8,
+  "description": "This file documents all parameters that are FROZEN (locked) for the Step 2+ experiments. Only yield parameters (fe_yield_lo/hi, be_yield_lo/hi) are allowed to vary.",
+  "step1_baseline_yields": {
+    "fe_yield_lo": 0.8,
+    "fe_yield_hi": 0.95,
+    "be_yield_lo": 0.7,
+    "be_yield_hi": 0.9
+  }
+}
