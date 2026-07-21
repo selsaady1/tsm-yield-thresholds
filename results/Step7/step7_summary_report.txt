@@ -1,5 +1,5 @@
 ======================================================================
-  STEP 7: RESEARCH SUMMARY — COMPLETE FINDINGS
+  STEP 7: RESEARCH SUMMARY - COMPLETE FINDINGS
   Generated: 2026-02-27 11:51
   Target: ITC 2026
 ======================================================================
@@ -58,7 +58,7 @@
   Finding 2: Deterministic planning fails at a specific threshold.
     - When FE yield spread exceeds ~0.18, deterministic planning
       loses >2% of profit compared to stochastic planning.
-    - Customer service degrades via a 'cliff effect' — stable
+    - Customer service degrades via a 'cliff effect' - stable
       until the threshold, then rapid deterioration.
     - Evidence: Step 5 (150 experiments, 5 failure criteria)
 
@@ -157,6 +157,6 @@
     4        45       Outcome comparison (same data, enriched)
     5       150       Fine-grained threshold detection (50×3)
     6       200       Robustness across costs (50×4)
-    7         —       Synthesis (no new experiments)
+    7         -       Synthesis (no new experiments)
   ────   ───────────  ───────────────────────────────────
   Total:   493+      optimization solves

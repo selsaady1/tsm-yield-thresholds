@@ -1,7 +1,7 @@
 """
 step5_identify_failure_points.py
 ================================
-Step 5: Identify failure points — Find when average-yield planning
+Step 5: Identify failure points - Find when average-yield planning
 starts to perform poorly.
 
 Purpose
@@ -11,13 +11,13 @@ stochastic planning as FE yield uncertainty grows, and that the gap
 appears to accelerate past certain thresholds.  Step 5 formalizes this
 by:
 
-    1. Defining explicit FAILURE CRITERIA — practitioner-meaningful
+    1. Defining explicit FAILURE CRITERIA - practitioner-meaningful
        thresholds that separate "good enough" from "unacceptable."
     2. Running a FINE-GRAINED experiment with 50 spread levels to
        precisely locate where each criterion is triggered.
     3. Using LINEAR INTERPOLATION to estimate exact threshold values
        between grid points.
-    4. Characterizing the FAILURE ZONE — how rapidly performance
+    4. Characterizing the FAILURE ZONE - how rapidly performance
        degrades once you cross the threshold.
     5. Repeating for all three uncertainty scenarios (FE only, BE only,
        both together) to confirm that failure is driven by FE uncertainty.
@@ -82,7 +82,7 @@ try:
     HAS_MPL = True
 except ImportError:
     HAS_MPL = False
-    print("[warning] matplotlib not installed — skipping figures.")
+    print("[warning] matplotlib not installed - skipping figures.")
 
 
 # ======================================================================
@@ -118,13 +118,13 @@ def make_yields(mean, spread):
 #   "Am I leaving more than 2% of my profit on the table?"
 #   Why 2%:  In semiconductor manufacturing, margins are typically
 #   25-35%.  Losing 2% of total profit to a planning methodology
-#   choice is significant — it's real money.  Below 1%, it's likely
+#   choice is significant - it's real money.  Below 1%, it's likely
 #   not worth the implementation cost of stochastic planning.
 #
 # Criterion 2: Service gap > 1 unit (unmet demand difference)
 #   "Are my customers noticeably worse off?"
 #   Why 1 unit:  With expected demand of 750, 1 unit is 0.13% of
-#   demand — a small but measurable degradation.  In semiconductor
+#   demand - a small but measurable degradation.  In semiconductor
 #   supply chains, even small service failures can cascade into
 #   lost contracts.
 #
@@ -135,7 +135,7 @@ def make_yields(mean, spread):
 #
 # Criterion 4: %VSS > 1.5% (early warning)
 #   "Should I start thinking about upgrading my planning approach?"
-#   This is a lower bar — an early warning signal.
+#   This is a lower bar - an early warning signal.
 #
 # Criterion 5: VSS > $150 (absolute dollar threshold)
 #   "Is the absolute dollar loss significant?"
@@ -145,7 +145,7 @@ def make_yields(mean, spread):
 
 FAILURE_CRITERIA = {
     "pct_vss_2pct": {
-        "description": "%VSS exceeds 2% — losing >2% of profit to planning choice",
+        "description": "%VSS exceeds 2% - losing >2% of profit to planning choice",
         "metric": "pct_vss",
         "threshold": 2.0,
         "direction": "above",  # fails when metric > threshold
@@ -153,7 +153,7 @@ FAILURE_CRITERIA = {
         "short_label": "%VSS > 2%",
     },
     "pct_vss_1.5pct": {
-        "description": "%VSS exceeds 1.5% — early warning level",
+        "description": "%VSS exceeds 1.5% - early warning level",
         "metric": "pct_vss",
         "threshold": 1.5,
         "direction": "above",
@@ -161,7 +161,7 @@ FAILURE_CRITERIA = {
         "short_label": "%VSS > 1.5%",
     },
     "service_gap_1": {
-        "description": "Service gap exceeds 1 unit — measurable customer impact",
+        "description": "Service gap exceeds 1 unit - measurable customer impact",
         "metric": "unmet_gap",
         "threshold": 1.0,
         "direction": "above",
@@ -169,7 +169,7 @@ FAILURE_CRITERIA = {
         "short_label": "Service gap > 1 unit",
     },
     "service_gap_3": {
-        "description": "Service gap exceeds 3 units — serious service degradation",
+        "description": "Service gap exceeds 3 units - serious service degradation",
         "metric": "unmet_gap",
         "threshold": 3.0,
         "direction": "above",
@@ -177,7 +177,7 @@ FAILURE_CRITERIA = {
         "short_label": "Service gap > 3 units",
     },
     "vss_150": {
-        "description": "VSS exceeds $150 — large absolute dollar loss",
+        "description": "VSS exceeds $150 - large absolute dollar loss",
         "metric": "vss",
         "threshold": 150.0,
         "direction": "above",
@@ -277,7 +277,7 @@ def run_fine_experiments():
 
 
 # ======================================================================
-# 4.  THRESHOLD DETECTION — The core Step 5 logic
+# 4.  THRESHOLD DETECTION - The core Step 5 logic
 # ======================================================================
 
 def find_threshold(results, metric_key, threshold_value, direction="above"):
@@ -319,7 +319,7 @@ def find_threshold(results, metric_key, threshold_value, direction="above"):
 
         if crossed:
             if i == 0:
-                # Crossed at the very first point — threshold is below
+                # Crossed at the very first point - threshold is below
                 # our experimental range
                 return {
                     "found": True,
@@ -667,7 +667,7 @@ def plot_failure_zones(results_a, results_b, results_c, all_thresholds,
 
         ax.legend(fontsize=7, loc="upper left")
 
-    fig.suptitle("Step 5 — Failure Zone Identification\n"
+    fig.suptitle("Step 5 - Failure Zone Identification\n"
                  "Where does deterministic planning start to fail?",
                  fontsize=14, fontweight="bold", y=1.02)
     fig.tight_layout()
@@ -679,7 +679,7 @@ def plot_failure_zones(results_a, results_b, results_c, all_thresholds,
 def plot_degradation_rate(results_a, all_thresholds,
                           filepath="step5_fig2_degradation_rate.png"):
     """
-    Figure 2: Degradation rate — How fast does performance degrade
+    Figure 2: Degradation rate - How fast does performance degrade
     once you cross the threshold?  Uses Experiment A (FE only) as
     the primary illustration.
 
@@ -758,7 +758,7 @@ def plot_degradation_rate(results_a, all_thresholds,
 
     ax2.legend(fontsize=9)
 
-    fig.suptitle("Step 5 — Degradation Rate Analysis\n"
+    fig.suptitle("Step 5 - Degradation Rate Analysis\n"
                  "How fast does performance deteriorate past the threshold?",
                  fontsize=13, fontweight="bold", y=1.03)
     fig.tight_layout()
@@ -829,7 +829,7 @@ def plot_threshold_dashboard(results_a, results_b, results_c,
         fontsize=10, rotation=15, ha="right"
     )
     ax.set_ylabel("Yield Spread at Threshold", fontsize=12)
-    ax.set_title("Step 5 — Threshold Dashboard\n"
+    ax.set_title("Step 5 - Threshold Dashboard\n"
                  "At what yield spread does each failure criterion trigger?",
                  fontsize=13, fontweight="bold")
     ax.legend(fontsize=11, loc="upper left")
@@ -858,7 +858,7 @@ def generate_summary_report(results_a, results_b, results_c,
 
     lines = []
     lines.append("=" * 70)
-    lines.append("  STEP 5: FAILURE POINT IDENTIFICATION — SUMMARY REPORT")
+    lines.append("  STEP 5: FAILURE POINT IDENTIFICATION - SUMMARY REPORT")
     lines.append(f"  Generated: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}")
     lines.append("=" * 70)
 
@@ -876,10 +876,10 @@ def generate_summary_report(results_a, results_b, results_c,
     lines.append("  with 5 failure criteria applied to each, using linear")
     lines.append("  interpolation for sub-grid-point precision.")
 
-    # --- Section 2: Threshold Results — Experiment A ------------------
+    # --- Section 2: Threshold Results - Experiment A ------------------
     lines.append("")
     lines.append("")
-    lines.append("2. THRESHOLD RESULTS — EXPERIMENT A (FE UNCERTAINTY ONLY)")
+    lines.append("2. THRESHOLD RESULTS - EXPERIMENT A (FE UNCERTAINTY ONLY)")
     lines.append("-" * 50)
     lines.append("  This is the most important experiment because FE uncertainty")
     lines.append("  is the primary driver of planning approach differences.")
@@ -906,9 +906,9 @@ def generate_summary_report(results_a, results_b, results_c,
             lines.append(f"  {crit['short_label']}: NOT triggered in range 0.01–0.50")
             lines.append("")
 
-    # --- Section 3: Threshold Results — Experiment B ------------------
+    # --- Section 3: Threshold Results - Experiment B ------------------
     lines.append("")
-    lines.append("3. THRESHOLD RESULTS — EXPERIMENT B (BE UNCERTAINTY ONLY)")
+    lines.append("3. THRESHOLD RESULTS - EXPERIMENT B (BE UNCERTAINTY ONLY)")
     lines.append("-" * 50)
     lines.append("  BE uncertainty should NOT trigger failure criteria (or trigger")
     lines.append("  them only at the baseline level), confirming the no-recourse")
@@ -933,10 +933,10 @@ def generate_summary_report(results_a, results_b, results_c,
         lines.append("  Note: Any triggers here are from the baseline FE spread (0.15),")
         lines.append("  not from BE uncertainty changes.")
 
-    # --- Section 4: Threshold Results — Experiment C ------------------
+    # --- Section 4: Threshold Results - Experiment C ------------------
     lines.append("")
     lines.append("")
-    lines.append("4. THRESHOLD RESULTS — EXPERIMENT C (BOTH TOGETHER)")
+    lines.append("4. THRESHOLD RESULTS - EXPERIMENT C (BOTH TOGETHER)")
     lines.append("-" * 50)
 
     for crit_key in FAILURE_CRITERIA:
@@ -951,7 +951,7 @@ def generate_summary_report(results_a, results_b, results_c,
     # --- Section 5: The Failure Zone Summary --------------------------
     lines.append("")
     lines.append("")
-    lines.append("5. THE FAILURE ZONE — KEY FINDING")
+    lines.append("5. THE FAILURE ZONE - KEY FINDING")
     lines.append("-" * 50)
     lines.append("")
 
@@ -997,7 +997,7 @@ def generate_summary_report(results_a, results_b, results_c,
     lines.append("-" * 50)
     lines.append("")
     lines.append("  Once the threshold is crossed, how fast does performance")
-    lines.append("  degrade? (Based on Experiment A — FE uncertainty only)")
+    lines.append("  degrade? (Based on Experiment A - FE uncertainty only)")
     lines.append("")
 
     a_rates = all_rates.get("A_FE_only", {})

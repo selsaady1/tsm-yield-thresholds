@@ -6,7 +6,7 @@ else fixed.
 
 Purpose
 -------
-Step 2 gave us a broad 7x7 grid — a wide scan across many FE and BE
+Step 2 gave us a broad 7x7 grid - a wide scan across many FE and BE
 spread combinations.  Step 3 is different: it does a *gradual ramp-up*
 of uncertainty, one source at a time, to answer three specific questions:
 
@@ -21,7 +21,7 @@ uncertainty hurt expected profit the most, and that %VSS grows with
 the level of uncertainty.
 
 Design principles (all from the absorbed materials):
-  - Uses the Step 2 FrozenInstance — all costs, capacities, prices,
+  - Uses the Step 2 FrozenInstance - all costs, capacities, prices,
     demand, and structure are locked.
   - Yield means are held constant at Step 1 baseline values
     (FE mean = 0.875, BE mean = 0.800).
@@ -74,7 +74,7 @@ try:
     HAS_MPL = True
 except ImportError:
     HAS_MPL = False
-    print("[warning] matplotlib not installed — skipping figures.")
+    print("[warning] matplotlib not installed - skipping figures.")
 
 DEBUG = "--debug" in sys.argv
 
@@ -163,7 +163,7 @@ def run_experiment_b():
 
     This isolates the effect of Back-End yield uncertainty.
     Rashidi et al. found that BE yield uncertainty has a particularly
-    large impact because the Back-End is the last stage — there's no
+    large impact because the Back-End is the last stage - there's no
     recourse action left to compensate for bad BE yields.
     """
     print(f"\n{'='*60}")
@@ -304,7 +304,7 @@ def save_scenario_decisions(all_results, filepath="step3_scenario_decisions.csv"
             rows.append(row)
 
     if not rows:
-        print(f"  [skip] No per-scenario data — run_experiment(include_raw=True) required")
+        print(f"  [skip] No per-scenario data - run_experiment(include_raw=True) required")
         return
 
     fieldnames = list(rows[0].keys())
@@ -415,7 +415,7 @@ def plot_wafer_allocation(results_a, results_b, results_c,
 
     From Step 1 and 2 we know that stochastic planning hedges by starting
     more wafers at FE2. This figure shows how that hedging behavior
-    intensifies as uncertainty grows — separately for FE, BE, and both.
+    intensifies as uncertainty grows - separately for FE, BE, and both.
     """
     if not HAS_MPL:
         print("  [skip] No matplotlib.")
@@ -466,7 +466,7 @@ def plot_wafer_allocation(results_a, results_b, results_c,
 def plot_operational_impact(results_a, results_b, results_c,
                             filepath="step3_fig3_operational_impact.png"):
     """
-    Figure 3: Operational consequences — unmet demand and inventory
+    Figure 3: Operational consequences - unmet demand and inventory
     for RP vs EEV as uncertainty grows.
 
     This shows the SERVICE LEVEL impact: as uncertainty grows, does
@@ -516,7 +516,7 @@ def plot_operational_impact(results_a, results_b, results_c,
         if col == 0:
             ax_bot.set_ylabel("Expected DieBank Inventory", fontsize=11)
 
-    fig.suptitle("Step 3: Operational Impact — Unmet Demand & Inventory\n"
+    fig.suptitle("Step 3: Operational Impact - Unmet Demand & Inventory\n"
                  "How service levels and inventory change as "
                  "yield uncertainty grows",
                  fontsize=13, fontweight="bold", y=1.02)
@@ -626,7 +626,7 @@ def print_summary(results_a, results_b, results_c):
         print(f"    the last stage where there is no recourse action left.")
     else:
         print(f"\n  → FE uncertainty has a larger effect on VSS than BE uncertainty.")
-        print(f"    This differs from Rashidi et al.'s finding — may be due to")
+        print(f"    This differs from Rashidi et al.'s finding - may be due to")
         print(f"    differences in model parameters (capacity, cost ratios).")
 
     print()

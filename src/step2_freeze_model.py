@@ -5,8 +5,8 @@ Step 2: Lock the planning model structure, keep only yield parameters free.
 
 Purpose
 -------
-This script freezes the validated Step 1 model — all costs, capacities,
-prices, demand levels, and supply chain structure — and exposes ONLY the
+This script freezes the validated Step 1 model - all costs, capacities,
+prices, demand levels, and supply chain structure - and exposes ONLY the
 yield parameters (FE yield range, BE yield range) as experimental inputs.
 
 This creates the controlled experimental framework needed for Steps 3-7:
@@ -55,13 +55,13 @@ try:
     HAS_MPL = True
 except ImportError:
     HAS_MPL = False
-    print("[warning] matplotlib not installed — skipping heatmap.")
+    print("[warning] matplotlib not installed - skipping heatmap.")
 
 DEBUG = "--debug" in sys.argv
 
 
 # ======================================================================
-# 1.  FROZEN INSTANCE — The locked model parameters
+# 1.  FROZEN INSTANCE - The locked model parameters
 # ======================================================================
 
 class FrozenInstance:
@@ -277,7 +277,7 @@ class FrozenInstance:
 
 
 # ======================================================================
-# 2.  SOLVER FUNCTIONS (reused from Step 1 — no changes)
+# 2.  SOLVER FUNCTIONS (reused from Step 1 - no changes)
 # ======================================================================
 # These are identical to reproduce_vss.py.  The model structure is
 # already locked by the FrozenInstance; these functions just execute it.
@@ -498,7 +498,7 @@ def solve_rp_fixed(inst_dict, scenarios, fix_xf, fix_og, fix_oa):
 
 
 # ======================================================================
-# 3.  RUN_EXPERIMENT — The main experimental interface
+# 3.  RUN_EXPERIMENT - The main experimental interface
 # ======================================================================
 
 def run_experiment(frozen_inst, label="", include_raw=False):
@@ -600,7 +600,7 @@ def run_experiment(frozen_inst, label="", include_raw=False):
 
 
 # ======================================================================
-# 4.  VALIDATION — Confirm Step 1 results are reproduced exactly
+# 4.  VALIDATION - Confirm Step 1 results are reproduced exactly
 # ======================================================================
 
 def validate_step1():
@@ -713,7 +713,7 @@ def run_yield_grid():
 
 
 # ======================================================================
-# 6.  OUTPUT — CSV and Heatmap
+# 6.  OUTPUT - CSV and Heatmap
 # ======================================================================
 
 def save_results_csv(results, filepath="step2_experiment_results.csv"):
@@ -777,11 +777,11 @@ def plot_vss_heatmap(results, fe_spreads, be_spreads,
                      filepath="step2_vss_heatmap.png"):
     """
     Create a heatmap: VSS as a function of FE spread (x) and BE spread (y).
-    This is the key visualization for Step 2 — it shows how the value
+    This is the key visualization for Step 2 - it shows how the value
     of stochastic planning depends on WHERE the uncertainty is.
     """
     if not HAS_MPL:
-        print("  [skip] No matplotlib — cannot generate heatmap.")
+        print("  [skip] No matplotlib - cannot generate heatmap.")
         return
 
     # Build the VSS grid
@@ -931,7 +931,7 @@ def main():
     print(f"    Maximum VSS: ${max_r['vss']:.2f} at "
           f"FE_spread={max_r['fe_spread']:.2f}, "
           f"BE_spread={max_r['be_spread']:.2f}")
-    print(f"    Range: ${min(vss_vals):.2f} — ${max(vss_vals):.2f}")
+    print(f"    Range: ${min(vss_vals):.2f} - ${max(vss_vals):.2f}")
 
     # Step 1 baseline for reference
     step1_r = [r for r in results

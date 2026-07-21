@@ -84,12 +84,12 @@ def make_instance():
     d["n_f_i"]   = 100                          # gross dies per wafer
     d["L_F"]     = {"FE1": 10, "FE2": 8}       # asymmetric FE capacity (wafers)
     d["L_B"]     = {"BE1": 500, "BE2": 400}    # asymmetric BE capacity (devices)
-    d["L_G"]     = {"G1": 300}                  # outsourced FE cap (dies) — limited
-    d["L_A"]     = {"A1": 150}                  # outsourced BE cap (devices) — tight
+    d["L_G"]     = {"G1": 300}                  # outsourced FE cap (dies) - limited
+    d["L_A"]     = {"A1": 150}                  # outsourced BE cap (devices) - tight
 
     # --- Prices & penalties -------------------------------------------
     d["p_d"]     = 10           # selling price per device
-    d["v_d"]     = 3            # penalty ~30% of price — meaningful but not crushing
+    d["v_d"]     = 3            # penalty ~30% of price - meaningful but not crushing
     d["c_F"]     = 1.5          # FE in-house cost per wafer
     d["c_G"]     = 1.65         # outsourced FE ~10% more
     d["c_B"]     = 0.8          # BE in-house cost per device
@@ -331,7 +331,7 @@ def solve_rp(inst, scenarios, tag="RP"):
                     f"OA_cap_{s}_{a}"
 
     # --- (C8) Outsourced BE: devices received = starts sent -----------
-    #     (no yield loss on outsourced — Rashidi assumption)
+    #     (no yield loss on outsourced - Rashidi assumption)
     for s in S:
         for a in A:
             prob += X_AD[(s, a)] == X_KA[(s, a)], f"OA_flow_{s}_{a}"
@@ -575,7 +575,7 @@ def solve_rp_fixed_first_stage(inst, scenarios, fix_xf, fix_og, fix_oa):
 def print_results(res, label=""):
     """Print a compact summary of model results."""
     print(f"{'='*60}")
-    print(f"  {label}  ({res['tag']})  —  Status: {res['status']}")
+    print(f"  {label}  ({res['tag']})  -  Status: {res['status']}")
     print(f"{'='*60}")
     print(f"  Objective (expected profit): {res['obj']:>12.2f}")
     print()
@@ -662,7 +662,7 @@ def print_comparison(rp_res, eev_res, ev_det_res):
     elif vss == 0:
         print("  >> VSS = 0: No benefit from stochastic planning here.")
     else:
-        print("  >> VSS < 0: Unusual — check model or parameters.")
+        print("  >> VSS < 0: Unusual - check model or parameters.")
     print()
 
 
@@ -756,7 +756,7 @@ try:
     HAS_MPL = True
 except ImportError:
     HAS_MPL = False
-    print("[warning] matplotlib not installed — skipping graphs.")
+    print("[warning] matplotlib not installed - skipping graphs.")
     print("          Install with:  pip install matplotlib")
 
 
@@ -772,7 +772,7 @@ def generate_visualizations(rp_res, eev_res, inst, scenarios):
         step1_summary_table.csv
     """
     if not HAS_MPL:
-        print("[skip] No matplotlib — only generating the CSV table.")
+        print("[skip] No matplotlib - only generating the CSV table.")
         _save_summary_csv(rp_res, eev_res, inst, scenarios)
         return
 
@@ -862,7 +862,7 @@ def _plot_vss_vs_uncertainty(inst):
 
 
 # ------------------------------------------------------------------
-# GRAPH 2:  Wafer Starts — Stochastic (RP) vs Deterministic (EV)
+# GRAPH 2:  Wafer Starts - Stochastic (RP) vs Deterministic (EV)
 # ------------------------------------------------------------------
 # WHY THIS GRAPH:  The most visible first-stage difference between
 # the two approaches.  Rashidi et al. show that stochastic planning
@@ -906,7 +906,7 @@ def _plot_wafer_starts(rp_res, eev_res):
 
     ax.set_xlabel("Front-End Facility", fontsize=12)
     ax.set_ylabel("Wafer Starts", fontsize=12)
-    ax.set_title("Graph 2: First-Stage Wafer Starts — "
+    ax.set_title("Graph 2: First-Stage Wafer Starts - "
                  "Stochastic vs Deterministic\n"
                  "RP hedges by starting more wafers at FE2 "
                  "(3.12 vs 0.29)",
@@ -933,7 +933,7 @@ def _plot_wafer_starts(rp_res, eev_res):
 
 
 # ------------------------------------------------------------------
-# GRAPH 3:  Per-Scenario Profit — RP vs EEV
+# GRAPH 3:  Per-Scenario Profit - RP vs EEV
 # ------------------------------------------------------------------
 # WHY THIS GRAPH:  It shows WHERE the stochastic model wins.  Each
 # of the 8 scenarios contributes differently to expected profit.
@@ -1017,7 +1017,7 @@ def _plot_profit_by_scenario(rp_res, eev_res, scenarios):
     ax.set_xlabel("Scenario (yield and demand outcome)", fontsize=11)
     ax.set_ylabel("Scenario Profit ($, before probability weighting)",
                   fontsize=11)
-    ax.set_title("Graph 3: Per-Scenario Profit — Stochastic (RP) vs "
+    ax.set_title("Graph 3: Per-Scenario Profit - Stochastic (RP) vs "
                  "Deterministic (EEV)\n"
                  "Shows where stochastic planning wins across "
                  "different futures",
@@ -1072,11 +1072,11 @@ def _save_summary_csv(rp_res, eev_res, inst, scenarios):
         ["Outsource FE (G1)",
          "Yes" if (rp_res['O_G']['G1'] or 0) > 0.5 else "No",
          "Yes" if (eev_res['O_G']['G1'] or 0) > 0.5 else "No",
-         "—"],
+         "-"],
         ["Outsource BE (A1)",
          "Yes" if (rp_res['O_A']['A1'] or 0) > 0.5 else "No",
          "Yes" if (eev_res['O_A']['A1'] or 0) > 0.5 else "No",
-         "—"],
+         "-"],
         ["Expected Profit ($)",
          f"{rp_res['obj']:.2f}",
          f"{eev_res['obj']:.2f}",

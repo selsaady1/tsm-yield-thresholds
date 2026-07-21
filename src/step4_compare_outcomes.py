@@ -1,7 +1,7 @@
 """
 step4_compare_outcomes.py
 =========================
-Step 4: Compare planning outcomes — Measure profit, inventory, and service
+Step 4: Compare planning outcomes - Measure profit, inventory, and service
 differences between average-yield (EV/EEV) and stochastic (RP) planning.
 
 Purpose
@@ -12,8 +12,8 @@ formally compares the two planning approaches across three outcome
 dimensions:
 
     1. PROFIT:    Expected profit (RP vs EEV) and VSS across conditions
-    2. SERVICE:   Expected unmet demand (RP vs EEV) — the customer impact
-    3. INVENTORY:  Expected die-bank inventory (RP vs EEV) — the buffer usage
+    2. SERVICE:   Expected unmet demand (RP vs EEV) - the customer impact
+    3. INVENTORY:  Expected die-bank inventory (RP vs EEV) - the buffer usage
     4. DECISIONS:  First-stage wafer allocation and outsourcing differences
 
 This step does NOT run new optimization models.  It re-runs the Step 3
@@ -74,11 +74,11 @@ try:
     HAS_MPL = True
 except ImportError:
     HAS_MPL = False
-    print("[warning] matplotlib not installed — skipping figures.")
+    print("[warning] matplotlib not installed - skipping figures.")
 
 
 # ======================================================================
-# 1.  CONSTANTS — Same experimental design as Step 3
+# 1.  CONSTANTS - Same experimental design as Step 3
 # ======================================================================
 
 FE_MEAN = (FrozenInstance.STEP1_FE_LO + FrozenInstance.STEP1_FE_HI) / 2  # 0.875
@@ -282,7 +282,7 @@ def save_comparison_csv(results_a, results_b, results_c,
 def plot_profit_gap(results_a, results_b, results_c,
                     filepath="step4_fig1_profit_gap.png"):
     """
-    Figure 1: Profit Gap (VSS) — How much more profit does stochastic
+    Figure 1: Profit Gap (VSS) - How much more profit does stochastic
     planning earn compared to deterministic planning?
 
     This is the central economic comparison.  It directly answers:
@@ -331,7 +331,7 @@ def plot_profit_gap(results_a, results_b, results_c,
     ax2.set_title("Profit Advantage as % of Total Profit",
                   fontsize=13, fontweight="bold")
 
-    fig.suptitle("Step 4 — Profit Comparison: Stochastic vs Deterministic Planning\n"
+    fig.suptitle("Step 4 - Profit Comparison: Stochastic vs Deterministic Planning\n"
                  "How much profit is left on the table by ignoring uncertainty?",
                  fontsize=14, fontweight="bold", y=1.03)
     fig.tight_layout()
@@ -343,12 +343,12 @@ def plot_profit_gap(results_a, results_b, results_c,
 def plot_service_gap(results_a, results_b, results_c,
                      filepath="step4_fig2_service_gap.png"):
     """
-    Figure 2: Service Level Gap — How many more customer orders go unfilled
+    Figure 2: Service Level Gap - How many more customer orders go unfilled
     under deterministic planning?
 
     Two panels:
       Left:  Absolute unmet demand for RP vs EEV
-      Right: The GAP (EEV unmet - RP unmet) — extra unfilled orders from
+      Right: The GAP (EEV unmet - RP unmet) - extra unfilled orders from
              using the simpler approach
 
     Connection to literature: Rashidi et al. (Table 5) report "Average
@@ -390,7 +390,7 @@ def plot_service_gap(results_a, results_b, results_c,
 
     axes[0].set_ylabel("Expected Unmet Demand (units)", fontsize=11)
 
-    fig.suptitle("Step 4 — Service Level Comparison\n"
+    fig.suptitle("Step 4 - Service Level Comparison\n"
                  "Shaded area = additional customer orders lost by "
                  "using deterministic planning",
                  fontsize=13, fontweight="bold", y=1.04)
@@ -403,7 +403,7 @@ def plot_service_gap(results_a, results_b, results_c,
 def plot_decision_divergence(results_a, results_b, results_c,
                              filepath="step4_fig3_decision_divergence.png"):
     """
-    Figure 3: Decision Divergence — How differently do the two planning
+    Figure 3: Decision Divergence - How differently do the two planning
     approaches allocate resources?
 
     Tracks the FE2 wafer start gap (RP_FE2 - EV_FE2) and total wafer
@@ -458,7 +458,7 @@ def plot_decision_divergence(results_a, results_b, results_c,
                   "How many MORE total wafers does RP start?",
                   fontsize=12, fontweight="bold")
 
-    fig.suptitle("Step 4 — Decision Divergence: "
+    fig.suptitle("Step 4 - Decision Divergence: "
                  "How Differently Do the Two Approaches Plan?",
                  fontsize=14, fontweight="bold", y=1.03)
     fig.tight_layout()
@@ -470,7 +470,7 @@ def plot_decision_divergence(results_a, results_b, results_c,
 def plot_combined_dashboard(results_a, results_b, results_c,
                             filepath="step4_fig4_combined_dashboard.png"):
     """
-    Figure 4: Combined Dashboard — All four comparison dimensions in
+    Figure 4: Combined Dashboard - All four comparison dimensions in
     one figure, using Experiment A (FE uncertainty only) as the
     primary illustration.
 
@@ -553,7 +553,7 @@ def plot_combined_dashboard(results_a, results_b, results_c,
     ax.legend(fontsize=9)
     ax.grid(True, alpha=0.3)
 
-    fig.suptitle("Step 4 — Outcome Comparison Dashboard (Experiment A: FE Uncertainty)\n"
+    fig.suptitle("Step 4 - Outcome Comparison Dashboard (Experiment A: FE Uncertainty)\n"
                  "Four dimensions of the planning approach difference",
                  fontsize=14, fontweight="bold", y=1.02)
     fig.tight_layout()
@@ -626,7 +626,7 @@ def plot_motivation_service_cliff(results_a,
 
 
 # ======================================================================
-# 5.  SUMMARY REPORT — Plain language findings
+# 5.  SUMMARY REPORT - Plain language findings
 # ======================================================================
 
 def generate_summary_report(results_a, results_b, results_c,
@@ -641,7 +641,7 @@ def generate_summary_report(results_a, results_b, results_c,
 
     lines = []
     lines.append("=" * 70)
-    lines.append("  STEP 4: PLANNING OUTCOME COMPARISON — SUMMARY REPORT")
+    lines.append("  STEP 4: PLANNING OUTCOME COMPARISON - SUMMARY REPORT")
     lines.append(f"  Generated: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}")
     lines.append("=" * 70)
 

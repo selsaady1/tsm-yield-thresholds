@@ -16,8 +16,8 @@
   your best-case and worst-case FE yield outcomes.
   For example:
     Spread = 0.17 means yields range from 79.0% to 96.0%
-    Spread = 0.10 means yields range from 82.5% to 92.5% (narrow — deterministic is fine)
-    Spread = 0.30 means yields range from 72.5% to 100.0% (wide — stochastic is essential)
+    Spread = 0.10 means yields range from 82.5% to 92.5% (narrow - deterministic is fine)
+    Spread = 0.30 means yields range from 72.5% to 100.0% (wide - stochastic is essential)
 
   REFINED RULE (accounting for cost structure):
   ─────────────────────────────────────────────────────

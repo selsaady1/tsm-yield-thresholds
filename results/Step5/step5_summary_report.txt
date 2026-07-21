@@ -1,5 +1,5 @@
 ======================================================================
-  STEP 5: FAILURE POINT IDENTIFICATION — SUMMARY REPORT
+  STEP 5: FAILURE POINT IDENTIFICATION - SUMMARY REPORT
   Generated: 2026-02-26 21:30
 ======================================================================
 
@@ -16,7 +16,7 @@
   interpolation for sub-grid-point precision.
 
 
-2. THRESHOLD RESULTS — EXPERIMENT A (FE UNCERTAINTY ONLY)
+2. THRESHOLD RESULTS - EXPERIMENT A (FE UNCERTAINTY ONLY)
 --------------------------------------------------
   This is the most important experiment because FE uncertainty
   is the primary driver of planning approach differences.
@@ -47,7 +47,7 @@
     Degradation rate to end of range: 466.51 per unit spread
 
 
-3. THRESHOLD RESULTS — EXPERIMENT B (BE UNCERTAINTY ONLY)
+3. THRESHOLD RESULTS - EXPERIMENT B (BE UNCERTAINTY ONLY)
 --------------------------------------------------
   BE uncertainty should NOT trigger failure criteria (or trigger
   them only at the baseline level), confirming the no-recourse
@@ -63,7 +63,7 @@
   not from BE uncertainty changes.
 
 
-4. THRESHOLD RESULTS — EXPERIMENT C (BOTH TOGETHER)
+4. THRESHOLD RESULTS - EXPERIMENT C (BOTH TOGETHER)
 --------------------------------------------------
   %VSS > 2%: Triggered at spread = 0.3413
   %VSS > 1.5%: Triggered at spread = 0.0100
@@ -72,7 +72,7 @@
   VSS > $150: Triggered at spread = 0.4065
 
 
-5. THE FAILURE ZONE — KEY FINDING
+5. THE FAILURE ZONE - KEY FINDING
 --------------------------------------------------
 
   For FE uncertainty (Experiment A):
@@ -92,7 +92,7 @@
 --------------------------------------------------
 
   Once the threshold is crossed, how fast does performance
-  degrade? (Based on Experiment A — FE uncertainty only)
+  degrade? (Based on Experiment A - FE uncertainty only)
 
   %VSS > 2%:
     At threshold:      pct_vss = 2.00

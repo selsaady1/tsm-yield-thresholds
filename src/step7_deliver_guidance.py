@@ -1,7 +1,7 @@
 """
 step7_deliver_guidance.py
 =========================
-Step 7: Deliver guidance — Provide clear rules for when stochastic
+Step 7: Deliver guidance - Provide clear rules for when stochastic
 modeling is necessary.
 
 Purpose
@@ -9,18 +9,18 @@ Purpose
 This is the final step of the 7-step research plan.  It synthesizes
 ALL findings from Steps 1-6 into practitioner-facing deliverables:
 
-    1. A DECISION RULE — plain-language guidance of the form:
+    1. A DECISION RULE - plain-language guidance of the form:
        "If your FE yield spread exceeds X and your shortage penalty
         is at least Y% of selling price, invest in stochastic planning."
 
-    2. A DECISION MAP — a publication-quality 2D figure showing the
+    2. A DECISION MAP - a publication-quality 2D figure showing the
        boundary between "deterministic OK" and "stochastic needed"
        as a function of yield uncertainty and cost structure.
 
-    3. A LOOKUP TABLE — specific (penalty ratio, threshold spread)
+    3. A LOOKUP TABLE - specific (penalty ratio, threshold spread)
        pairs that practitioners can use directly.
 
-    4. A RESEARCH SUMMARY — connecting all seven steps into the
+    4. A RESEARCH SUMMARY - connecting all seven steps into the
        narrative for the ITC 2026 paper.
 
 This script does NOT run new optimization models.  It uses the
@@ -81,7 +81,7 @@ try:
     HAS_MPL = True
 except ImportError:
     HAS_MPL = False
-    print("[warning] matplotlib not installed — skipping figures.")
+    print("[warning] matplotlib not installed - skipping figures.")
 
 
 # ======================================================================
@@ -149,7 +149,7 @@ PENALTY_DOLLARS = [1.0, 3.0, 5.0, 8.0]
 
 
 # ======================================================================
-# 2.  THE DECISION RULE — The core deliverable
+# 2.  THE DECISION RULE - The core deliverable
 # ======================================================================
 
 def generate_decision_rule(filepath="step7_decision_rule.txt"):
@@ -201,10 +201,10 @@ def generate_decision_rule(filepath="step7_decision_rule.txt"):
                  f"{lo:.1%} to {hi:.1%}")
     lo, hi = spread_to_range(0.10)
     lines.append(f"    Spread = 0.10 means yields range from "
-                 f"{lo:.1%} to {hi:.1%} (narrow — deterministic is fine)")
+                 f"{lo:.1%} to {hi:.1%} (narrow - deterministic is fine)")
     lo, hi = spread_to_range(0.30)
     lines.append(f"    Spread = 0.30 means yields range from "
-                 f"{lo:.1%} to {hi:.1%} (wide — stochastic is essential)")
+                 f"{lo:.1%} to {hi:.1%} (wide - stochastic is essential)")
     lines.append("")
     lines.append("  REFINED RULE (accounting for cost structure):")
     lines.append("  ─────────────────────────────────────────────────────")
@@ -251,7 +251,7 @@ def generate_decision_rule(filepath="step7_decision_rule.txt"):
 
 
 # ======================================================================
-# 3.  DECISION LOOKUP TABLE — CSV for practitioners
+# 3.  DECISION LOOKUP TABLE - CSV for practitioners
 # ======================================================================
 
 def generate_decision_table(filepath="step7_decision_table.csv"):
@@ -282,7 +282,7 @@ def generate_decision_table(filepath="step7_decision_table.csv"):
                 "yield_hi": f"{hi:.4f}",
                 "recommendation": ("Stochastic planning needed"
                                    if thresh <= 0.20
-                                   else "Monitor — approaching threshold"),
+                                   else "Monitor - approaching threshold"),
             })
 
     fieldnames = list(rows[0].keys())
@@ -296,7 +296,7 @@ def generate_decision_table(filepath="step7_decision_table.csv"):
 
 
 # ======================================================================
-# 4.  FIGURE 1 — Publication-Quality Decision Map
+# 4.  FIGURE 1 - Publication-Quality Decision Map
 # ======================================================================
 
 def plot_decision_map(filepath="step7_fig1_decision_map.png"):
@@ -351,7 +351,7 @@ def plot_decision_map(filepath="step7_fig1_decision_map.png"):
             markeredgecolor="white", markeredgewidth=1.5,
             label="Critical (%VSS > 2%)", zorder=5)
 
-    # Service boundary (gap > 1 unit)  — physical, cost-independent
+    # Service boundary (gap > 1 unit)  - physical, cost-independent
     ax.plot(svc_spreads, PENALTY_DOLLARS, "^:", color="#6366F1",
             linewidth=2, markersize=9, markerfacecolor="#6366F1",
             markeredgecolor="white", markeredgewidth=1.5,
@@ -424,7 +424,7 @@ def plot_decision_map(filepath="step7_fig1_decision_map.png"):
 
 
 # ======================================================================
-# 5.  FIGURE 2 — Evidence Cascade (7-Step Summary)
+# 5.  FIGURE 2 - Evidence Cascade (7-Step Summary)
 # ======================================================================
 
 def plot_evidence_cascade(filepath="step7_fig2_evidence_cascade.png"):
@@ -444,7 +444,7 @@ def plot_evidence_cascade(filepath="step7_fig2_evidence_cascade.png"):
     ax.axis("off")
 
     # Title
-    ax.text(7, 7.6, "Research Evidence Cascade — Steps 1 to 7",
+    ax.text(7, 7.6, "Research Evidence Cascade - Steps 1 to 7",
             fontsize=16, fontweight="bold", ha="center", va="center")
     ax.text(7, 7.2, "Semiconductor Supply Chain Planning Under Yield Uncertainty",
             fontsize=11, ha="center", va="center", color="gray")
@@ -539,7 +539,7 @@ def plot_evidence_cascade(filepath="step7_fig2_evidence_cascade.png"):
 
 
 # ======================================================================
-# 6.  FIGURE 3 — Sensitivity Fan Chart
+# 6.  FIGURE 3 - Sensitivity Fan Chart
 # ======================================================================
 
 def plot_sensitivity_fan(filepath="step7_fig3_sensitivity_fan.png"):
@@ -621,7 +621,7 @@ def plot_sensitivity_fan(filepath="step7_fig3_sensitivity_fan.png"):
 
 
 # ======================================================================
-# 7.  COMPLETE RESEARCH SUMMARY — The ITC 2026 narrative
+# 7.  COMPLETE RESEARCH SUMMARY - The ITC 2026 narrative
 # ======================================================================
 
 def generate_summary_report(filepath="step7_summary_report.txt"):
@@ -633,7 +633,7 @@ def generate_summary_report(filepath="step7_summary_report.txt"):
     """
     lines = []
     lines.append("=" * 70)
-    lines.append("  STEP 7: RESEARCH SUMMARY — COMPLETE FINDINGS")
+    lines.append("  STEP 7: RESEARCH SUMMARY - COMPLETE FINDINGS")
     lines.append(f"  Generated: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}")
     lines.append("  Target: ITC 2026")
     lines.append("=" * 70)
@@ -698,7 +698,7 @@ def generate_summary_report(filepath="step7_summary_report.txt"):
     lines.append("  Finding 2: Deterministic planning fails at a specific threshold.")
     lines.append("    - When FE yield spread exceeds ~0.18, deterministic planning")
     lines.append("      loses >2% of profit compared to stochastic planning.")
-    lines.append("    - Customer service degrades via a 'cliff effect' — stable")
+    lines.append("    - Customer service degrades via a 'cliff effect' - stable")
     lines.append("      until the threshold, then rapid deterioration.")
     lines.append("    - Evidence: Step 5 (150 experiments, 5 failure criteria)")
     lines.append("")
@@ -810,7 +810,7 @@ def generate_summary_report(filepath="step7_summary_report.txt"):
     lines.append("    4        45       Outcome comparison (same data, enriched)")
     lines.append("    5       150       Fine-grained threshold detection (50×3)")
     lines.append("    6       200       Robustness across costs (50×4)")
-    lines.append("    7         —       Synthesis (no new experiments)")
+    lines.append("    7         -       Synthesis (no new experiments)")
     lines.append("  ────   ───────────  ───────────────────────────────────")
     lines.append("  Total:   493+      optimization solves")
     lines.append("")
