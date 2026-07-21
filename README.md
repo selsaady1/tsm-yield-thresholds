@@ -166,3 +166,19 @@ reproduce.sh    One-command reproduction of the headline numbers.
 ## License
 
 See [`LICENSE`](LICENSE).
+
+## Revision experiments (journal round)
+
+Two experiments added for the journal version, in `experiments/`:
+
+- **Two-dimensional invariance check** (`joint_2d_sweep.py` → `results/JointSweep2D/`):
+  sweeps FE mean × shortage penalty (20 cells) and records the worst-case FE
+  yield at the %VSS>2% crossing. It stays within [0.671, 0.704] (mean 0.694),
+  and 0.693–0.704 for FE mean ≥ 0.85 — the worst-case-70% rule holds across the grid.
+- **Multi-product extension** (`multiproduct_model.py`, `multiproduct_sweep.py`
+  → `results/MultiProduct/`): two device types ($12 and $8) sharing FE/BE
+  capacity. Collapsing to one product reproduces the single-product baseline
+  exactly (VSS $92.16, no formulation regression). The FE-spread threshold moves
+  to 0.164 half-range (from 0.178, ~8% lower) while the worst-case FE yield stays
+  near 0.70 — shared capacity lowers the threshold, confirming the single-product
+  value as a conservative upper bound.
