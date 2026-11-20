@@ -1,0 +1,12 @@
+--- a/main.tex
++++ b/main.tex
+@@ -490,6 +490,9 @@
+ 
+ FE uncertainty thus separates the plans under both information structures and alone produces the cliff; BE uncertainty is neutral only if die release can respond to BE yield, which depends on whether test yields are known when dies are committed.
+ 
++% TSM-A: Extensions I (sec:extA), owned by TSM-A; keep directly after Results.
++\input{sec_extA}
++
+ % ==============================================================
+ \section{Discussion}
+ \label{sec:discussion}

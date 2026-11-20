@@ -1,0 +1,28 @@
+t5_limited_data (FULL) -> /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/tsm_a/t5_limited_data
+self-check: max |dev| = 9.09e-13
+Q table demand=600 BE=0.7: 4 breakpoints at D = 0.0000, 492.8571, 792.8571, 1800.0000
+Q table demand=600 BE=0.9: 5 breakpoints at D = 0.0000, 350.0000, 650.0000, 666.6666, 1800.0000
+Q table demand=900 BE=0.7: 4 breakpoints at D = 0.0000, 750.0000, 1050.0000, 1800.0000
+Q table demand=900 BE=0.9: 5 breakpoints at D = 0.0000, 683.3333, 983.3333, 990.0000, 1800.0000
+Q table demand=750 BE=0.8: 4 breakpoints at D = 0.0000, 600.0000, 900.0000, 1800.0000
+  VALIDATION pwl_table_vs_direct_cbc_max_abs = 6.635e-05
+  VALIDATION baseline_rp_obj = 6380.66
+  VALIDATION baseline_eev_obj = 6288.50
+  VALIDATION baseline_vss = 92.16
+  VALIDATION baseline_rp_wafers = 13.1250
+  VALIDATION baseline_ev_wafers = 10.2857
+  VALIDATION beta7_sigma0.07_vss (beta_results.csv: 92.0) = 92.000
+  VALIDATION saa_and_eev_vs_full_cbc_max_abs = 1.937e-06
+TRUTH sigma=0.075: x*=14.6429 F*=6376.8106 x_det=10.2857 F_det=6280.0231 VSS*=96.7875 (1.518%), MC check 6376.7828
+TRUTH sigma=0.15: x*=18.0000 F*=6350.9570 x_det=10.2857 F_det=6186.1394 VSS*=164.8176 (2.595%), MC check 6351.1438
+  sigma=0.075 n=  5: VSS*=96.79 in-sample 96.35 realized 94.82 [91.26,98.38] bagged 93.35 boot-corr 95.20 gap_saa 4.57 gap_det 99.38 P(real<0)=0.000 cover MMW 1.000 boot 0.370  (1 s)
+  sigma=0.075 n= 10: VSS*=96.79 in-sample 97.32 realized 96.58 [93.98,99.17] bagged 96.07 boot-corr 97.18 gap_saa 2.03 gap_det 98.60 P(real<0)=0.000 cover MMW 1.000 boot 0.535  (1 s)
+  sigma=0.075 n= 20: VSS*=96.79 in-sample 96.91 realized 97.04 [94.92,99.17] bagged 96.90 boot-corr 96.83 gap_saa 0.80 gap_det 97.84 P(real<0)=0.000 cover MMW 1.000 boot 0.700  (1 s)
+  sigma=0.075 n= 50: VSS*=96.79 in-sample 96.77 realized 96.68 [95.45,97.90] bagged 96.69 boot-corr 96.69 gap_saa 0.39 gap_det 97.07 P(real<0)=0.000 cover MMW 1.000 boot 0.725  (3 s)
+  sigma=0.075 n=100: VSS*=96.79 in-sample 96.87 realized 97.10 [96.18,98.02] bagged 97.12 boot-corr 96.62 gap_saa 0.21 gap_det 97.31 P(real<0)=0.000 cover MMW 1.000 boot 0.710  (10 s)
+  sigma=0.15 n=  5: VSS*=164.82 in-sample 149.81 realized 148.08 [142.26,153.91] bagged 138.88 boot-corr 155.38 gap_saa 26.81 gap_det 174.90 P(real<0)=0.000 cover MMW 0.960 boot 0.265  (1 s)
+  sigma=0.15 n= 10: VSS*=164.82 in-sample 151.95 realized 161.04 [156.05,166.02] bagged 155.49 boot-corr 155.50 gap_saa 14.48 gap_det 175.52 P(real<0)=0.000 cover MMW 0.970 boot 0.475  (1 s)
+  sigma=0.15 n= 20: VSS*=164.82 in-sample 161.19 realized 162.92 [158.64,167.20] bagged 160.33 boot-corr 164.45 gap_saa 4.74 gap_det 167.66 P(real<0)=0.000 cover MMW 0.975 boot 0.675  (1 s)
+  sigma=0.15 n= 50: VSS*=164.82 in-sample 165.97 realized 162.13 [159.33,164.94] bagged 161.21 boot-corr 166.73 gap_saa 1.01 gap_det 163.15 P(real<0)=0.000 cover MMW 0.990 boot 0.865  (3 s)
+  sigma=0.15 n=100: VSS*=164.82 in-sample 166.42 realized 163.89 [161.71,166.06] bagged 163.47 boot-corr 166.93 gap_saa 0.16 gap_det 164.05 P(real<0)=0.000 cover MMW 1.000 boot 0.950  (11 s)
+done in 180 s

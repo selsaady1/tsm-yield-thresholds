@@ -1,0 +1,2 @@
+grid: full; sweep points: 1000; wall time 77 s
+non-optimal solves dropped: none

@@ -1,0 +1,47 @@
+{
+ "prompt_id": "tsm_d",
+ "run_id": "tsmd_summary",
+ "purpose": "Registry numbers, generated tables and figures from the TSM-D run files (all TSM-D IDs)",
+ "command": "python code/tsm_d/summarize.py",
+ "cwd": "/Users/saifelsaady/Developer/Projects/PhD Research Project/TSM-26-0314_work/tsm_d",
+ "seed": "none",
+ "started_at": "2026-11-13T16:34:12-07:00",
+ "finished_at": "2026-11-13T16:34:13-07:00",
+ "runtime_s": 1.05,
+ "status": "OK",
+ "python": "3.14.5",
+ "pulp": "3.3.0",
+ "cbc": "2.10.13 (/Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/.venv/lib/python3.14/site-packages/pulp/apis/../solverdir/cbc/osx/i64/cbc -> /opt/homebrew/Cellar/cbc/2.10.13/bin/cbc)",
+ "solver_options": {
+  "solver": "PULP_CBC_CMD",
+  "msg": 0,
+  "threads": 1,
+  "gapRel": "CBC default (0, problems are LPs or MILPs with inert binaries; all solved to proven optimality)",
+  "timeLimit": null
+ },
+ "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+ "input_files": {
+  "results/tsm_d/tsmd_r1_cliff_binding/cliff_events.csv": "53a0859a9df04277830082498a8922a4dd218be4fb13e24b8cc62106e1778bac",
+  "results/tsm_d/tsmd_r1_cliff_binding/cliff_binding_sweep.csv": "ef10045dc434d11dcb4241514c41603aa3efa23b6ea786412a3d18b163b835fe",
+  "results/tsm_d/tsmd_r2_matched_var/matched_summary.csv": "255ec8993270afde96d8056ad9c387a139366813c83aac534882385b3aa06e24",
+  "results/tsm_d/tsmd_r2_matched_var/matched_points.csv": "2c0723df33a34f6b54a5fd2616539e77b1186f5594e72618eb96a587fdf33042",
+  "results/tsm_d/tsmd_r2_matched_var/matched_verdict.csv": "8acdd24d963eca425d157efbdf74863dcf79d7e5e3db7511db31238883aec84f",
+  "results/tsm_d/tsmd_r3_mapping/mapping_table.csv": "36cc7b688253b1d14870afaf4ad7f6e7fc9a6690ef38995a1a927927409a3352",
+  "results/tsm_d/tsmd_r4_randinst/instances_results.jsonl": "d802332890eeefaeb09b3ff97dc0aed03ea3f6324a229213af9c5ca014c37a71"
+ },
+ "output_files": {
+  "results/tsm_d/tsmd_summary/summary.csv": "1dbc7ba25ad12d47c1771fb4805b9051675fe4a6c943b469d70974544ee9287c",
+  "OUT/numbers.json": "8d07c37965c237f3fc8661444ea2037b488bd03c49b2b5f258625fde0712236c",
+  "OUT/tables/tab_tsm_d_mapping.tex": "c4fcdb28507f73d1889f59f2ac3006d3ffdf3e9c3b3ee85a5a183000b8554fd4",
+  "OUT/tables/tab_tsm_d_randinst_misses.tex": "130859a91565a03985497e65dddf6938508d1615a4b1d6d65442679eb4258f92",
+  "OUT/figs/fig_tsm_d_cliff_binding.pdf": "b890a3c56df592b1b6ab1f0fc2d8b84d928d6c98063fb5fbb4822e60e65f0fc0",
+  "OUT/figs/fig_tsm_d_randinst.pdf": "fb356d003452f7eb09130d7358952868d7ef882e4c5b32468319ba182ce1331d",
+  "OUT/figs/fig_tsm_d_matched.pdf": "5436779032b3ff3c0473b07fc0866e559ddf717320ab6225483f7cd00323bf6f"
+ },
+ "git_commit": "none (not a git repo)",
+ "code_sha256": {
+  "code/tsm_d/summarize.py": "70d2678835f15f36203407d02e95c7a25bbfb80f8d2f06d1b573e6b269ab1796",
+  "code/tsm_d/tsmd_common.py": "c133423290cdbcca72777175f9cf0eedbe24322f03c5a41191e15e52e658d118"
+ },
+ "notes": ""
+}

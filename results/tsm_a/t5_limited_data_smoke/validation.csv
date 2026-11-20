@@ -1,0 +1,9 @@
+check,value
+pwl_table_vs_direct_cbc_max_abs,6.192e-05
+baseline_rp_obj,6380.66
+baseline_eev_obj,6288.50
+baseline_vss,92.16
+baseline_rp_wafers,13.1250
+baseline_ev_wafers,10.2857
+beta7_sigma0.07_vss (beta_results.csv: 92.0),92.000
+saa_and_eev_vs_full_cbc_max_abs,1.937e-06

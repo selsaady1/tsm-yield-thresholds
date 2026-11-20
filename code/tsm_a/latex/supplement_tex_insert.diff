@@ -1,0 +1,11 @@
+--- a/supplement.tex
++++ b/supplement.tex
+@@ -193,5 +193,8 @@
+ 
+ \input{supplement_detail}
+ 
++% TSM-A: Section S-XV (Extensions I in detail), owned by TSM-A.
++\input{supplement_extA}
++
+ \input{supplement_bib}
+ \end{document}

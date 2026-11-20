@@ -1,0 +1,12 @@
+quantity,value,paper_value,match
+self_check_max_abs_dev,9.09e-13,,
+rp_obj,6380.66,6380.66,1
+eev_obj,6288.50,6288.50,1
+vss,92.16,92.16,1
+pct_vss,1.44,1.44,1
+rp_wafers,13.12,13.12,1
+ev_wafers,10.29,10.29,1
+rp_exp_unmet,30.0000,,
+eev_exp_unmet,30.0000,,
+N_max,1050.00,,
+N_bar_ev_dies_used,900.00,,

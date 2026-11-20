@@ -1,0 +1,11 @@
+[2026-11-13T16:14:07-07:00] run tsmb_r00_validate started 2026-11-13T16:14:07-07:00  pid 85710
+[2026-11-13T16:14:07-07:00] command: run_r00_validate.py
+[2026-11-13T16:14:08-07:00] self-checks: revision_common 0.00e+00, tsmb_static 0.00e+00, multiperiod T=1 0.00e+00
+[2026-11-13T16:14:08-07:00] RP_profit: reproduced 6380.6577  published 6380.66  match True
+[2026-11-13T16:14:08-07:00] EEV_profit: reproduced 6288.5000  published 6288.5  match True
+[2026-11-13T16:14:08-07:00] VSS: reproduced 92.1577  published 92.16  match True
+[2026-11-13T16:14:08-07:00] pct_VSS: reproduced 1.4443  published 1.44  match True
+[2026-11-13T16:14:08-07:00] RP_total_wafers: reproduced 13.1250  published 13.12  match True
+[2026-11-13T16:14:08-07:00] EV_total_wafers: reproduced 10.2857  published 10.29  match True
+[2026-11-13T16:14:08-07:00] N_max=1050.00 N_bar=900.00 L_G=300 rho=0.8333
+[2026-11-13T16:14:08-07:00] run tsmb_r00_validate finished 2026-11-13T16:14:08-07:00 status OK runtime 1.0 s

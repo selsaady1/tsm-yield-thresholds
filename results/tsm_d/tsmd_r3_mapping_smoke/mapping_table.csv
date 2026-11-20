@@ -1,0 +1,5 @@
+factor,level,fe_mean,be_lo,be_hi,N_max,N_bar,L_G,W_EV,rho,rho_times_ybar,pred_onset_half,pred_onset_ylo,pred_regime,solved_onset_half,solved_onset_ylo,onset_abs_err_half,vss2_half,vss2_ylo,vss2_regime
+base,0,0.875,0.7,0.9,1050.0,900.0,300,10.285714,0.833333,0.729167,0.16071,0.71429,clipped,0.16072,0.71428,0.0,0.1777,0.6973,clipped
+demand_level,0.8,0.875,0.7,0.9,964.2857,712.5,300,8.142857,0.932331,0.815789,0.05921,0.81579,symmetric,0.05921,0.81579,0.0,below_grid,NA,above_at_first_grid_point
+be_capacity,0.9,0.875,0.7,0.9,960.0,900.0,300,10.285714,0.733333,0.641667,0.29605,0.57895,clipped,0.29605,0.57895,0.0,0.24439,0.63061,clipped
+be_mean,0.75,0.875,0.65,0.85,1050.0,950.0,300,10.857143,0.789474,0.690789,0.22283,0.65217,clipped,0.22283,0.65217,0.0,0.2024,0.6726,clipped

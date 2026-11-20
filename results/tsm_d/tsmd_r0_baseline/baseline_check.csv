@@ -1,0 +1,15 @@
+quantity,published,reproduced,rounded_2dp,match
+rp_obj,6380.66,6380.657738,6380.66,1
+eev_obj,6288.5,6288.500000,6288.50,1
+vss,92.16,92.157738,92.16,1
+pct_vss,1.44,1.444330,1.44,1
+rp_wafers,13.12,13.125000,13.12,1
+ev_wafers,10.29,10.285714,10.29,1
+N_bar,,900.000000,900.00,
+N_max,,1050.000000,1050.00,
+L_G,,300.000000,300.00,
+rho,,0.833333,0.83,
+rho_times_ybar,,0.729167,0.73,
+rho_over_2_minus_rho,,0.714286,0.71,
+selfcheck_max_dev_vs_step2,,0.000000,0.00,
+named_lp_max_dev,,0.000000,0.00,

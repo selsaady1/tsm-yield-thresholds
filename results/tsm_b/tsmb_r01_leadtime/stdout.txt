@@ -1,0 +1,23 @@
+[2026-11-13T16:14:00-07:00] run tsmb_r01_leadtime started 2026-11-13T16:14:00-07:00  pid 84030
+[2026-11-13T16:14:00-07:00] command: run_r01_leadtime.py
+[2026-11-13T16:14:00-07:00] T=1 check deviation 0.0e+00; N_max=1050.0; L_G=300; 9 configurations x 51 half-ranges
+[2026-11-13T16:14:00-07:00] progress: P1_l0 h=0.01
+[2026-11-13T16:14:03-07:00] P1_l0: %VSS(0.075)=1.444 2%@0.1778 gap>1@0.1792 rise>1@0.1792 onset 0.1607 pred 0.1607 nonopt none
+[2026-11-13T16:15:02-07:00] progress: P4_l0 h=0.27
+[2026-11-13T16:16:04-07:00] P4_l0: %VSS(0.075)=0.941 2%@0.2613 gap>1@0.2053 rise>1@0.2053 onset 0.1607 pred 0.1607 nonopt none
+[2026-11-13T16:16:04-07:00] progress: P1_l1 h=0.01
+[2026-11-13T16:16:06-07:00] P1_l1: %VSS(0.075)=3.714 2%@below_grid gap>1@below_grid rise>1@0.3496 onset 0.3431 pred 0.1607 nonopt none
+[2026-11-13T16:17:09-07:00] P4_l1: %VSS(0.075)=3.714 2%@below_grid gap>1@below_grid rise>1@0.3842 onset 0.3745 pred 0.1607 nonopt none
+[2026-11-13T16:17:13-07:00] progress: P4_l1_m1 h=0.01
+[2026-11-13T16:18:15-07:00] progress: P4_l1_m1 h=0.17
+[2026-11-13T16:19:17-07:00] progress: P4_l1_m1 h=0.34
+[2026-11-13T16:20:30-07:00] P4_l1_m1: %VSS(0.075)=3.714 2%@below_grid gap>1@below_grid rise>1@0.3842 onset 0.3745 pred 0.1607 nonopt none
+[2026-11-13T16:20:34-07:00] progress: P4_l1_m2 h=0.01
+[2026-11-13T16:21:36-07:00] progress: P4_l1_m2 h=0.17
+[2026-11-13T16:22:39-07:00] progress: P4_l1_m2 h=0.35
+[2026-11-13T16:23:46-07:00] P4_l1_m2: %VSS(0.075)=3.714 2%@below_grid gap>1@below_grid rise>1@0.3842 onset 0.3745 pred 0.1607 nonopt none
+[2026-11-13T16:23:46-07:00] progress: P3_l1 h=0.01
+[2026-11-13T16:23:54-07:00] P3_l1: %VSS(0.075)=3.714 2%@below_grid gap>1@below_grid rise>1@0.3772 onset 0.3678 pred 0.1607 nonopt none
+[2026-11-13T16:24:20-07:00] P3_l1_m1: %VSS(0.075)=3.714 2%@below_grid gap>1@below_grid rise>1@0.3772 onset 0.3678 pred 0.1607 nonopt none
+[2026-11-13T16:24:45-07:00] P3_l1_m2: %VSS(0.075)=3.714 2%@below_grid gap>1@below_grid rise>1@0.3772 onset 0.3678 pred 0.1607 nonopt none
+[2026-11-13T16:24:45-07:00] run tsmb_r01_leadtime finished 2026-11-13T16:24:45-07:00 status OK runtime 645.6 s

@@ -1,0 +1,39 @@
+{
+ "prompt_id": "tsm_d",
+ "run_id": "tsmd_r0_baseline",
+ "purpose": "Baseline reproduction (RP, EEV, VSS, rho) before new runs; supports all TSM-D IDs",
+ "command": "nice -n 10 python code/tsm_d/r0_baseline.py",
+ "cwd": "/Users/saifelsaady/Developer/Projects/PhD Research Project/TSM-26-0314_work/tsm_d",
+ "seed": "none (deterministic LP/MILP)",
+ "started_at": "2026-11-13T16:20:07-07:00",
+ "finished_at": "2026-11-13T16:20:08-07:00",
+ "runtime_s": 0.7,
+ "status": "OK",
+ "python": "3.14.5",
+ "pulp": "3.3.0",
+ "cbc": "2.10.13 (/Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/.venv/lib/python3.14/site-packages/pulp/apis/../solverdir/cbc/osx/i64/cbc -> /opt/homebrew/Cellar/cbc/2.10.13/bin/cbc)",
+ "solver_options": {
+  "solver": "PULP_CBC_CMD",
+  "msg": 0,
+  "threads": 1,
+  "gapRel": "CBC default (0, problems are LPs or MILPs with inert binaries; all solved to proven optimality)",
+  "timeLimit": null
+ },
+ "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+ "input_files": {
+  "repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50",
+  "repo/src/step2_freeze_model.py": "cb210b9ef872806920bcda74934957e341eeea75aad55d3f25e4fdeaf9643e87",
+  "code/tsm_d/tsmd_common.py": "c133423290cdbcca72777175f9cf0eedbe24322f03c5a41191e15e52e658d118"
+ },
+ "output_files": {
+  "results/tsm_d/tsmd_r0_baseline/baseline_check.csv": "67d7b746dbf47bfdfa75e76cb0c3e3d4e0fb85cd6fd8139a9a1ecfdf6d19e831"
+ },
+ "git_commit": "none (not a git repo)",
+ "code_sha256": {
+  "code/tsm_d/r0_baseline.py": "a06d934150b9e3c71c078bc14012c6310882fb34854f4f34ead6885f19add88d",
+  "repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50",
+  "repo/src/step2_freeze_model.py": "cb210b9ef872806920bcda74934957e341eeea75aad55d3f25e4fdeaf9643e87",
+  "code/tsm_d/tsmd_common.py": "c133423290cdbcca72777175f9cf0eedbe24322f03c5a41191e15e52e658d118"
+ },
+ "notes": "published values from main.tex Section VI-A; named LP fixes o_g=o_a=1 (property (b))"
+}

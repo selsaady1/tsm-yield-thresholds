@@ -1,0 +1,4 @@
+Superseded first attempt of run tsmd_r4_randinst (folder renamed by the TSM-D tab on 2026-11-13; its run.json still says run_id tsmd_r4_randinst).
+842 solves were not optimal: with fractional sampled fab capacities, PuLP read the EV wafer starts at limited precision (e.g. 10.209913 > L_F = 10.2099127686), so fixing them made the EEV problem infeasible.
+Fix: tsmd_common.patch_clamp_fixed_first_stage() clamps the fixed first stage to [0, L_F] (change <= 1e-6 wafers). The rerun in results/tsm_d/tsmd_r4_randinst/ has 0 non-optimal solves.
+No number in the paper comes from this folder.

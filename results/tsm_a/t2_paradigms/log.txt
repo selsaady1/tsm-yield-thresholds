@@ -1,0 +1,138 @@
+t2_paradigms (FULL) -> /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/tsm_a/t2_paradigms
+self-check vs revision_common/step2: max |dev| = 9.09e-13
+c_F=1.5: unmet floor per scenario [0.0, 120.0]
+  cF=1.5  h=0.01 EEV:1.47% BOX_Y:0.19% ARO_ALL:2.71% ARO_Y:0.00% BUD_G1:0.04% CC_e0:0.00% CVAR_l1:2.71%
+  cF=1.5  h=0.02 EEV:1.46% BOX_Y:0.13% ARO_ALL:2.59% ARO_Y:0.00% BUD_G1:0.07% CC_e0:0.00% CVAR_l1:2.59%
+  cF=1.5  h=0.03 EEV:1.46% BOX_Y:0.13% ARO_ALL:2.46% ARO_Y:0.00% BUD_G1:0.11% CC_e0:0.00% CVAR_l1:2.46%
+  cF=1.5  h=0.04 EEV:1.46% BOX_Y:0.13% ARO_ALL:2.33% ARO_Y:0.00% BUD_G1:0.14% CC_e0:0.00% CVAR_l1:2.33%
+  cF=1.5  h=0.05 EEV:1.45% BOX_Y:0.13% ARO_ALL:2.20% ARO_Y:0.00% BUD_G1:0.18% CC_e0:0.00% CVAR_l1:2.20%
+  cF=1.5  h=0.06 EEV:1.45% BOX_Y:0.13% ARO_ALL:2.07% ARO_Y:0.00% BUD_G1:0.23% CC_e0:0.00% CVAR_l1:2.07%
+  cF=1.5  h=0.07 EEV:1.45% BOX_Y:0.13% ARO_ALL:1.93% ARO_Y:0.00% BUD_G1:0.30% CC_e0:0.00% CVAR_l1:1.93%
+  cF=1.5  h=0.08 EEV:1.44% BOX_Y:0.13% ARO_ALL:1.79% ARO_Y:0.00% BUD_G1:0.38% CC_e0:0.00% CVAR_l1:1.79%
+  cF=1.5  h=0.09 EEV:1.47% BOX_Y:0.13% ARO_ALL:1.64% ARO_Y:0.00% BUD_G1:0.45% CC_e0:0.00% CVAR_l1:1.64%
+  cF=1.5  h=0.10 EEV:1.50% BOX_Y:0.13% ARO_ALL:1.54% ARO_Y:0.00% BUD_G1:0.53% CC_e0:0.00% CVAR_l1:1.54%
+  cF=1.5  h=0.11 EEV:1.54% BOX_Y:0.13% ARO_ALL:1.46% ARO_Y:0.00% BUD_G1:0.60% CC_e0:0.00% CVAR_l1:1.46%
+  cF=1.5  h=0.12 EEV:1.61% BOX_Y:0.13% ARO_ALL:1.38% ARO_Y:-0.00% BUD_G1:0.67% CC_e0:0.00% CVAR_l1:1.38%
+  cF=1.5  h=0.13 EEV:1.66% BOX_Y:0.13% ARO_ALL:1.37% ARO_Y:-0.00% BUD_G1:0.73% CC_e0:0.00% CVAR_l1:1.37%
+  cF=1.5  h=0.14 EEV:1.69% BOX_Y:0.12% ARO_ALL:1.37% ARO_Y:-0.00% BUD_G1:0.77% CC_e0:0.00% CVAR_l1:1.37%
+  cF=1.5  h=0.15 EEV:1.73% BOX_Y:0.12% ARO_ALL:1.37% ARO_Y:0.00% BUD_G1:0.81% CC_e0:0.00% CVAR_l1:1.37%
+  cF=1.5  h=0.16 EEV:1.76% BOX_Y:0.12% ARO_ALL:1.36% ARO_Y:-0.00% BUD_G1:0.86% CC_e0:0.00% CVAR_l1:1.36%
+  cF=1.5  h=0.17 EEV:1.89% BOX_Y:0.12% ARO_ALL:1.36% ARO_Y:0.00% BUD_G1:0.90% CC_e0:0.00% CVAR_l1:1.36%
+  cF=1.5  h=0.18 EEV:2.03% BOX_Y:0.12% ARO_ALL:1.36% ARO_Y:0.00% BUD_G1:0.94% CC_e0:0.00% CVAR_l1:1.36%
+  cF=1.5  h=0.19 EEV:2.17% BOX_Y:0.12% ARO_ALL:1.36% ARO_Y:0.00% BUD_G1:0.99% CC_e0:0.00% CVAR_l1:1.36%
+  cF=1.5  h=0.20 EEV:2.31% BOX_Y:0.12% ARO_ALL:1.36% ARO_Y:0.00% BUD_G1:1.03% CC_e0:0.00% CVAR_l1:1.36%
+  cF=1.5  h=0.21 EEV:2.45% BOX_Y:0.12% ARO_ALL:1.36% ARO_Y:0.00% BUD_G1:1.08% CC_e0:0.00% CVAR_l1:1.36%
+  cF=1.5  h=0.22 EEV:2.60% BOX_Y:0.12% ARO_ALL:1.36% ARO_Y:0.00% BUD_G1:1.12% CC_e0:0.00% CVAR_l1:1.36%
+  cF=1.5  h=0.23 EEV:2.75% BOX_Y:0.12% ARO_ALL:1.36% ARO_Y:0.00% BUD_G1:1.17% CC_e0:0.00% CVAR_l1:1.36%
+  cF=1.5  h=0.24 EEV:2.89% BOX_Y:0.12% ARO_ALL:1.35% ARO_Y:0.00% BUD_G1:1.22% CC_e0:0.00% CVAR_l1:1.35%
+  cF=1.5  h=0.25 EEV:3.04% BOX_Y:0.12% ARO_ALL:1.35% ARO_Y:0.00% BUD_G1:1.26% CC_e0:0.00% CVAR_l1:1.35%
+  cF=1.5  h=0.26 EEV:3.19% BOX_Y:0.12% ARO_ALL:1.35% ARO_Y:0.00% BUD_G1:1.31% CC_e0:0.00% CVAR_l1:1.35%
+  cF=1.5  h=0.27 EEV:3.44% BOX_Y:0.12% ARO_ALL:1.35% ARO_Y:0.00% BUD_G1:1.36% CC_e0:0.00% CVAR_l1:1.35%
+  cF=1.5  h=0.28 EEV:3.72% BOX_Y:0.12% ARO_ALL:1.35% ARO_Y:0.00% BUD_G1:1.44% CC_e0:0.00% CVAR_l1:1.35%
+  cF=1.5  h=0.29 EEV:4.00% BOX_Y:0.12% ARO_ALL:1.35% ARO_Y:0.00% BUD_G1:1.51% CC_e0:0.00% CVAR_l1:1.35%
+  cF=1.5  h=0.30 EEV:4.25% BOX_Y:0.08% ARO_ALL:1.30% ARO_Y:0.00% BUD_G1:1.55% CC_e0:0.00% CVAR_l1:1.30%
+  cF=1.5  h=0.31 EEV:4.50% BOX_Y:0.03% ARO_ALL:1.25% ARO_Y:0.00% BUD_G1:1.57% CC_e0:0.00% CVAR_l1:1.25%
+  cF=1.5  h=0.32 EEV:4.77% BOX_Y:0.00% ARO_ALL:1.20% ARO_Y:0.00% BUD_G1:1.61% CC_e0:0.00% CVAR_l1:1.20%
+  cF=1.5  h=0.33 EEV:5.04% BOX_Y:0.00% ARO_ALL:1.14% ARO_Y:0.00% BUD_G1:1.74% CC_e0:0.00% CVAR_l1:1.14%
+  cF=1.5  h=0.34 EEV:5.27% BOX_Y:0.00% ARO_ALL:1.03% ARO_Y:0.00% BUD_G1:1.83% CC_e0:0.00% CVAR_l1:1.03%
+  cF=1.5  h=0.35 EEV:5.50% BOX_Y:0.00% ARO_ALL:0.92% ARO_Y:0.00% BUD_G1:1.93% CC_e0:0.00% CVAR_l1:0.92%
+  cF=1.5  h=0.36 EEV:5.74% BOX_Y:0.00% ARO_ALL:0.81% ARO_Y:0.00% BUD_G1:2.02% CC_e0:0.00% CVAR_l1:0.81%
+  cF=1.5  h=0.37 EEV:5.98% BOX_Y:0.00% ARO_ALL:0.70% ARO_Y:0.00% BUD_G1:2.12% CC_e0:0.00% CVAR_l1:0.70%
+  cF=1.5  h=0.38 EEV:6.23% BOX_Y:0.00% ARO_ALL:0.59% ARO_Y:0.00% BUD_G1:2.22% CC_e0:0.00% CVAR_l1:0.59%
+  cF=1.5  h=0.39 EEV:6.48% BOX_Y:0.00% ARO_ALL:0.48% ARO_Y:0.00% BUD_G1:2.32% CC_e0:0.00% CVAR_l1:0.48%
+  cF=1.5  h=0.40 EEV:6.74% BOX_Y:0.00% ARO_ALL:0.38% ARO_Y:0.00% BUD_G1:2.56% CC_e0:0.00% CVAR_l1:0.38%
+  cF=1.5  h=0.41 EEV:7.00% BOX_Y:0.00% ARO_ALL:0.27% ARO_Y:0.00% BUD_G1:2.85% CC_e0:0.00% CVAR_l1:0.27%
+  cF=1.5  h=0.42 EEV:7.27% BOX_Y:0.00% ARO_ALL:0.16% ARO_Y:0.00% BUD_G1:3.15% CC_e0:0.00% CVAR_l1:0.16%
+  cF=1.5  h=0.43 EEV:7.55% BOX_Y:0.00% ARO_ALL:0.05% ARO_Y:0.00% BUD_G1:3.46% CC_e0:0.00% CVAR_l1:0.05%
+  cF=1.5  h=0.44 EEV:7.80% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:3.77% CC_e0:0.00% CVAR_l1:0.00%
+  cF=1.5  h=0.45 EEV:8.03% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:4.07% CC_e0:0.00% CVAR_l1:0.00%
+  cF=1.5  h=0.46 EEV:8.24% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:4.33% CC_e0:Infeasible CVAR_l1:0.00%
+  cF=1.5  h=0.47 EEV:8.26% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:4.41% CC_e0:Infeasible CVAR_l1:0.00%
+  cF=1.5  h=0.48 EEV:8.30% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:4.49% CC_e0:Infeasible CVAR_l1:0.00%
+  cF=1.5  h=0.49 EEV:8.34% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:4.59% CC_e0:Infeasible CVAR_l1:0.00%
+  cF=1.5  h=0.50 EEV:8.26% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:4.54% CC_e0:Infeasible CVAR_l1:0.00%
+c_F=15.0: unmet floor per scenario [0.0, 120.0]
+  cF=15   h=0.01 EEV:1.10% BOX_Y:0.09% ARO_ALL:2.13% ARO_Y:0.00% BUD_G1:0.01% CC_e0:0.00% CVAR_l1:2.13%
+  cF=15   h=0.02 EEV:1.07% BOX_Y:0.02% ARO_ALL:2.00% ARO_Y:-0.00% BUD_G1:0.01% CC_e0:0.00% CVAR_l1:2.00%
+  cF=15   h=0.03 EEV:1.03% BOX_Y:0.02% ARO_ALL:1.87% ARO_Y:0.00% BUD_G1:0.02% CC_e0:0.00% CVAR_l1:1.87%
+  cF=15   h=0.04 EEV:1.00% BOX_Y:0.02% ARO_ALL:1.73% ARO_Y:0.00% BUD_G1:0.02% CC_e0:0.00% CVAR_l1:1.73%
+  cF=15   h=0.05 EEV:0.96% BOX_Y:0.02% ARO_ALL:1.58% ARO_Y:0.00% BUD_G1:0.02% CC_e0:0.00% CVAR_l1:1.58%
+  cF=15   h=0.06 EEV:0.93% BOX_Y:0.02% ARO_ALL:1.44% ARO_Y:-0.00% BUD_G1:0.04% CC_e0:0.00% CVAR_l1:1.44%
+  cF=15   h=0.07 EEV:0.89% BOX_Y:0.01% ARO_ALL:1.29% ARO_Y:0.00% BUD_G1:0.09% CC_e0:0.00% CVAR_l1:1.29%
+  cF=15   h=0.08 EEV:0.85% BOX_Y:0.01% ARO_ALL:1.14% ARO_Y:-0.00% BUD_G1:0.13% CC_e0:0.00% CVAR_l1:1.14%
+  cF=15   h=0.09 EEV:0.84% BOX_Y:0.01% ARO_ALL:0.98% ARO_Y:0.00% BUD_G1:0.17% CC_e0:0.00% CVAR_l1:0.98%
+  cF=15   h=0.10 EEV:0.83% BOX_Y:0.01% ARO_ALL:0.86% ARO_Y:0.00% BUD_G1:0.20% CC_e0:0.00% CVAR_l1:0.86%
+  cF=15   h=0.11 EEV:0.84% BOX_Y:0.01% ARO_ALL:0.77% ARO_Y:0.00% BUD_G1:0.24% CC_e0:0.00% CVAR_l1:0.77%
+  cF=15   h=0.12 EEV:0.87% BOX_Y:0.01% ARO_ALL:0.68% ARO_Y:-0.00% BUD_G1:0.28% CC_e0:-0.00% CVAR_l1:0.68%
+  cF=15   h=0.13 EEV:0.88% BOX_Y:0.00% ARO_ALL:0.66% ARO_Y:0.00% BUD_G1:0.30% CC_e0:0.00% CVAR_l1:0.66%
+  cF=15   h=0.14 EEV:0.89% BOX_Y:0.00% ARO_ALL:0.65% ARO_Y:0.00% BUD_G1:0.32% CC_e0:0.00% CVAR_l1:0.65%
+  cF=15   h=0.15 EEV:0.90% BOX_Y:0.00% ARO_ALL:0.63% ARO_Y:0.00% BUD_G1:0.34% CC_e0:0.00% CVAR_l1:0.63%
+  cF=15   h=0.16 EEV:0.91% BOX_Y:0.00% ARO_ALL:0.63% ARO_Y:0.00% BUD_G1:0.35% CC_e0:0.00% CVAR_l1:0.63%
+  cF=15   h=0.17 EEV:1.01% BOX_Y:0.00% ARO_ALL:0.62% ARO_Y:0.01% BUD_G1:0.37% CC_e0:0.00% CVAR_l1:0.62%
+  cF=15   h=0.18 EEV:1.13% BOX_Y:0.00% ARO_ALL:0.61% ARO_Y:0.01% BUD_G1:0.39% CC_e0:0.00% CVAR_l1:0.61%
+  cF=15   h=0.19 EEV:1.24% BOX_Y:0.00% ARO_ALL:0.60% ARO_Y:0.01% BUD_G1:0.41% CC_e0:0.00% CVAR_l1:0.60%
+  cF=15   h=0.20 EEV:1.35% BOX_Y:0.00% ARO_ALL:0.59% ARO_Y:0.02% BUD_G1:0.42% CC_e0:0.00% CVAR_l1:0.59%
+  cF=15   h=0.21 EEV:1.47% BOX_Y:0.01% ARO_ALL:0.58% ARO_Y:0.02% BUD_G1:0.44% CC_e0:0.00% CVAR_l1:0.58%
+  cF=15   h=0.22 EEV:1.58% BOX_Y:0.01% ARO_ALL:0.57% ARO_Y:0.02% BUD_G1:0.45% CC_e0:0.00% CVAR_l1:0.57%
+  cF=15   h=0.23 EEV:1.70% BOX_Y:0.01% ARO_ALL:0.56% ARO_Y:0.03% BUD_G1:0.47% CC_e0:0.00% CVAR_l1:0.56%
+  cF=15   h=0.24 EEV:1.82% BOX_Y:0.01% ARO_ALL:0.55% ARO_Y:0.03% BUD_G1:0.48% CC_e0:0.00% CVAR_l1:0.55%
+  cF=15   h=0.25 EEV:1.93% BOX_Y:0.01% ARO_ALL:0.53% ARO_Y:0.04% BUD_G1:0.49% CC_e0:0.00% CVAR_l1:0.53%
+  cF=15   h=0.26 EEV:2.05% BOX_Y:0.01% ARO_ALL:0.52% ARO_Y:0.04% BUD_G1:0.50% CC_e0:0.00% CVAR_l1:0.52%
+  cF=15   h=0.27 EEV:2.26% BOX_Y:0.01% ARO_ALL:0.51% ARO_Y:0.04% BUD_G1:0.52% CC_e0:0.00% CVAR_l1:0.51%
+  cF=15   h=0.28 EEV:2.51% BOX_Y:0.02% ARO_ALL:0.50% ARO_Y:0.05% BUD_G1:0.55% CC_e0:0.00% CVAR_l1:0.50%
+  cF=15   h=0.29 EEV:2.76% BOX_Y:0.02% ARO_ALL:0.48% ARO_Y:0.05% BUD_G1:0.59% CC_e0:0.00% CVAR_l1:0.48%
+  cF=15   h=0.30 EEV:3.02% BOX_Y:0.02% ARO_ALL:0.47% ARO_Y:0.04% BUD_G1:0.62% CC_e0:0.00% CVAR_l1:0.47%
+  cF=15   h=0.31 EEV:3.28% BOX_Y:0.02% ARO_ALL:0.46% ARO_Y:0.03% BUD_G1:0.66% CC_e0:0.00% CVAR_l1:0.46%
+  cF=15   h=0.32 EEV:3.56% BOX_Y:0.02% ARO_ALL:0.44% ARO_Y:0.02% BUD_G1:0.70% CC_e0:0.00% CVAR_l1:0.44%
+  cF=15   h=0.33 EEV:3.84% BOX_Y:0.00% ARO_ALL:0.42% ARO_Y:0.00% BUD_G1:0.84% CC_e0:0.00% CVAR_l1:0.42%
+  cF=15   h=0.34 EEV:4.09% BOX_Y:0.00% ARO_ALL:0.37% ARO_Y:0.00% BUD_G1:0.95% CC_e0:0.00% CVAR_l1:0.37%
+  cF=15   h=0.35 EEV:4.35% BOX_Y:0.00% ARO_ALL:0.32% ARO_Y:0.00% BUD_G1:1.07% CC_e0:0.00% CVAR_l1:0.32%
+  cF=15   h=0.36 EEV:4.61% BOX_Y:0.00% ARO_ALL:0.27% ARO_Y:0.00% BUD_G1:1.18% CC_e0:0.00% CVAR_l1:0.27%
+  cF=15   h=0.37 EEV:4.88% BOX_Y:0.00% ARO_ALL:0.22% ARO_Y:0.00% BUD_G1:1.31% CC_e0:0.00% CVAR_l1:0.22%
+  cF=15   h=0.38 EEV:5.15% BOX_Y:0.00% ARO_ALL:0.18% ARO_Y:0.00% BUD_G1:1.43% CC_e0:0.00% CVAR_l1:0.18%
+  cF=15   h=0.39 EEV:5.43% BOX_Y:0.00% ARO_ALL:0.14% ARO_Y:0.00% BUD_G1:1.56% CC_e0:0.00% CVAR_l1:0.14%
+  cF=15   h=0.40 EEV:5.72% BOX_Y:0.00% ARO_ALL:0.10% ARO_Y:0.00% BUD_G1:1.83% CC_e0:0.00% CVAR_l1:0.10%
+  cF=15   h=0.41 EEV:6.01% BOX_Y:0.00% ARO_ALL:0.07% ARO_Y:0.00% BUD_G1:2.15% CC_e0:0.00% CVAR_l1:0.07%
+  cF=15   h=0.42 EEV:6.31% BOX_Y:0.00% ARO_ALL:0.04% ARO_Y:0.00% BUD_G1:2.48% CC_e0:0.00% CVAR_l1:0.04%
+  cF=15   h=0.43 EEV:6.61% BOX_Y:0.00% ARO_ALL:0.01% ARO_Y:0.00% BUD_G1:2.83% CC_e0:0.00% CVAR_l1:0.01%
+  cF=15   h=0.44 EEV:6.89% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:3.17% CC_e0:0.00% CVAR_l1:0.00%
+  cF=15   h=0.45 EEV:7.15% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:3.50% CC_e0:0.00% CVAR_l1:0.00%
+  cF=15   h=0.46 EEV:7.38% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:3.79% CC_e0:Infeasible CVAR_l1:0.00%
+  cF=15   h=0.47 EEV:7.43% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:3.90% CC_e0:Infeasible CVAR_l1:0.00%
+  cF=15   h=0.48 EEV:7.48% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:4.01% CC_e0:Infeasible CVAR_l1:0.00%
+  cF=15   h=0.49 EEV:7.54% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:4.13% CC_e0:Infeasible CVAR_l1:0.00%
+  cF=15   h=0.50 EEV:7.48% BOX_Y:0.00% ARO_ALL:0.00% ARO_Y:0.00% BUD_G1:4.10% CC_e0:Infeasible CVAR_l1:0.00%
+  c_F=1.5 method=RP loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.1778 worstcase_benefit_over_det_gt2pct_half=0.2003 cvar_benefit_over_det_gt2pct_half=0.2003 n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=EEV loss_vs_rp_gt2pct_half=0.1778 svc_gap_vs_rp_gt1_half=0.1792 svc_gap_vs_rp_first_grid_half=0.17 benefit_over_det_gt2pct_half=never worstcase_benefit_over_det_gt2pct_half=never cvar_benefit_over_det_gt2pct_half=never n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=BOX_Y loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.1867 worstcase_benefit_over_det_gt2pct_half=0.1994 cvar_benefit_over_det_gt2pct_half=0.1994 n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=BOX_YD loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.1778 worstcase_benefit_over_det_gt2pct_half=0.2003 cvar_benefit_over_det_gt2pct_half=0.2003 n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=ARO_ALL loss_vs_rp_gt2pct_half=below_grid svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2665 worstcase_benefit_over_det_gt2pct_half=0.1949 cvar_benefit_over_det_gt2pct_half=0.1949 n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=ARO_Y loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.1778 worstcase_benefit_over_det_gt2pct_half=0.2003 cvar_benefit_over_det_gt2pct_half=0.2003 n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=BUD_G0 loss_vs_rp_gt2pct_half=0.3578 svc_gap_vs_rp_gt1_half=0.3325 svc_gap_vs_rp_first_grid_half=0.32 benefit_over_det_gt2pct_half=0.2661 worstcase_benefit_over_det_gt2pct_half=0.1961 cvar_benefit_over_det_gt2pct_half=0.1961 n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=BUD_G1 loss_vs_rp_gt2pct_half=0.3578 svc_gap_vs_rp_gt1_half=0.3325 svc_gap_vs_rp_first_grid_half=0.32 benefit_over_det_gt2pct_half=0.2661 worstcase_benefit_over_det_gt2pct_half=0.1961 cvar_benefit_over_det_gt2pct_half=0.1961 n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=BUD_G2 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2142 worstcase_benefit_over_det_gt2pct_half=0.1979 cvar_benefit_over_det_gt2pct_half=0.1979 n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=BUD_G3 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.1778 worstcase_benefit_over_det_gt2pct_half=0.2003 cvar_benefit_over_det_gt2pct_half=0.2003 n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=CC_e0 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.1778 worstcase_benefit_over_det_gt2pct_half=0.2003 cvar_benefit_over_det_gt2pct_half=0.2003 n_grid=50 infeasible_or_failed_halves=0.46;0.47;0.48;0.49;0.50
+  c_F=1.5 method=CC_e0.125 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.1778 worstcase_benefit_over_det_gt2pct_half=0.2003 cvar_benefit_over_det_gt2pct_half=0.2003 n_grid=50 infeasible_or_failed_halves=0.50
+  c_F=1.5 method=CC_e0.25 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.1778 worstcase_benefit_over_det_gt2pct_half=0.2003 cvar_benefit_over_det_gt2pct_half=0.2003 n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=CVAR_l0 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.1778 worstcase_benefit_over_det_gt2pct_half=0.2003 cvar_benefit_over_det_gt2pct_half=0.2003 n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=CVAR_l0.5 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.1778 worstcase_benefit_over_det_gt2pct_half=0.2003 cvar_benefit_over_det_gt2pct_half=0.2003 n_grid=50 infeasible_or_failed_halves=none
+  c_F=1.5 method=CVAR_l1 loss_vs_rp_gt2pct_half=below_grid svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2665 worstcase_benefit_over_det_gt2pct_half=0.1949 cvar_benefit_over_det_gt2pct_half=0.1949 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=RP loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2557 worstcase_benefit_over_det_gt2pct_half=0.2549 cvar_benefit_over_det_gt2pct_half=0.2549 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=EEV loss_vs_rp_gt2pct_half=0.2557 svc_gap_vs_rp_gt1_half=0.1792 svc_gap_vs_rp_first_grid_half=0.17 benefit_over_det_gt2pct_half=never worstcase_benefit_over_det_gt2pct_half=never cvar_benefit_over_det_gt2pct_half=never n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=BOX_Y loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2568 worstcase_benefit_over_det_gt2pct_half=0.2616 cvar_benefit_over_det_gt2pct_half=0.2616 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=BOX_YD loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2590 worstcase_benefit_over_det_gt2pct_half=0.2739 cvar_benefit_over_det_gt2pct_half=0.2739 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=ARO_ALL loss_vs_rp_gt2pct_half=below_grid svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2796 worstcase_benefit_over_det_gt2pct_half=0.2057 cvar_benefit_over_det_gt2pct_half=0.2057 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=ARO_Y loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2590 worstcase_benefit_over_det_gt2pct_half=0.2739 cvar_benefit_over_det_gt2pct_half=0.2739 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=BUD_G0 loss_vs_rp_gt2pct_half=0.4054 svc_gap_vs_rp_gt1_half=0.3325 svc_gap_vs_rp_first_grid_half=0.32 benefit_over_det_gt2pct_half=0.2821 worstcase_benefit_over_det_gt2pct_half=0.2159 cvar_benefit_over_det_gt2pct_half=0.2159 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=BUD_G1 loss_vs_rp_gt2pct_half=0.4054 svc_gap_vs_rp_gt1_half=0.3325 svc_gap_vs_rp_first_grid_half=0.32 benefit_over_det_gt2pct_half=0.2821 worstcase_benefit_over_det_gt2pct_half=0.2159 cvar_benefit_over_det_gt2pct_half=0.2159 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=BUD_G2 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2678 worstcase_benefit_over_det_gt2pct_half=0.2376 cvar_benefit_over_det_gt2pct_half=0.2376 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=BUD_G3 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2590 worstcase_benefit_over_det_gt2pct_half=0.2739 cvar_benefit_over_det_gt2pct_half=0.2739 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=CC_e0 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2557 worstcase_benefit_over_det_gt2pct_half=0.2549 cvar_benefit_over_det_gt2pct_half=0.2549 n_grid=50 infeasible_or_failed_halves=0.46;0.47;0.48;0.49;0.50
+  c_F=15.0 method=CC_e0.125 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2557 worstcase_benefit_over_det_gt2pct_half=0.2549 cvar_benefit_over_det_gt2pct_half=0.2549 n_grid=50 infeasible_or_failed_halves=0.50
+  c_F=15.0 method=CC_e0.25 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2557 worstcase_benefit_over_det_gt2pct_half=0.2549 cvar_benefit_over_det_gt2pct_half=0.2549 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=CVAR_l0 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2557 worstcase_benefit_over_det_gt2pct_half=0.2549 cvar_benefit_over_det_gt2pct_half=0.2549 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=CVAR_l0.5 loss_vs_rp_gt2pct_half=never svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2796 worstcase_benefit_over_det_gt2pct_half=0.2057 cvar_benefit_over_det_gt2pct_half=0.2057 n_grid=50 infeasible_or_failed_halves=none
+  c_F=15.0 method=CVAR_l1 loss_vs_rp_gt2pct_half=below_grid svc_gap_vs_rp_gt1_half=never svc_gap_vs_rp_first_grid_half=never benefit_over_det_gt2pct_half=0.2796 worstcase_benefit_over_det_gt2pct_half=0.2057 cvar_benefit_over_det_gt2pct_half=0.2057 n_grid=50 infeasible_or_failed_halves=none
+non-optimal (status recorded, no value written): 12
+done in 51 s

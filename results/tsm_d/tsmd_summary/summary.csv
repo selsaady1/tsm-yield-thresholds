@@ -1,0 +1,79 @@
+key,value,display,run,file,row,col
+TSMD_cliff_bind_hr,0.16072,0.161,results/tsm_d/tsmd_r1_cliff_binding/,cliff_events.csv,event=eev_LG_binds,half
+TSMD_cliff_gap_hr,0.16072,0.161,results/tsm_d/tsmd_r1_cliff_binding/,cliff_events.csv,event=service_gap_opens,half
+TSMD_cliff_rpcap_hr,0.29167,0.292,results/tsm_d/tsmd_r1_cliff_binding/,cliff_events.csv,event=rp_fe_capacity_binds,half
+TSMD_cliff_rpLG_hr,0.45833,0.458,results/tsm_d/tsmd_r1_cliff_binding/,cliff_events.csv,event=rp_LG_binds,half
+TSMD_cliff_shadow_be_before,6.65,6.65,results/tsm_d/tsmd_r1_cliff_binding/,cliff_binding_sweep.csv,half=0.1,eev_worst_BE_shadow_cond
+TSMD_cliff_shadow_lg_before,0.0,0,results/tsm_d/tsmd_r1_cliff_binding/,cliff_binding_sweep.csv,half=0.1,eev_worst_LG_shadow_cond
+TSMD_cliff_shadow_lg_after,6.65,6.65,results/tsm_d/tsmd_r1_cliff_binding/,cliff_binding_sweep.csv,half=0.2,eev_worst_LG_shadow_cond
+TSMD_cliff_shadow_be_after,0.0,0,results/tsm_d/tsmd_r1_cliff_binding/,cliff_binding_sweep.csv,half=0.2,eev_worst_BE_shadow_cond
+TSMD_cliff_rp_wafers_016,14.685315,14.69,results/tsm_d/tsmd_r1_cliff_binding/,cliff_binding_sweep.csv,half=0.16,rp_wafers
+TSMD_cliff_ev_wafers_016,10.495627,10.50,results/tsm_d/tsmd_r1_cliff_binding/,cliff_binding_sweep.csv,half=0.16,ev_wafers
+TSMD_cliff_rp_lowdies_016,1050.0000225,"1{,}050",results/tsm_d/tsmd_r1_cliff_binding/,cliff_binding_sweep.csv,half=0.16,100*fe_lo*rp_wafers
+TSMD_cliff_ev_lowdies_016,750.4373305,750.4,results/tsm_d/tsmd_r1_cliff_binding/,cliff_binding_sweep.csv,half=0.16,100*fe_lo*ev_wafers
+TSMD_cliff_rp_worst_outs_016,0.0,0,results/tsm_d/tsmd_r1_cliff_binding/,cliff_binding_sweep.csv,half=0.16,rp_worst_outsourced
+TSMD_cliff_ev_worst_outs_016,299.5627,299.6,results/tsm_d/tsmd_r1_cliff_binding/,cliff_binding_sweep.csv,half=0.16,eev_worst_outsourced
+TSMD_tp_thr_half,0.17778,0.178,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=two_point,K=2",vss2_half
+TSMD_tp_thr_sd,0.15139,0.151,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=two_point,K=2",vss2_sd
+TSMD_unif7_thr_half,0.31442,0.314,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=uniform,K=7",vss2_half
+TSMD_unif7_thr_sd,0.12555,0.126,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=uniform,K=7",vss2_sd
+TSMD_beta22_7_thr_half,0.4127,0.413,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=beta22,K=7",vss2_half
+TSMD_beta22_7_thr_sd,0.11607,0.116,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=beta22,K=7",vss2_sd
+TSMD_unif15_thr_half,0.30494,0.305,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=uniform,K=15",vss2_half
+TSMD_beta22_15_thr_half,0.39561,0.396,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=beta22,K=15",vss2_half
+TSMD_betams_thr_sigma,0.13055,0.131,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=beta_mean_sd,K=7",vss2_sigma
+TSMD_betams_thr_sd,0.11537,0.115,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=beta_mean_sd,K=7",vss2_sd
+TSMD_tp_onset_half,0.16072,0.161,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=two_point,K=2",onset_half
+TSMD_unif7_onset_half,0.20058,0.201,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=uniform,K=7",onset_half
+TSMD_beta22_7_onset_half,0.27195,0.272,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,"family=beta22,K=7",onset_half
+TSMD_matched_onset_ratio_min,0.83333,0.833,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,all families,onset_lowest_over_mean
+TSMD_matched_onset_ratio_max,0.83334,0.833,results/tsm_d/tsmd_r2_matched_var/,matched_summary.csv,all families,onset_lowest_over_mean
+TSMD_tp_matchedvar,does not support,does not support,results/tsm_d/tsmd_r2_matched_var/,matched_verdict.csv,key=TSMD_tp_matchedvar,value
+TSMD_tp_matchedsupport,supports,supports,results/tsm_d/tsmd_r2_matched_var/,matched_verdict.csv,key=two_point_crosses_first_at_matched_support,value
+TSMD_map_ylo_base,0.729167,0.73,results/tsm_d/tsmd_r3_mapping/,mapping_table.csv,factor=base,rho_times_ybar
+TSMD_map_ylo_base_clip,0.71429,0.714,results/tsm_d/tsmd_r3_mapping/,mapping_table.csv,factor=base,pred_onset_ylo
+TSMD_map_rho_base,0.833333,0.833,results/tsm_d/tsmd_r3_mapping/,mapping_table.csv,factor=base,rho
+TSMD_map_ylo_min,0.5725,0.57,results/tsm_d/tsmd_r3_mapping/,mapping_table.csv,"factor=fe_mean,level=0.7",vss2_ylo
+TSMD_map_ylo_max,0.83446,0.83,results/tsm_d/tsmd_r3_mapping/,mapping_table.csv,"factor=outs_fe_capacity,level=150.0",vss2_ylo
+TSMD_map_onset_ylo_min,0.48718,0.49,results/tsm_d/tsmd_r3_mapping/,mapping_table.csv,"factor=be_capacity,level=0.8",solved_onset_ylo
+TSMD_map_onset_ylo_max,0.81666,0.82,results/tsm_d/tsmd_r3_mapping/,mapping_table.csv,"factor=be_capacity,level=1.1",solved_onset_ylo
+TSMD_map_onset_err_max,0.0,below $10^{-4}$,results/tsm_d/tsmd_r3_mapping/,mapping_table.csv,all rows with onset,onset_abs_err_half
+TSMD_map_n_configs,34,34,results/tsm_d/tsmd_r3_mapping/,mapping_table.csv,all rows,count
+TSMD_map_n_onset,33,33,results/tsm_d/tsmd_r3_mapping/,mapping_table.csv,solved_onset_half != none,count
+TSMD_200inst_drawn,200,200,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,id>0,count
+TSMD_200inst_seed,20261113,20261113,results/tsm_d/tsmd_r4_randinst/,run.json,,seed
+TSMD_200inst_n,200,200,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,"id>0,nonoptimal==0",count
+TSMD_200inst_struct_n,79,79,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class=threshold,count
+TSMD_200inst_struct_pct,39.5,39.5,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class share,count/n
+TSMD_200inst_always_n,94,94,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class=always,count
+TSMD_200inst_always_pct,47.0,47,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class share,count/n
+TSMD_200inst_never_n,27,27,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class=never,count
+TSMD_200inst_never_pct,13.5,13.5,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class share,count/n
+TSMD_200inst_mean,0.18181615901898734,0.182,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class=threshold,thr2_half
+TSMD_200inst_median,0.1561328125,0.156,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class=threshold,thr2_half
+TSMD_200inst_min,0.0112109375,0.011,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class=threshold,thr2_half
+TSMD_200inst_max,0.4798046875,0.480,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class=threshold,thr2_half
+TSMD_200inst_p10,0.0460390625,0.046,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class=threshold,thr2_half
+TSMD_200inst_p90,0.36357031250000005,0.364,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class=threshold,thr2_half
+TSMD_200inst_base_thr,0.1777734375,0.178,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,id=0,thr2_half
+TSMD_200inst_base_onset,0.1607177734375,0.161,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,id=0,solved_onset_half
+TSMD_200inst_multicross_n,16,16,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,"thr2_class=threshold,n_crossings_2pct>1",count
+TSMD_200inst_cliff_n,182,182,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,pred_onset_half<=0.5 or solved_onset_half!=NA,count
+TSMD_200inst_both_n,178,178,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,both present,count
+TSMD_200inst_hit_n,169,169,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,|pred-solved|<=0.005,count
+TSMD_200inst_nocliff_n,18,18,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,neither,count
+TSMD_200inst_miss_n,13,13,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,cliff and not hit,count
+TSMD_200inst_rho_hit_pct,92.85714285714286,92.9,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,hit_n / cliff_n,count
+TSMD_200inst_agree_pct,93.5,93.5,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,(hit_n + nocliff_n)/n,count
+TSMD_200inst_rho_tol,0.005,0.005,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,,
+TSMD_200inst_rho_err_median,4.6546353529644535e-06,below $10^{-5}$,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,both present,|pred_onset_half - solved_onset_half|
+TSMD_200inst_rho_err_p90,4.8828125e-06,below $10^{-5}$,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,both present,|pred_onset_half - solved_onset_half|
+TSMD_200inst_rho_err_max,0.27197411708194474,0.272,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,both present,|pred_onset_half - solved_onset_half|
+TSMD_200inst_miss_hedge_max,0.5759461999999997,0.58,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,misses,rp_hedge_wafers_at_0.25
+TSMD_200inst_hit_hedge_min,-2.3929159999999996,-2.39,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,hits,rp_hedge_wafers_at_0.25
+TSMD_200inst_hit_lowhedge_n,10,10,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,hits,rp_hedge_wafers_at_0.25
+TSMD_200inst_spearman,0.5932940475796149,0.59,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class=threshold and pred_onset_half<=0.5,"spearman(pred_onset_half, thr2_half)"
+TSMD_200inst_spearman_n,74,74,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,,count
+TSMD_200inst_near_cliff_pct,15.189873417721518,15.2,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class=threshold,|thr2_half - solved_onset_half|<=0.02
+TSMD_200inst_before_cliff_pct,26.582278481012658,26.6,results/tsm_d/tsmd_r4_randinst/,instances_results.csv,thr2_class=threshold,thr2_half < solved_onset_half - 0.02
+TSMD_200inst_runtime_min,5.039833333333333,5,results/tsm_d/tsmd_r4_randinst/,run.json,,runtime_s/60

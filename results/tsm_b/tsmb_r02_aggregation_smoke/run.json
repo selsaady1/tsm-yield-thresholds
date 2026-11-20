@@ -1,0 +1,36 @@
+{
+ "prompt_id": "tsm_b",
+ "run_id": "tsmb_r02_aggregation_smoke",
+ "purpose": "R1.7b: tool-group disaggregation and non-identical fabs; threshold and rho check",
+ "command": "nice -n 10 /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/.venv/bin/python run_r02_aggregation.py --smoke",
+ "cwd": "/Users/saifelsaady/Developer/Projects/PhD Research Project/TSM-26-0314_work/tsm_b/code/tsm_b",
+ "seed": 0,
+ "started_at": "2026-11-13T16:13:05-07:00",
+ "finished_at": "2026-11-13T16:13:11-07:00",
+ "runtime_s": 5.2,
+ "status": "OK",
+ "python": "3.14.5",
+ "pulp": "3.3.0",
+ "cbc": "2.10.13 (/opt/homebrew/Cellar/cbc/2.10.13/bin/cbc)",
+ "solver_options": {
+  "solver": "CBC via PuLP PULP_CBC_CMD",
+  "threads": 1,
+  "msg": 0,
+  "gapRel": "CBC default (models are LPs apart from two inert binaries in the single-period model)",
+  "timeLimit": null
+ },
+ "input_files": {},
+ "output_files": {
+  "results/tsm_b/tsmb_r02_aggregation_smoke/sweep.csv": "d9b0b3d957181a73e13845c576f32165d1cff0e6ce892bb2b4b207bc74b03108",
+  "results/tsm_b/tsmb_r02_aggregation_smoke/summary.csv": "47b4ea0013db13c8535990ea155afde0f870679d70c5d35cf98eac8b7144cb03",
+  "results/tsm_b/tsmb_r02_aggregation_smoke/log.txt": "c5746f7cffc01b9583b8277005cc80f59b843524b9285e5625706a7d9d49b019"
+ },
+ "git_commit": "none (not a git repo)",
+ "code_sha256": {
+  "code/tsm_b/run_r02_aggregation.py": "aea3dce5a65b12d5b1b521d84baa02dff7f235bcc4f1e935848462c1c13d4df0",
+  "code/tsm_b/tsmb_sweeps.py": "86edac4f81a939c036dad9af7b04b0d8f17874a84cf75e22a5e586ced9e3564c",
+  "code/tsm_b/tsmb_static.py": "abb0433e8f92a241af48c2b7fc092a58ce2c9471d8d77fd99d14b7e93d9cb20c",
+  "repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50"
+ },
+ "notes": "all optimal: True; smoke=True"
+}
