@@ -1,0 +1,205 @@
+% ==============================================================
+% TSM-A (Nov 13, 2026): supplement Section S-XV. Input after
+% \input{supplement_detail} in supplement.tex. Every number is read
+% from tsm-yield-thresholds/results/tsm_a/ (figs_tables/numbers.csv
+% lists each one with its file and row); scripts in code/tsm_a/.
+% ==============================================================
+\section{Extensions I in Detail: Other Planning Approaches and Other Uncertainty}
+\label{sec:S-extA}
+
+This section gives the formulations, full results, and run records behind the article's section ``Extensions I.'' The scripts are in \texttt{code/tsm\_a/} and every output, with a \texttt{run.json} that records the command, seed, commit, solver version, and runtime, is in \texttt{results/tsm\_a/<run\_id>/} of the code repository. All runs are solver runs (PuLP~3.3.0 with CBC~2.10.13); none uses a language model.
+
+\subsection{Common Setup}
+
+One model builder extends the article's Eqs.~(1) to~(9) with the options below; with its default options it is the article's recourse problem, and it reproduces the Step~2 code to $9.1\times10^{-13}$ in objective value and the baseline RP, EEV, and VSS (\$6{,}380.66, \$6{,}288.50, \$92.16) exactly. Every plan fixes the wafer starts $x_f$; it is then evaluated as the article evaluates the deterministic plan, by fixing $x_f$ and re-optimizing the recourse in each scenario. Crossings are located by linear interpolation between the 50 half-ranges of Step~5 (the rule of Steps~5 and~6); onsets of the service gap by bisection to $10^{-4}$.
+
+\subsection{Other Planning Approaches: Formulations}
+
+Let $P_\xi$ denote the profit of scenario $\xi$: the bracket in Eq.~(1) minus $c_F\sum_f x_f$.
+
+\emph{Static box-robust plan}~\cite{soyster1973}. Eqs.~(1) to~(9) with the single scenario $(y^F_{\text{lo}},\bar q,y^B_{\text{lo}})$, or $(y^F_{\text{lo}},q_{\text{hi}},y^B_{\text{lo}})$ for the variant with demand at its high level.
+
+\emph{Adjustable robust plan}~\cite{bental2004adjustable}. $\max t$ subject to $t\le P_\xi$ and Eqs.~(2) to~(9) for every $\xi$, so the recourse is scenario-wise. The variant robust in the yields only maximizes $\sum_q \pi_q t_q$ subject to $t_q\le P_\xi$ for every $\xi$ with demand $q$.
+
+\emph{Budgeted plan}~\cite{bertsimas2004}. The three yields (FE1, FE2, BE) are at their mean ($\bar y^F=(y^F_{\text{lo}}+y^F_{\text{hi}})/2$, $\bar y^B=0.80$) or at their low level, with at most $\Gamma$ of them low; each fab has its own FE yield in Eq.~(3). The worst case is taken over the vertices of this budget set, crossed with the two demand levels, with the objective of the variant robust in the yields. This is a finite-scenario version of the budget of uncertainty. Its $\Gamma=3$ case has the same worst case as the variant robust in the yields (every yield low), and its $\Gamma=0$ case ignores yield risk.
+
+\emph{Chance-constrained plan}~\cite{charnes1959,luedtke2008sample}. Eqs.~(1) to~(9) with $m_\xi\le m^0_\xi+s+q_\xi b_\xi$ for every $\xi$, $\sum_\xi\pi_\xi b_\xi\le\epsilon$, $b_\xi\in\{0,1\}$, and $s=0$. Here $m^0_\xi$ is the unmet demand of scenario $\xi$ when FE supply is unlimited (solved: 120 units in the scenarios with high demand and low BE yield, 0 otherwise), so the constraint concerns only avoidable shortfall.
+
+\emph{CVaR plan}~\cite{rockafellar2000}. $\max\,(1-\lambda)\sum_\xi\pi_\xi P_\xi+\lambda\big[\eta-\frac{1}{1-\alpha}\sum_\xi\pi_\xi u_\xi\big]$ with $u_\xi\ge\eta-P_\xi$, $u_\xi\ge0$, $\alpha=0.9$. With eight scenarios of probability $0.125>1-\alpha$, CVaR$_{0.9}$ is the profit of the worst scenario, so $\lambda=1$ is the max-min problem and $\lambda=0$ is the RP (the latter checked at every half-range).
+
+Table~\ref{tab:S-extA-paradigms} lists every plan at the base wafer cost and at $c_F=\$15$, and Fig.~\ref{fig:S-extA-paradigms} shows the loss of selected plans against the RP. At $c_F=\$15$ the deterministic plan's loss exceeds 2\% from $h=0.26$, and the box plans and the plan robust in the yields stay within 0.09\% of the RP. The chance constraint with $\epsilon=0$ is infeasible from $h=0.46$ and the one with $\epsilon=0.125$ at $h=0.50$, at both wafer costs; those points are omitted.
+
+\begin{table*}[t]
+\centering
+\caption{Every plan of the article's Table on other planning approaches, at two wafer costs (Step~5 sweep, 50 half-ranges). Max loss: largest expected-profit loss against the RP, \% of the RP. Loss $>2\%$: grid half-ranges at which it exceeds 2\%. Gain $>2\%$ from $h$: interpolated half-range from which the plan beats the deterministic plan by more than 2\%, in expected profit (\% of the RP) and in worst-case profit (\% of the deterministic plan's). Gap: half-range from which its expected unmet demand exceeds the RP's by more than one unit. $<$0.01: at the smallest half-range.}
+\label{tab:S-extA-paradigms}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}l ccccc ccccc@{}}
+\toprule
+ & \multicolumn{5}{c}{\textbf{$c_F=\$1.50$ (base)}} & \multicolumn{5}{c}{\textbf{$c_F=\$15$}} \\
+\cmidrule(lr){2-6}\cmidrule(l){7-11}
+\textbf{Plan} & \textbf{Max loss} & \textbf{Loss $>2\%$} & \textbf{Gain, exp.} & \textbf{Gain, worst} & \textbf{Gap} & \textbf{Max loss} & \textbf{Loss $>2\%$} & \textbf{Gain, exp.} & \textbf{Gain, worst} & \textbf{Gap} \\
+\midrule
+Deterministic (EEV) & 8.34 & 0.18 to 0.50 & n/a & n/a & 0.179 & 7.54 & 0.26 to 0.50 & n/a & n/a & 0.179 \\
+Stochastic (RP) & 0.00 & none & 0.178 & 0.200 & never & 0.00 & none & 0.256 & 0.255 & never \\
+Box robust, yields low & 0.19 & none & 0.187 & 0.199 & never & 0.09 & none & 0.257 & 0.262 & never \\
+Box robust, yields low, demand high & 0.00 & none & 0.178 & 0.200 & never & 0.05 & none & 0.259 & 0.274 & never \\
+Adj.\ robust in yields & 0.00 & none & 0.178 & 0.200 & never & 0.05 & none & 0.259 & 0.274 & never \\
+Adj.\ robust, all 8 scen. & 2.71 & 0.01 to 0.06 & 0.267 & 0.195 & never & 2.13 & 0.01 to 0.02 & 0.280 & 0.206 & never \\
+Budget $\Gamma=0$ & 4.59 & 0.36 to 0.50 & 0.266 & 0.196 & 0.333 & 4.13 & 0.41 to 0.50 & 0.282 & 0.216 & 0.333 \\
+Budget $\Gamma=1$ & 4.59 & 0.36 to 0.50 & 0.266 & 0.196 & 0.333 & 4.13 & 0.41 to 0.50 & 0.282 & 0.216 & 0.333 \\
+Budget $\Gamma=2$ & 0.75 & none & 0.214 & 0.198 & never & 0.25 & none & 0.268 & 0.238 & never \\
+Budget $\Gamma=3$ & 0.00 & none & 0.178 & 0.200 & never & 0.05 & none & 0.259 & 0.274 & never \\
+Chance, $\epsilon=0$ & 0.00 & none & 0.178 & 0.200 & never & 0.00 & none & 0.256 & 0.255 & never \\
+Chance, $\epsilon=0.125$ & 0.00 & none & 0.178 & 0.200 & never & 0.00 & none & 0.256 & 0.255 & never \\
+Chance, $\epsilon=0.25$ & 0.00 & none & 0.178 & 0.200 & never & 0.00 & none & 0.256 & 0.255 & never \\
+CVaR, $\lambda=0.5$ & 0.00 & none & 0.178 & 0.200 & never & 0.63 & none & 0.280 & 0.206 & never \\
+CVaR, $\lambda=1$ & 2.71 & 0.01 to 0.06 & 0.267 & 0.195 & never & 2.13 & 0.01 to 0.02 & 0.280 & 0.206 & never \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig_extA_paradigms.pdf}
+\caption{Expected-profit loss against the RP of selected plans over the FE half-range, at the base wafer cost and at $c_F=\$15$. Dotted line: 2\%.}
+\label{fig:S-extA-paradigms}
+\end{figure*}
+
+\subsection{Capacity Uncertainty: Model and Full Results}
+
+\emph{Outsourced capacity.} Eq.~(4) uses a scenario capacity $L^G_{g\xi}\in\{(1-\delta)L^G_g,(1+\delta)L^G_g\}$, each with probability one half, independent of yields and demand.
+
+\emph{In-house capacity.} Planned starts satisfy $x_f\le(1+\delta)L^F_f$. The wafers processed in scenario $\xi$ are $r_{f\xi}=\min(x_f,L^F_{f\xi})$ with $L^F_{f\xi}\in\{(1-\delta)L^F_f,(1+\delta)L^F_f\}$ (a common shock to both fabs), enforced by $r_{f\xi}\le x_f$, $r_{f\xi}\le L^F_{f\xi}$, $r_{f\xi}\ge x_f-\bar L_f d_{f\xi}$, $r_{f\xi}\ge L^F_{f\xi}-\bar L_f(1-d_{f\xi})$, $d_{f\xi}\in\{0,1\}$, $\bar L_f=(1+\delta)L^F_f$. Eq.~(3) uses $r_{f\xi}$ in place of $x_f$, and $c_F$ is charged on $r_{f\xi}$.
+
+\emph{Deterministic plan.} The expected-value problem uses the mean capacities and does not determine the split of wafers between the identical fabs. We split in proportion to fab capacity. With the split returned by CBC (FE1 filled first), the deterministic plan's \%VSS is at least 2.02, 3.11, and 5.97 at every half-range for $\delta=0.1$, 0.2, and 0.3.
+
+Table~\ref{tab:S-extA-capacity} gives every configuration; Fig.~\ref{fig:S-extA-capacity} shows the service gap under uncertain $L_G$ and \%VSS under uncertain in-house capacity.
+
+\begin{table}[t]
+\centering
+\caption{Capacity uncertainty, all configurations. Half-ranges at which \%VSS passes 2\% and the service gap passes one unit (interpolated), the solved and predicted gap onset (prediction: Eq.~(12) with the low $L_G$), their absolute difference, the first grid half-range at which the RP's own unmet demand rises, and the service gap at $h=0.50$ (units).}
+\label{tab:S-extA-capacity}
+\footnotesize
+\setlength{\tabcolsep}{2.4pt}
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+\textbf{Unc.} & \textbf{$\delta$\%} & \textbf{2\%} & \textbf{Gap$>$1} & \textbf{Onset} & \textbf{Pred.} & \textbf{$|\Delta|$} & \textbf{RP} & \textbf{Gap} \\
+\midrule
+$L_G$ & 0 & 0.178 & 0.179 & 0.161 & 0.161 & 0.00001 & 0.46 & 37.0 \\
+$L_G$ & 10 & 0.165 & 0.149 & 0.117 & 0.117 & 0.00001 & 0.45 & 37.0 \\
+$L_G$ & 20 & 0.140 & 0.110 & 0.088 & 0.088 & 0.00005 & 0.43 & 36.6 \\
+$L_G$ & 30 & 0.118 & 0.081 & 0.058 & 0.058 & 0.00000 & 0.41 & 35.6 \\
+In-house & 0 & 0.178 & 0.179 & 0.161 & 0.161 & 0.00001 & 0.46 & 37.0 \\
+In-house & 10 & 0.178 & 0.179 & 0.161 & 0.161 & 0.00001 & 0.42 & 33.7 \\
+In-house & 20 & 0.183 & 0.179 & 0.161 & 0.161 & 0.00001 & 0.36 & 27.2 \\
+In-house & 30 & 0.217 & 0.179 & 0.161 & 0.161 & 0.00001 & 0.28 & 22.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig_extA_capacity.pdf}
+\caption{Capacity uncertainty. Left: service gap with outsourced FE capacity $L_G$ two-point random. Right: \%VSS with in-house FE capacity two-point random (proportional split). Dotted line: 2\%.}
+\label{fig:S-extA-capacity}
+\end{figure*}
+
+\subsection{Demand Map: All Settings}
+
+Table~\ref{tab:S-extA-demand} lists the 15 demand settings of the article's demand map. $\rho=(N_{\max}-L_G)/\bar N$ uses $N_{\max}$ from a solve with FE supply unlimited and $\bar N$ from the expected-value plan at zero FE spread. The $\bar q=750$ rows repeat the Step~8 demand-spread runs; the largest difference in \%VSS from the stored Step~8 values is 0.00005, the rounding of that file.
+
+\begin{table}[t]
+\centering
+\caption{Demand map: demand mean $\bar q$ and half-range (units), $\rho$, half-range of the \%VSS $=2\%$ crossing ($<$: exceeded at the smallest half-range), solved and predicted gap onset, and half-range at which the service gap passes one unit.}
+\label{tab:S-extA-demand}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}rrccccc@{}}
+\toprule
+$\bar q$ & \textbf{Half} & $\rho$ & \textbf{2\%} & \textbf{Onset} & \textbf{Pred.} & \textbf{Gap$>$1} \\
+\midrule
+675 & 0 & 0.744 & 0.175 & 0.282 & 0.282 & 0.291 \\
+675 & 75 & 0.877 & 0.111 & 0.108 & 0.108 & 0.120 \\
+675 & 150 & 0.930 & $<$ & 0.061 & 0.061 & 0.073 \\
+675 & 225 & 0.930 & $<$ & 0.061 & 0.061 & 0.073 \\
+675 & 300 & 0.930 & $<$ & 0.061 & 0.061 & 0.066 \\
+750 & 0 & 0.786 & 0.173 & 0.228 & 0.228 & 0.237 \\
+750 & 75 & 0.833 & 0.177 & 0.161 & 0.161 & 0.179 \\
+750 & 150 & 0.833 & 0.178 & 0.161 & 0.161 & 0.179 \\
+750 & 225 & 0.833 & 0.164 & 0.161 & 0.161 & 0.169 \\
+750 & 300 & 0.833 & $<$ & 0.161 & 0.161 & 0.169 \\
+825 & 0 & 0.755 & 0.208 & 0.269 & 0.269 & 0.276 \\
+825 & 75 & 0.755 & 0.220 & 0.269 & 0.269 & 0.284 \\
+825 & 150 & 0.755 & 0.242 & 0.269 & 0.269 & 0.275 \\
+825 & 225 & 0.755 & 0.269 & 0.269 & 0.269 & 0.275 \\
+825 & 300 & 0.755 & 0.269 & 0.269 & 0.269 & 0.275 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Scenarios from Limited Data: Method and Full Results}
+
+\emph{Truth.} FE yield $\sim$ Beta$(a,b)$ with mean 0.875, moment-matched as in Section~\mbox{S-VI}: $(a,b)=(16.14,2.31)$ for standard deviation 0.075 and $(3.38,0.483)$ for 0.15. The optimal stochastic plan under the truth starts 14.64 and 18.00 wafers (expected profit \$6{,}376.81 and \$6{,}350.96); the deterministic plan from the true mean starts 10.29 wafers; the true VSS is \$96.79 (1.52\%) and \$164.82 (2.60\%). A Monte Carlo check with 200{,}000 draws gives \$6{,}376.78 and \$6{,}351.14 for the optimal expected profit.
+
+\emph{Exact evaluation.} With the wafer starts fixed, the recourse value of $D$ in-house dies, $Q(D;q,y^B)$, is concave and piecewise linear in $D$. We tabulated it with CBC at $D=0,1,\dots,1{,}800$ for each demand and BE-yield pair, recovered its pieces, and checked them against direct solves at 300 random non-integer $D$ per pair (largest deviation $6.6\times10^{-5}$, CBC's numerical tolerance). The expected recourse value under the Beta truth is then a closed-form sum of incomplete beta functions, and the SAA and expected-value problems are solved exactly over total wafer starts in $[0,18]$ by enumerating breakpoints. Against direct CBC solves of the full model on nine random samples the largest deviation is $1.9\times10^{-6}$; the same code reproduces the article's baseline RP, EEV, and VSS and the seven-point Beta VSS at standard deviation 0.07 (\$92.000; \$92.0 in the Step~1 Beta file).
+
+\emph{Plans and statistics.} For each replication (seed \texttt{SeedSequence([20261113, $\sigma$ index, $n$, $r$])}): the SAA plan~\cite{kleywegt2002}; the deterministic plan from the sample mean; $B=20$ bootstrap resamples~\cite{efron1993bootstrap}, which give the bagged plan (average wafer starts of the resample plans) and Efron's optimism correction of the in-sample VSS; the exact optimality gap; and the one-sided 95\% gap bound of~\cite{mak1999monte,bayraksan2006assessing}, mean $+\,t_{0.95,19}\,s/\sqrt{20}$ over 20 batches of size $n$, with batches drawn from the truth or as bootstrap resamples of the data. The optional Wasserstein distributionally robust plan was not run.
+
+Table~\ref{tab:S-extA-data} gives both truths. Under the narrower truth (standard deviation 0.075, true \%VSS 1.52\%) estimation matters little: realized and in-sample VSS are within \$2 of the true VSS from five lots on, and the in-sample \%VSS wrongly exceeds 2\% in at most 4.5\% of replications. In every cell the confidence interval of the VSS optimism contains zero. In all 2{,}000 replications the realized VSS is positive. Fig.~\ref{fig:S-extA-data} shows the spread of in-sample and realized VSS.
+
+\begin{table*}[t]
+\centering
+\caption{Scenarios from $n$ lot yields, both truths (200 replications per row; means, \$). Opt.\ VSS: in-sample minus realized VSS, with 95\% confidence interval. Opt.\ obj.: in-sample minus realized profit of the SAA plan. Boot-corr.: in-sample VSS after Efron's optimism correction. Bagged: realized VSS of the bagged plan. Gap SAA, Gap det.: exact optimality gaps. In $>$2, Real $>$2: \% of replications with in-sample or realized \%VSS above 2\%. Cover: \% of replications whose 95\% gap bound covers the exact gap (truth batches, bootstrap batches).}
+\label{tab:S-extA-data}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lr cc c c cc cc cc cc@{}}
+\toprule
+$\sigma$ & $n$ & \textbf{VSS in} & \textbf{VSS real.} & \textbf{Opt.\ VSS} & \textbf{Opt.\ obj.} & \textbf{Boot-corr.} & \textbf{Bagged} & \textbf{Gap SAA} & \textbf{Gap det.} & \textbf{In $>$2} & \textbf{Real $>$2} & \textbf{Cover truth} & \textbf{Cover boot} \\
+\midrule
+0.075 & 5 & 96.4 & 94.8 & 1.5 [$-$3.1, 6.1] & 7.7 & 95.2 & 93.4 & 4.57 & 99.4 & 2.5 & 9.5 & 100.0 & 37.0 \\
+0.075 & 10 & 97.3 & 96.6 & 0.7 [$-$2.8, 4.3] & 4.1 & 97.2 & 96.1 & 2.03 & 98.6 & 4.5 & 4.5 & 100.0 & 53.5 \\
+0.075 & 20 & 96.9 & 97.0 & $-$0.1 [$-$2.9, 2.7] & 2.0 & 96.8 & 96.9 & 0.80 & 97.8 & 1.0 & 1.5 & 100.0 & 70.0 \\
+0.075 & 50 & 96.8 & 96.7 & 0.1 [$-$1.5, 1.7] & 0.9 & 96.7 & 96.7 & 0.39 & 97.1 & 0.0 & 0.0 & 100.0 & 72.5 \\
+0.075 & 100 & 96.9 & 97.1 & $-$0.2 [$-$1.4, 0.9] & 0.4 & 96.6 & 97.1 & 0.21 & 97.3 & 0.0 & 0.0 & 100.0 & 71.0 \\
+\midrule
+0.15 & 5 & 149.8 & 148.1 & 1.7 [$-$13.2, 16.6] & 42.1 & 155.4 & 138.9 & 26.81 & 174.9 & 38.0 & 72.5 & 96.0 & 26.5 \\
+0.15 & 10 & 151.9 & 161.0 & $-$9.1 [$-$20.7, 2.6] & 21.3 & 155.5 & 155.5 & 14.48 & 175.5 & 55.0 & 85.0 & 97.0 & 47.5 \\
+0.15 & 20 & 161.2 & 162.9 & $-$1.7 [$-$11.2, 7.8] & 8.2 & 164.4 & 160.3 & 4.74 & 167.7 & 73.0 & 87.0 & 97.5 & 67.5 \\
+0.15 & 50 & 166.0 & 162.1 & 3.8 [$-$2.7, 10.3] & $-$0.6 & 166.7 & 161.2 & 1.01 & 163.1 & 87.0 & 96.0 & 99.0 & 86.5 \\
+0.15 & 100 & 166.4 & 163.9 & 2.5 [$-$2.2, 7.3] & $-$0.5 & 166.9 & 163.5 & 0.16 & 164.0 & 98.0 & 100.0 & 100.0 & 95.0 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig_extA_limited_data.pdf}
+\caption{In-sample and realized VSS of the SAA plan over 200 replications per sample size (boxes: quartiles and median; whiskers: most extreme values within 1.5 interquartile ranges of the box; outliers not drawn), for the two Beta truths. Dashed line: true VSS.}
+\label{fig:S-extA-data}
+\end{figure*}
+
+\subsection{Runs}
+
+Table~\ref{tab:S-extA-runs} lists the runs; each was preceded by a smoke test on a reduced grid. All solves were optimal except the 12 infeasible chance-constrained points noted above.
+
+\begin{table}[t]
+\centering
+\caption{TSM-A runs (\texttt{code/tsm\_a/}, results in \texttt{results/tsm\_a/<run\_id>/}). Wall-clock seconds on an Apple-silicon Mac (Darwin arm64); API cost zero.}
+\label{tab:S-extA-runs}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llrl@{}}
+\toprule
+\textbf{run\_id} & \textbf{Content} & \textbf{s} & \textbf{Seed} \\
+\midrule
+t0\_baseline & baseline check & 0.7 & none \\
+t2\_paradigms & 1{,}600 plan evaluations & 51.2 & none \\
+t3\_capacity & 400 sweep points & 36.9 & none \\
+t4\_demand\_map & 750 sweep points & 39.3 & none \\
+t5\_limited\_data & 2{,}000 replications & 179.6 & 20261113 \\
+\bottomrule
+\end{tabular}
+\end{table}

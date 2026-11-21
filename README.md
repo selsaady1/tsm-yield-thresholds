@@ -182,3 +182,29 @@ Two experiments added for the journal version, in `experiments/`:
   to 0.164 half-range (from 0.178, ~8% lower) while the worst-case FE yield stays
   near 0.70 - shared capacity lowers the threshold, confirming the single-product
   value as a conservative upper bound.
+
+## Revision code, second round (TSM-26-0314 revision, Nov 2026)
+
+This branch adds the scripts and result files behind the revised manuscript. Every run folder has a `run.json` with the seed, solver versions (PuLP 3.3.0, CBC 2.10.13), file hashes, runtime and non-optimal count. Large figures are not included; the scripts regenerate them.
+
+| Folder | What it holds | Paper sections |
+|---|---|---|
+| `experiments/param_sensitivity_revision.py`, `results/Revision/ParamSensitivity/` | Step 8 one-factor sweeps (3,050 points), FE-mean mapping (Step 10a), strict three-stage variant (Step 10b, `na_variant.csv`) | V-C, V-D, V-E, IX; Table II; Supplement S-IV, S-XVI, S-XVII |
+| `experiments/capacity_cliff_sweep.py`, `results/Revision/CapacityCliff/` | Step 9 capacity and cliff sweep (1,000 points) | V-B; Supplement |
+| `code/tsm_a/`, `results/tsm_a/` | Extensions I: robust, adjustable robust, budgeted, chance-constrained and CVaR plans (t2); uncertain capacity (t3); demand on the decision map (t4); scenarios estimated from limited data (t5); `figs_tables/numbers.csv` maps every printed number to its source row | VI; Supplement S-XV |
+| `code/tsm_b/`, `results/tsm_b/` | Extensions II: baseline check (r00); lead times and die-bank inventory, two-stage and multistage (r01); tool groups and non-identical fabs (r02); WIP and congestion via a clearing function (r03) | VII; Supplement S-XIII |
+| `code/tsm_d/`, `results/tsm_d/` | Cliff as a capacity effect (r1); matched-variance comparison (r2); how the worst-case-yield threshold moves (r3); 200 random instances by Latin hypercube, seed 20261113 (r4); `summarize.py` | V-B, V-C, V-D, V-F; Fig. 3; Supplement S-XI |
+
+Run from the repository root with the packages in `requirements.txt` (PuLP 3.3.0 was used):
+
+```
+python code/tsm_a/t0_baseline.py              # reproduces RP 6,380.66, EEV 6,288.50, VSS 92.16
+python code/tsm_a/t2_paradigms.py --smoke     # quick check; drop --smoke for the full run
+python code/tsm_d/r0_baseline.py
+python code/tsm_d/r4_randinst.py --n 200 --workers 2
+(cd code/tsm_b && python run_r00_validate.py && python run_r01_leadtime.py)
+```
+
+Measured runtimes on an Apple-silicon laptop: about 1 s (baselines) to 11 min (`run_r01_leadtime.py`); the 200-instance run takes about 5 min on 2 workers. `env.sh` and the `run_all.sh` files hold the interpreter path used for the original runs; set `PY` to your own Python. Folders ending in `_smoke` are quick test runs; `tsmd_r4_randinst_attempt1_superseded/` is a failed first attempt kept for the record (no number in the paper comes from it).
+
+Note: the "Revision experiments (journal round)" section above describes the July 2026 runs. The revised manuscript no longer presents the 70% worst-case yield as a general rule; see Sections V-D and IX of the revised paper.

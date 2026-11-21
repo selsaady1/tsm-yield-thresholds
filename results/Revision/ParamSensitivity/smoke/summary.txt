@@ -1,0 +1,5 @@
+grid: smoke; OFAT sweep points: 825 (~2475 solves); wall time 48 s
+self-check max deviation vs step2: 0.000e+00
+N_bar=900.000 N_max=1050.000 L_G=300 rho=0.83333 rho/(2-rho)=0.71429
+beta crossing: cross_sigma=0.13024, lowest_point=0.64573, second_lowest=0.79442, disc_mean=0.87979
+non-optimal solves: none

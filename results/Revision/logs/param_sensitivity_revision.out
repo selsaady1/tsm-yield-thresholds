@@ -1,0 +1,100 @@
+param_sensitivity_revision.py  (FULL grid)  -> /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/ParamSensitivity
+  self-check vs step2_freeze_model: max objective deviation = 0.00e+00
+  baseline: RP 6380.66  EEV 6288.50  VSS 92.16  %VSS 1.44
+[A] one-factor-at-a-time sweeps
+  OFAT           holding = 0.01     2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT           holding = 0.025    2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT           holding = 0.05     2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT           holding = 0.1      2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT           holding = 0.25     2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT           holding = 0.5      2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT        wafer_cost = 0.5      2%: half=0.1731 ylo=0.7019 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT        wafer_cost = 1.5      2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT        wafer_cost = 5        2%: half=0.1951 ylo=0.6799 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT        wafer_cost = 15       2%: half=0.2557 ylo=0.6193 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT        wafer_cost = 50       2%: half=0.3232 ylo=0.5518 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT        wafer_cost = 100      2%: half=    NA ylo=    NA [no_crossing]   gap>1: half=0.1792 [clipped]
+  OFAT        wafer_cost = 150      2%: half=    NA ylo=    NA [above_at_first_grid_point]   gap>1: half=    NA [above_at_first_grid_point]
+  OFAT     outs_die_cost = 0.5      2%: half=0.2766 ylo=0.5984 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT     outs_die_cost = 1        2%: half=0.2378 ylo=0.6372 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT     outs_die_cost = 1.65     2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT     outs_die_cost = 2.5      2%: half=    NA ylo=    NA [above_at_first_grid_point]   gap>1: half=0.1792 [clipped]
+  OFAT     outs_die_cost = 4        2%: half=    NA ylo=    NA [above_at_first_grid_point]   gap>1: half=0.1792 [clipped]
+  OFAT           penalty = 1        2%: half=0.1817 ylo=0.6933 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT           penalty = 3        2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT           penalty = 5        2%: half=0.1747 ylo=0.7003 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT           penalty = 8        2%: half=0.1712 ylo=0.7038 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT      demand_level = 0.8      2%: half=    NA ylo=    NA [above_at_first_grid_point]   gap>1: half=0.0732 [symmetric]
+  OFAT      demand_level = 0.9      2%: half=    NA ylo=    NA [above_at_first_grid_point]   gap>1: half=0.0734 [symmetric]
+  OFAT      demand_level = 1        2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT      demand_level = 1.1      2%: half=0.2485 ylo=0.6265 [clipped]   gap>1: half=0.2754 [clipped]
+  OFAT      demand_level = 1.2      2%: half=0.2712 ylo=0.6038 [clipped]   gap>1: half=0.3252 [clipped]
+  OFAT     demand_spread = 0        2%: half=0.1732 ylo=0.7018 [clipped]   gap>1: half=0.2365 [clipped]
+  OFAT     demand_spread = 75       2%: half=0.1770 ylo=0.6980 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT     demand_spread = 150      2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT     demand_spread = 225      2%: half=0.1635 ylo=0.7115 [clipped]   gap>1: half=0.1687 [clipped]
+  OFAT     demand_spread = 300      2%: half=    NA ylo=    NA [above_at_first_grid_point]   gap>1: half=0.1687 [clipped]
+  OFAT       fe_capacity = 0.6      2%: half=    NA ylo=    NA [no_crossing]   gap>1: half=0.1792 [clipped]
+  OFAT       fe_capacity = 0.8      2%: half=0.1916 ylo=0.6834 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT       fe_capacity = 1        2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT       fe_capacity = 1.25     2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT       fe_capacity = 1.5      2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT       be_capacity = 0.8      2%: half=0.2760 ylo=0.5990 [clipped]   gap>1: half=0.3941 [clipped]
+  OFAT       be_capacity = 0.9      2%: half=0.2444 ylo=0.6306 [clipped]   gap>1: half=0.3029 [clipped]
+  OFAT       be_capacity = 1        2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT       be_capacity = 1.1      2%: half=0.0620 ylo=0.8130 [symmetric]   gap>1: half=0.0694 [symmetric]
+  OFAT       be_capacity = 1.25     2%: half=    NA ylo=    NA [above_at_first_grid_point]   gap>1: half=    NA [above_at_first_grid_point]
+  OFAT       be_capacity = 1.5      2%: half=    NA ylo=    NA [above_at_first_grid_point]   gap>1: half=    NA [above_at_first_grid_point]
+  OFAT  outs_fe_capacity = 0        2%: half=    NA ylo=    NA [above_at_first_grid_point]   gap>1: half=    NA [above_at_first_grid_point]
+  OFAT  outs_fe_capacity = 150      2%: half=0.0405 ylo=0.8345 [symmetric]   gap>1: half=0.0111 [symmetric]
+  OFAT  outs_fe_capacity = 300      2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT  outs_fe_capacity = 450      2%: half=0.2016 ylo=0.6734 [clipped]   gap>1: half=0.3891 [clipped]
+  OFAT  outs_fe_capacity = 600      2%: half=0.2016 ylo=0.6734 [clipped]   gap>1: half=    NA [no_crossing]
+  OFAT           fe_mean = 0.7      2%: half=0.1275 ylo=0.5725 [symmetric]   gap>1: half=0.1256 [symmetric]
+  OFAT           fe_mean = 0.75     2%: half=0.1343 ylo=0.6157 [symmetric]   gap>1: half=0.1345 [symmetric]
+  OFAT           fe_mean = 0.8      2%: half=0.1430 ylo=0.6570 [symmetric]   gap>1: half=0.1435 [symmetric]
+  OFAT           fe_mean = 0.82     2%: half=0.1464 ylo=0.6736 [symmetric]   gap>1: half=0.1471 [symmetric]
+  OFAT           fe_mean = 0.85     2%: half=0.1528 ylo=0.6972 [clipped]   gap>1: half=0.1542 [clipped]
+  OFAT           fe_mean = 0.875    2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT           fe_mean = 0.9      2%: half=0.2028 ylo=0.6972 [clipped]   gap>1: half=0.2042 [clipped]
+  OFAT           fe_mean = 0.92     2%: half=0.2228 ylo=0.6972 [clipped]   gap>1: half=0.2242 [clipped]
+  OFAT           be_mean = 0.7      2%: half=0.2178 ylo=0.6572 [clipped]   gap>1: half=0.2887 [clipped]
+  OFAT           be_mean = 0.75     2%: half=0.2024 ylo=0.6726 [clipped]   gap>1: half=0.2402 [clipped]
+  OFAT           be_mean = 0.8      2%: half=0.1778 ylo=0.6972 [clipped]   gap>1: half=0.1792 [clipped]
+  OFAT           be_mean = 0.85     2%: half=0.1221 ylo=0.7529 [symmetric]   gap>1: half=0.1192 [symmetric]
+  OFAT           be_mean = 0.9      2%: half=0.1053 ylo=0.7697 [symmetric]   gap>1: half=0.0980 [symmetric]
+[B] mean / spread parameterisation (70% mapping)
+  MEAN 0.700: onset ylo=0.5833 (pred 0.5833, symmetric)  2%: half=0.1275 ylo=0.5725 ratio=0.8179 [symmetric]
+  MEAN 0.750: onset ylo=0.6250 (pred 0.6250, symmetric)  2%: half=0.1343 ylo=0.6157 ratio=0.8210 [symmetric]
+  MEAN 0.800: onset ylo=0.6667 (pred 0.6667, symmetric)  2%: half=0.1430 ylo=0.6570 ratio=0.8213 [symmetric]
+  MEAN 0.820: onset ylo=0.6833 (pred 0.6833, symmetric)  2%: half=0.1464 ylo=0.6736 ratio=0.8214 [symmetric]
+  MEAN 0.850: onset ylo=0.7083 (pred 0.7083, symmetric)  2%: half=0.1528 ylo=0.6972 ratio=0.8216 [clipped]
+  MEAN 0.875: onset ylo=0.7143 (pred 0.7143, clipped)  2%: half=0.1778 ylo=0.6972 ratio=0.8216 [clipped]
+  MEAN 0.900: onset ylo=0.7143 (pred 0.7143, clipped)  2%: half=0.2028 ylo=0.6972 ratio=0.8216 [clipped]
+  MEAN 0.920: onset ylo=0.7143 (pred 0.7143, clipped)  2%: half=0.2228 ylo=0.6972 ratio=0.8216 [clipped]
+  MEAN 0.950: onset ylo=0.7143 (pred 0.7143, clipped)  2%: half=0.2528 ylo=0.6972 ratio=0.8216 [clipped]
+[C] strict three-stage (non-anticipative) variant
+  NA=False  Exp A crossings (half): vss2=0.1778, vss15=0.1008, gap1=0.1792, gap3=0.2149, vss150=0.2028
+  NA=False  Exp B: %VSS range 0.741..1.820, max gap 0.000, 2% crossing BE half = none
+  NA=True  Exp A crossings (half): vss2=0.1255, vss15=below_grid, gap1=0.1792, gap3=0.2149, vss150=0.1790
+  NA=True  Exp B: %VSS range 1.117..2.860, max gap 10.362, 2% crossing BE half = 0.1418
+[D] load-balancing check
+  BAL half=0.01: RP 6382.137 vs balanced 6382.137; EEV 6288.500 vs 6288.500; RP util balanced 0.674/0.674
+  BAL half=0.075: RP 6380.658 vs balanced 6380.658; EEV 6288.500 vs 6288.500; RP util balanced 0.729/0.729
+  BAL half=0.15: RP 6378.621 vs balanced 6378.621; EEV 6268.461 vs 6268.461; RP util balanced 0.805/0.805
+  BAL half=0.178: RP 6377.748 vs balanced 6377.748; EEV 6250.004 vs 6250.004; RP util balanced 0.837/0.837
+  BAL half=0.25: RP 6375.145 vs balanced 6375.145; EEV 6181.153 vs 6181.153; RP util balanced 0.933/0.933
+  BAL half=0.35: RP 6343.699 vs balanced 6343.699; EEV 5994.671 vs 5994.671; RP util balanced 1.000/1.000
+[E] Beta lowest support point at the crossing
+  BETA 2% crossing at sigma=0.1306: lowest of 7 points = 0.6451, second = 0.7943, discretised mean = 0.8798
+  wrote /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/ParamSensitivity/ofat_thresholds.csv (61 rows)
+  wrote /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/ParamSensitivity/ofat_sweep_points.csv (3050 rows)
+  wrote /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/ParamSensitivity/mean_mapping.csv (9 rows)
+  wrote /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/ParamSensitivity/na_variant.csv (200 rows)
+  wrote /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/ParamSensitivity/balanced_load_check.csv (6 rows)
+  wrote /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/ParamSensitivity/beta_tail.csv (47 rows)
+  wrote /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/ParamSensitivity/fig_param_sensitivity.png
+  wrote /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/ParamSensitivity/fig_mean_mapping.png
+  non-optimal solves: none
+done in 172 s
+rc=0

@@ -1,0 +1,4 @@
+2026-11-13T16:19:49-07:00 base=0: rho=0.8333 pred_ylo=0.71429 solved_ylo=0.71428 vss2_ylo=0.6973
+2026-11-13T16:19:50-07:00 demand_level=0.8: rho=0.9323 pred_ylo=0.81579 solved_ylo=0.81579 vss2_ylo=NA
+2026-11-13T16:19:52-07:00 be_capacity=0.9: rho=0.7333 pred_ylo=0.57895 solved_ylo=0.57895 vss2_ylo=0.63061
+2026-11-13T16:19:53-07:00 be_mean=0.75: rho=0.7895 pred_ylo=0.65217 solved_ylo=0.65217 vss2_ylo=0.6726

@@ -1,0 +1,15 @@
+{'quantity': 'rp_obj', 'published': 6380.66, 'reproduced': '6380.657738', 'rounded_2dp': '6380.66', 'match': 1}
+{'quantity': 'eev_obj', 'published': 6288.5, 'reproduced': '6288.500000', 'rounded_2dp': '6288.50', 'match': 1}
+{'quantity': 'vss', 'published': 92.16, 'reproduced': '92.157738', 'rounded_2dp': '92.16', 'match': 1}
+{'quantity': 'pct_vss', 'published': 1.44, 'reproduced': '1.444330', 'rounded_2dp': '1.44', 'match': 1}
+{'quantity': 'rp_wafers', 'published': 13.12, 'reproduced': '13.125000', 'rounded_2dp': '13.12', 'match': 1}
+{'quantity': 'ev_wafers', 'published': 10.29, 'reproduced': '10.285714', 'rounded_2dp': '10.29', 'match': 1}
+{'quantity': 'N_bar', 'published': '', 'reproduced': '900.000000', 'rounded_2dp': '900.00', 'match': ''}
+{'quantity': 'N_max', 'published': '', 'reproduced': '1050.000000', 'rounded_2dp': '1050.00', 'match': ''}
+{'quantity': 'L_G', 'published': '', 'reproduced': '300.000000', 'rounded_2dp': '300.00', 'match': ''}
+{'quantity': 'rho', 'published': '', 'reproduced': '0.833333', 'rounded_2dp': '0.83', 'match': ''}
+{'quantity': 'rho_times_ybar', 'published': '', 'reproduced': '0.729167', 'rounded_2dp': '0.73', 'match': ''}
+{'quantity': 'rho_over_2_minus_rho', 'published': '', 'reproduced': '0.714286', 'rounded_2dp': '0.71', 'match': ''}
+{'quantity': 'selfcheck_max_dev_vs_step2', 'published': '', 'reproduced': '0.000000', 'rounded_2dp': '0.00', 'match': ''}
+{'quantity': 'named_lp_max_dev', 'published': '', 'reproduced': '0.000000', 'rounded_2dp': '0.00', 'match': ''}
+STATUS OK

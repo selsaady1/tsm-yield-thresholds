@@ -1,0 +1,2 @@
+grid: smoke; sweep points: 225; wall time 25 s
+non-optimal solves dropped: none

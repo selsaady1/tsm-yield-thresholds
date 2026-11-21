@@ -1,0 +1,41 @@
+{
+ "prompt_id": "tsm_d",
+ "run_id": "tsmd_r2_matched_var",
+ "purpose": "T4 (R1.6): two-point versus uniform and Beta FE yield at matched support and at matched mean/sd",
+ "command": "nice -n 10 python code/tsm_d/r2_matched_var.py",
+ "cwd": "/Users/saifelsaady/Developer/Projects/PhD Research Project/TSM-26-0314_work/tsm_d",
+ "seed": "none (deterministic quantile-midpoint discretisation)",
+ "started_at": "2026-11-13T16:20:08-07:00",
+ "finished_at": "2026-11-13T16:20:44-07:00",
+ "runtime_s": 35.94,
+ "status": "OK",
+ "python": "3.14.5",
+ "pulp": "3.3.0",
+ "cbc": "2.10.13 (/Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/.venv/lib/python3.14/site-packages/pulp/apis/../solverdir/cbc/osx/i64/cbc -> /opt/homebrew/Cellar/cbc/2.10.13/bin/cbc)",
+ "solver_options": {
+  "solver": "PULP_CBC_CMD",
+  "msg": 0,
+  "threads": 1,
+  "gapRel": "CBC default (0, problems are LPs or MILPs with inert binaries; all solved to proven optimality)",
+  "timeLimit": null
+ },
+ "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+ "input_files": {
+  "repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50",
+  "repo/src/step2_freeze_model.py": "cb210b9ef872806920bcda74934957e341eeea75aad55d3f25e4fdeaf9643e87",
+  "code/tsm_d/tsmd_common.py": "c133423290cdbcca72777175f9cf0eedbe24322f03c5a41191e15e52e658d118"
+ },
+ "output_files": {
+  "results/tsm_d/tsmd_r2_matched_var/matched_points.csv": "2c0723df33a34f6b54a5fd2616539e77b1186f5594e72618eb96a587fdf33042",
+  "results/tsm_d/tsmd_r2_matched_var/matched_summary.csv": "255ec8993270afde96d8056ad9c387a139366813c83aac534882385b3aa06e24",
+  "results/tsm_d/tsmd_r2_matched_var/matched_verdict.csv": "8acdd24d963eca425d157efbdf74863dcf79d7e5e3db7511db31238883aec84f"
+ },
+ "git_commit": "none (not a git repo)",
+ "code_sha256": {
+  "code/tsm_d/r2_matched_var.py": "1dc1d18e8a9f194cd8881b3ca79c58dab62e7bb41c3dee50b12829d2ac269426",
+  "repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50",
+  "repo/src/step2_freeze_model.py": "cb210b9ef872806920bcda74934957e341eeea75aad55d3f25e4fdeaf9643e87",
+  "code/tsm_d/tsmd_common.py": "c133423290cdbcca72777175f9cf0eedbe24322f03c5a41191e15e52e658d118"
+ },
+ "notes": "non-optimal solves: 0"
+}

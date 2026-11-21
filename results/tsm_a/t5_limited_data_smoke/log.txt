@@ -1,0 +1,22 @@
+t5_limited_data (SMOKE) -> /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/tsm_a/t5_limited_data_smoke
+self-check: max |dev| = 9.09e-13
+Q table demand=600 BE=0.7: 4 breakpoints at D = 0.0000, 492.8571, 792.8571, 1800.0000
+Q table demand=600 BE=0.9: 5 breakpoints at D = 0.0000, 350.0000, 650.0000, 666.6666, 1800.0000
+Q table demand=900 BE=0.7: 4 breakpoints at D = 0.0000, 750.0000, 1050.0000, 1800.0000
+Q table demand=900 BE=0.9: 5 breakpoints at D = 0.0000, 683.3333, 983.3333, 990.0000, 1800.0000
+Q table demand=750 BE=0.8: 4 breakpoints at D = 0.0000, 600.0000, 900.0000, 1800.0000
+  VALIDATION pwl_table_vs_direct_cbc_max_abs = 6.192e-05
+  VALIDATION baseline_rp_obj = 6380.66
+  VALIDATION baseline_eev_obj = 6288.50
+  VALIDATION baseline_vss = 92.16
+  VALIDATION baseline_rp_wafers = 13.1250
+  VALIDATION baseline_ev_wafers = 10.2857
+  VALIDATION beta7_sigma0.07_vss (beta_results.csv: 92.0) = 92.000
+  VALIDATION saa_and_eev_vs_full_cbc_max_abs = 1.937e-06
+TRUTH sigma=0.075: x*=14.6429 F*=6376.8106 x_det=10.2857 F_det=6280.0231 VSS*=96.7875 (1.518%), MC check 6376.7828
+TRUTH sigma=0.15: x*=18.0000 F*=6350.9570 x_det=10.2857 F_det=6186.1394 VSS*=164.8176 (2.595%), MC check 6351.1438
+  sigma=0.075 n=  5: VSS*=96.79 in-sample 93.00 realized 85.56 [60.00,111.12] bagged 83.85 boot-corr 90.11 gap_saa 1.46 gap_det 87.02 P(real<0)=0.000 cover MMW 1.000 boot 0.600  (0 s)
+  sigma=0.075 n= 20: VSS*=96.79 in-sample 98.37 realized 84.54 [71.52,97.55] bagged 84.71 boot-corr 98.98 gap_saa 0.57 gap_det 85.11 P(real<0)=0.000 cover MMW 1.000 boot 1.000  (0 s)
+  sigma=0.15 n=  5: VSS*=164.82 in-sample 208.68 realized 146.99 [80.43,213.54] bagged 133.78 boot-corr 240.62 gap_saa 20.14 gap_det 167.13 P(real<0)=0.000 cover MMW 1.000 boot 0.400  (0 s)
+  sigma=0.15 n= 20: VSS*=164.82 in-sample 177.49 realized 166.90 [132.46,201.34] bagged 166.44 boot-corr 173.95 gap_saa 4.43 gap_det 171.32 P(real<0)=0.000 cover MMW 1.000 boot 0.800  (0 s)
+done in 122 s

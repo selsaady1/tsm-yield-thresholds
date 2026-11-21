@@ -1,0 +1,17 @@
+quantity,reproduced,published_step1_csv,match_to_2dp
+RP_profit,6380.657738,6380.66,True
+EEV_profit,6288.500000,6288.5,True
+VSS,92.157738,92.16,True
+pct_VSS,1.444330,1.44,True
+RP_total_wafers,13.125000,13.12,True
+EV_total_wafers,10.285714,10.29,True
+N_max,1050.000000,,
+N_bar,900.000000,,
+L_G,300.000000,,
+rho,0.833333,,
+RP_FE1_util,1.000000,,
+RP_FE2_util,0.390625,,
+EV_FE1_util,1.000000,,
+EV_FE2_util,0.035714,,
+RP_total_util,0.729167,,
+EV_total_util,0.571429,,

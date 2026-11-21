@@ -1,0 +1,10 @@
+t4_demand_map (SMOKE) -> /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/tsm_a/t4_demand_map_smoke
+self-check: max |dev| = 9.09e-13
+  demand_mean=750.0 demand_half=0.0 N_max=1007.14 N_bar=900.00 L_G=300 rho=0.7857 vss2_half=0.1650 gap1_half=0.1885 gap_onset_half=0.2280 pred_onset_half=0.2279 abs_err_pred_vs_solved=0.00004 pct_vss_at_first_grid=1.2691 pct_vss_max=7.0116 gap_max=29.8026
+  demand_mean=750.0 demand_half=150.0 N_max=1050.00 N_bar=900.00 L_G=300 rho=0.8333 vss2_half=0.1707 gap1_half=0.1698 gap_onset_half=0.1607 pred_onset_half=0.1607 abs_err_pred_vs_solved=0.00004 pct_vss_at_first_grid=1.4535 pct_vss_max=8.0341 gap_max=35.1316
+  demand_mean=750.0 demand_half=300.0 N_max=1050.00 N_bar=900.00 L_G=300 rho=0.8333 vss2_half=below_grid gap1_half=0.1587 gap_onset_half=0.1607 pred_onset_half=0.1607 abs_err_pred_vs_solved=0.00004 pct_vss_at_first_grid=2.1202 pct_vss_max=9.3585 gap_max=42.6316
+  reuse demand_half=0.0 n_matched=5 max_abs_diff_pct_vss=0.000046 max_abs_diff_unmet_gap=0.000047 step8_file=results/Revision/ParamSensitivity/ofat_sweep_points.csv
+  reuse demand_half=150.0 n_matched=5 max_abs_diff_pct_vss=0.000048 max_abs_diff_unmet_gap=0.000026 step8_file=results/Revision/ParamSensitivity/ofat_sweep_points.csv
+  reuse demand_half=300.0 n_matched=5 max_abs_diff_pct_vss=0.000045 max_abs_diff_unmet_gap=0.000039 step8_file=results/Revision/ParamSensitivity/ofat_sweep_points.csv
+non-optimal points dropped: 0
+done in 3 s

@@ -1,0 +1,5 @@
+family,K,param,vss2_half,vss2_mean,vss2_sd,vss2_lowest,onset_half,onset_mean,onset_sd,onset_lowest,onset_lowest_over_mean,vss2_sigma,onset_sigma
+two_point,2,half,0.17334,0.85083,0.14917,0.70166,0.16071,0.85714,0.14286,0.71428,0.83333,,
+uniform,7,half,0.30908,0.78296,0.12402,0.59693,0.20058,0.83721,0.09302,0.69767,0.83333,,
+beta22,7,half,0.41358,0.73071,0.11626,0.54946,0.27195,0.80152,0.08569,0.66794,0.83333,,
+beta_mean_sd,7,sigma,,0.87980,0.11532,0.64516,,0.87758,0.07763,0.73132,0.83333,0.13050,0.08637

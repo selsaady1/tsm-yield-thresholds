@@ -1,0 +1,35 @@
+{
+ "prompt_id": "tsm_b",
+ "run_id": "tsmb_r01_leadtime_smoke",
+ "purpose": "R1.7c: multi-period model with FE/BE lead times and die-bank inventory; two-stage and multistage; VSS, %VSS, service, cliff",
+ "command": "nice -n 10 /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/.venv/bin/python run_r01_leadtime.py --smoke",
+ "cwd": "/Users/saifelsaady/Developer/Projects/PhD Research Project/TSM-26-0314_work/tsm_b/code/tsm_b",
+ "seed": 0,
+ "started_at": "2026-11-13T16:12:53-07:00",
+ "finished_at": "2026-11-13T16:13:05-07:00",
+ "runtime_s": 12.6,
+ "status": "OK",
+ "python": "3.14.5",
+ "pulp": "3.3.0",
+ "cbc": "2.10.13 (/opt/homebrew/Cellar/cbc/2.10.13/bin/cbc)",
+ "solver_options": {
+  "solver": "CBC via PuLP PULP_CBC_CMD",
+  "threads": 1,
+  "msg": 0,
+  "gapRel": "CBC default (models are LPs apart from two inert binaries in the single-period model)",
+  "timeLimit": null
+ },
+ "input_files": {},
+ "output_files": {
+  "results/tsm_b/tsmb_r01_leadtime_smoke/sweep.csv": "468edd6c9ffc5f418a6730b10fcbd35cbb9add10b24e66145b9609df540f6a83",
+  "results/tsm_b/tsmb_r01_leadtime_smoke/summary.csv": "5f85034d3f773f9d74fec32c8b4a2aec806e7621da732c28365031b03ba284a2",
+  "results/tsm_b/tsmb_r01_leadtime_smoke/log.txt": "b0ca96b80774e6e4d321a15832b49c0451c15d815019ecb87dd3ec40255c0ab6"
+ },
+ "git_commit": "none (not a git repo)",
+ "code_sha256": {
+  "code/tsm_b/run_r01_leadtime.py": "4394b9cd659abfa75314db8e822268bea8d19e4f8ed952e94419a89358dd22bd",
+  "code/tsm_b/tsmb_multiperiod.py": "147b7284081c7ee59d3a4691f5ccba92e660eb15ea77880a2c815d0aa5702195",
+  "repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50"
+ },
+ "notes": "15 sweep points; all optimal: True; smoke=True"
+}

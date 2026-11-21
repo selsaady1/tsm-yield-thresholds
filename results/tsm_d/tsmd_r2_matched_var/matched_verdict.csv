@@ -1,0 +1,9 @@
+key,value
+two_point_vss2_half,0.17778
+min_other_vss2_half_matched_support,0.30494
+two_point_crosses_first_at_matched_support,1
+two_point_vss2_sd,0.15139
+max_other_vss2_sd,0.12555
+two_point_crosses_last_at_matched_sd,1
+TSMD_tp_matchedvar,does not support
+rule,"'supports' only if, at matched mean and standard deviation, the two-point 2% crossing (in sd units) is not larger than every alternative family's; it is reported as 'does not support' when the two-point family is the last to cross"

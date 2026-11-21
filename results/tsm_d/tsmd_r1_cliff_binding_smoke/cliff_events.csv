@@ -1,0 +1,7 @@
+event,half
+eev_LG_binds,0.16072
+eev_release_below_Nmax,0.16072
+service_gap_opens,0.16072
+rp_fe_capacity_binds,0.29167
+rp_LG_binds,0.45833
+rp_unmet_rises,0.45833

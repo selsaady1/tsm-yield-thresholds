@@ -1,0 +1,51 @@
+{
+  "run_id": "t5_limited_data",
+  "command": "cd tsm-yield-thresholds && .venv/bin/python code/tsm_a/t5_limited_data.py",
+  "seed": 20261113,
+  "git_commit": "98975b8bdc971cc04b616166b3ffa1ab5b46fc0b",
+  "git_dirty_files": [
+    "M .gitignore",
+    "?? code/",
+    "?? experiments/capacity_cliff_sweep.py",
+    "?? experiments/param_sensitivity_revision.py",
+    "?? experiments/revision_common.py",
+    "?? experiments/revision_figs.py",
+    "?? results/Revision/",
+    "?? results/revision_rerun/",
+    "?? results/tsm_a/"
+  ],
+  "note_git": "code/tsm_a and results/tsm_a are new, uncommitted files; script hashes below identify the exact code that ran",
+  "script_sha256": {
+    "make_figs_tables.py": "ad329f292479c44a13be3c5f0eeb1254429fd02a112374db32d36c386eeda06c",
+    "t0_baseline.py": "bff98ddf7235f73e8703bc7d4057933a8c7f20d776f573c012541f543b1fd138",
+    "t2_paradigms.py": "7b3ac1c01b32221290605f8174dc250380e81d61c10395b20d6ca8169ceb43d1",
+    "t3_capacity.py": "3159b78ca1258204ae22284f98292a3f5a0dbffac1924e1dac94f78bd657a2b9",
+    "t4_demand_map.py": "43279c209dc006f68975e36e8715ecc0cdbf7c8733e253858267953a1619528d",
+    "t5_limited_data.py": "a17886f9513fec08f6587ba485d990fe9910d166d3c1cbde9695fab5028229b0",
+    "tsa_common.py": "2a5bbd077a7d3d8b485832c9ebd243fa3dcbd93237e1b9d2df295e0f5065bd2f"
+  },
+  "started": "2026-11-13T15:59:12",
+  "finished": "2026-11-13T16:02:12",
+  "runtime_seconds": 179.6,
+  "solver": "CBC",
+  "solver_version": "2.10.13",
+  "pulp_version": "3.3.0",
+  "python": "3.14.5",
+  "machine": "Darwin arm64",
+  "api_cost_usd": 0.0,
+  "R": 200,
+  "B": 20,
+  "M_batches": 20,
+  "sigmas": [
+    0.075,
+    0.15
+  ],
+  "n_values": [
+    5,
+    10,
+    20,
+    50,
+    100
+  ],
+  "evaluation": "exact integration of the piecewise-linear recourse value against the Beta density"
+}

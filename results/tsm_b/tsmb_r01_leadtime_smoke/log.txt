@@ -1,0 +1,10 @@
+[2026-11-13T16:12:53-07:00] run tsmb_r01_leadtime_smoke started 2026-11-13T16:12:53-07:00  pid 79444
+[2026-11-13T16:12:53-07:00] command: run_r01_leadtime.py --smoke
+[2026-11-13T16:12:53-07:00] T=1 check deviation 0.0e+00; N_max=1050.0; L_G=300; 5 configurations x 3 half-ranges
+[2026-11-13T16:12:53-07:00] progress: P1_l0 h=0.075
+[2026-11-13T16:12:54-07:00] P1_l0: %VSS(0.075)=1.444 2%@0.1551 gap>1@0.1330 rise>1@0.1330 onset 0.1607 pred 0.1607 nonopt none
+[2026-11-13T16:12:55-07:00] P1_l1: %VSS(0.075)=3.714 2%@below_grid gap>1@below_grid rise>1@0.2917 onset 0.3431 pred 0.1607 nonopt none
+[2026-11-13T16:12:57-07:00] P3_l1: %VSS(0.075)=3.714 2%@below_grid gap>1@below_grid rise>1@0.3468 onset 0.3678 pred 0.1607 nonopt none
+[2026-11-13T16:13:01-07:00] P3_l1_m1: %VSS(0.075)=3.714 2%@below_grid gap>1@below_grid rise>1@0.3468 onset 0.3678 pred 0.1607 nonopt none
+[2026-11-13T16:13:05-07:00] P3_l1_m2: %VSS(0.075)=3.714 2%@below_grid gap>1@below_grid rise>1@0.3468 onset 0.3678 pred 0.1607 nonopt none
+[2026-11-13T16:13:05-07:00] run tsmb_r01_leadtime_smoke finished 2026-11-13T16:13:05-07:00 status OK runtime 12.6 s

@@ -1,0 +1,41 @@
+{
+ "prompt_id": "tsm_d",
+ "run_id": "tsmd_r4_randinst",
+ "purpose": "T6 (R2.4, R1.2, R1.0a): random instances by Latin hypercube; rho cliff check and 2% threshold per instance",
+ "command": "nice -n 10 python code/tsm_d/r4_randinst.py --n 200 --workers 2",
+ "cwd": "/Users/saifelsaady/Developer/Projects/PhD Research Project/TSM-26-0314_work/tsm_d",
+ "seed": 20261113,
+ "started_at": "2026-11-13T16:22:07-07:00",
+ "finished_at": "2026-11-13T16:27:10-07:00",
+ "runtime_s": 302.39,
+ "status": "OK",
+ "python": "3.14.5",
+ "pulp": "3.3.0",
+ "cbc": "2.10.13 (/Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/.venv/lib/python3.14/site-packages/pulp/apis/../solverdir/cbc/osx/i64/cbc -> /opt/homebrew/Cellar/cbc/2.10.13/bin/cbc)",
+ "solver_options": {
+  "solver": "PULP_CBC_CMD",
+  "msg": 0,
+  "threads": 1,
+  "gapRel": "CBC default (0, problems are LPs or MILPs with inert binaries; all solved to proven optimality)",
+  "timeLimit": null
+ },
+ "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+ "input_files": {
+  "repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50",
+  "repo/src/step2_freeze_model.py": "cb210b9ef872806920bcda74934957e341eeea75aad55d3f25e4fdeaf9643e87",
+  "code/tsm_d/tsmd_common.py": "c133423290cdbcca72777175f9cf0eedbe24322f03c5a41191e15e52e658d118"
+ },
+ "output_files": {
+  "results/tsm_d/tsmd_r4_randinst/instances_sampled.csv": "2a1840938390ba2b29bfe12116f98be7373a5fbe4bc87af549a3d73b2acba92f",
+  "results/tsm_d/tsmd_r4_randinst/instances_results.csv": "0f395c3cd411c08fa3164c29060c2b458e7920e3c76a8c7e0587af420f44293c",
+  "results/tsm_d/tsmd_r4_randinst/instances_results.jsonl": "d802332890eeefaeb09b3ff97dc0aed03ea3f6324a229213af9c5ca014c37a71"
+ },
+ "git_commit": "none (not a git repo)",
+ "code_sha256": {
+  "code/tsm_d/r4_randinst.py": "7eb7db3aac4dcf391d92959780c8d934e496273f4c8251ef3b0ace53e07a28a6",
+  "repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50",
+  "repo/src/step2_freeze_model.py": "cb210b9ef872806920bcda74934957e341eeea75aad55d3f25e4fdeaf9643e87",
+  "code/tsm_d/tsmd_common.py": "c133423290cdbcca72777175f9cf0eedbe24322f03c5a41191e15e52e658d118"
+ },
+ "notes": "instance 0 = base instance (sanity check, excluded from the 200); non-optimal solves: 0; EEV first stage clamped to [0, L_F] before fixing (tsmd_common.patch_clamp_fixed_first_stage) because PuLP reads CBC solutions at limited precision and fractional capacities otherwise made EEV infeasible in an earlier attempt (842 non-optimal solves, superseded)"
+}

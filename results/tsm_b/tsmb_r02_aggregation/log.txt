@@ -1,0 +1,11 @@
+[2026-11-13T16:14:00-07:00] run tsmb_r02_aggregation started 2026-11-13T16:14:00-07:00  pid 84033
+[2026-11-13T16:14:00-07:00] command: run_r02_aggregation.py
+[2026-11-13T16:14:00-07:00] tool groups: {"load": {"litho": 1.0, "etch": 0.8, "implant": 0.5}, "cap": {"FE1": {"litho": 10.0, "etch": 8.8, "implant": 6.0}, "FE2": {"litho": 9.0, "etch": 6.4, "implant": 4.8}}} | tight: {"load": {"litho": 1.0, "etch": 0.8, "implant": 0.5}, "cap": {"FE1": {"litho": 10.0, "etch": 8.16, "implant": 5.1}, "FE2": {"litho": 8.16, "etch": 6.4, "implant": 4.08}}}
+[2026-11-13T16:14:00-07:00] progress: agg_ref h=0.01
+[2026-11-13T16:14:03-07:00] agg_ref: %VSS(0.075)=1.444 2%@0.1778 gap>1@0.1792 onset solved 0.16074218750000002 pred 0.160736083984375 util RP 1.000/0.391 nonopt none
+[2026-11-13T16:14:05-07:00] tg3: %VSS(0.075)=1.444 2%@0.1778 gap>1@0.1792 onset solved 0.16074218750000002 pred 0.160736083984375 util RP 1.000/0.391 nonopt none
+[2026-11-13T16:14:08-07:00] tg3_tight: %VSS(0.075)=1.444 2%@0.1778 gap>1@0.1792 onset solved 0.16074218750000002 pred 0.160736083984375 util RP 1.000/0.391 nonopt none
+[2026-11-13T16:14:11-07:00] ni_main: %VSS(0.075)=1.433 2%@0.1963 gap>1@0.1938 onset solved 0.1588671875 pred 0.158843994140625 util RP 1.000/0.417 nonopt none
+[2026-11-13T16:14:14-07:00] ni_yield: %VSS(0.075)=1.440 2%@0.1755 gap>1@0.1763 onset solved 0.1588671875 pred 0.158843994140625 util RP 1.000/0.417 nonopt none
+[2026-11-13T16:14:17-07:00] ni_cost: %VSS(0.075)=1.438 2%@0.1785 gap>1@0.1792 onset solved 0.16074218750000002 pred 0.160736083984375 util RP 1.000/0.391 nonopt none
+[2026-11-13T16:14:17-07:00] run tsmb_r02_aggregation finished 2026-11-13T16:14:17-07:00 status OK runtime 17.1 s

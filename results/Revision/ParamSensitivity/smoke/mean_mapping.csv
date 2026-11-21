@@ -1,0 +1,4 @@
+fe_mean_nominal,N_bar,N_max,L_G,rho,clip_starts_at_half,onset_half,onset_ylo,onset_ratio,onset_regime,pred_onset_ylo,pred_regime,vss2_half,vss2_ylo,vss2_ratio,vss2_regime
+0.7,900.00,1050.00,300,0.8333,0.3000,0.1167,0.5833,0.8333,symmetric,0.5833,symmetric,0.1275,0.5725,0.8179,symmetric
+0.85,900.00,1050.00,300,0.8333,0.1500,0.1417,0.7083,0.8333,symmetric,0.7083,symmetric,0.1542,0.6958,0.8206,clipped
+0.95,900.00,1050.00,300,0.8333,0.0500,0.2357,0.7143,0.8334,clipped,0.7143,clipped,0.2527,0.6973,0.8216,clipped

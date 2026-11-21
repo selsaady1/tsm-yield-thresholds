@@ -1,0 +1,72 @@
+% ==============================================================
+% TSM-A (Nov 13, 2026): Extensions I. Inserted after Results by
+% \input{sec_extA} in main.tex. Every number below is read from
+% tsm-yield-thresholds/results/tsm_a/ (see figs_tables/numbers.csv);
+% scripts in tsm-yield-thresholds/code/tsm_a/.
+% ==============================================================
+\section{Extensions I: Other Planning Approaches and Other Uncertainty}
+\label{sec:extA}
+
+Before a planner trusts the threshold or the cliff check, four questions remain: would a robust, chance-constrained, or risk-averse planner agree; does the check survive uncertain capacity; where does demand put a fab on the map; and how much of the VSS is real when the yield distribution is estimated from a few lots. We answer each with new solves on the base instance (details in Section~\mbox{S-XV}).
+
+\subsection{Robust, Chance-Constrained, and Risk-Averse Plans}
+\label{sec:extA-paradigms}
+
+Over the 50 half-ranges of Step~5 we computed (a) a static box-robust plan~\cite{soyster1973}, the deterministic model with every yield low; (b) adjustable (two-stage) robust plans~\cite{bental2004adjustable} that maximize worst-case profit over the eight scenarios, or over the yields only for each demand; (c) budgeted plans~\cite{bertsimas2004} with at most $\Gamma\in\{0,1,2,3\}$ of the yields FE1, FE2, BE low; (d) chance-constrained plans~\cite{charnes1959,luedtke2008sample} that allow an avoidable shortfall with probability at most $\epsilon\in\{0,0.125,0.25\}$; and (e) plans maximizing $(1-\lambda)$ expected profit plus $\lambda$ CVaR$_{0.9}$~\cite{rockafellar2000}. Each plan fixes the wafer starts and is evaluated like the deterministic plan, with the recourse re-optimized in every scenario. Unlike the static box plan, the adjustable robust plans keep the recourse scenario-wise, as the RP does.
+
+\begin{table}[t]
+\centering
+\caption{Other planning approaches (base instance, 50 half-ranges). Loss: expected profit below the RP (\% of RP). Gain over the deterministic plan in expected profit (\% of RP) or worst-case profit (\% of the deterministic plan's). Gap: unmet demand above the RP's by over one unit.}
+\label{tab:extA-paradigms}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}p{3.05cm}ccccc@{}}
+\toprule
+ & \textbf{Max} & \textbf{Loss} & \multicolumn{2}{c}{\textbf{Gain $>2\%$ from}} & \textbf{Gap} \\
+\cmidrule(lr){4-5}
+\textbf{Plan} & \textbf{loss} & \textbf{$>2\%$, $h$} & \textbf{exp.} & \textbf{worst} & \textbf{from} \\
+\midrule
+Deterministic (EEV) & 8.34 & 0.18 to 0.50 & n/a & n/a & 0.179 \\
+RP; box, demand high; robust in yields; $\Gamma=3$; chance$^{a}$; CVaR $\lambda=0.5$ & 0.00 & none & 0.178 & 0.200 & never \\
+Box robust, mean demand & 0.19 & none & 0.187 & 0.199 & never \\
+Budget $\Gamma=2$ & 0.75 & none & 0.214 & 0.198 & never \\
+Budget $\Gamma\in\{0,1\}$ & 4.59 & 0.36 to 0.50 & 0.266 & 0.196 & 0.333 \\
+Max-min; CVaR $\lambda=1$ & 2.71 & 0.01 to 0.06 & 0.267 & 0.195 & never \\
+\bottomrule
+\end{tabular}
+
+\vspace{1pt}
+{\footnotesize $^{a}$All three $\epsilon$; infeasible from $h=0.46$ ($\epsilon=0$) and at 0.50 ($\epsilon=0.125$).}
+\end{table}
+
+Every plan that protects against the low yield is within 0.005\% of the RP's expected profit at every half-range and passes the 2\% gain at the RP's 0.178 (the box plan at mean demand: within 0.19\%, at 0.187; Table~\ref{tab:extA-paradigms}). At the base costs a full hedge is cheap, so these paradigms agree with the RP. Plans that protect profit against low demand as well behave differently: the max-min plan (equal here to CVaR with $\lambda=1$) starts fewer wafers than the deterministic plan (9.17 versus 10.29 at $h=0.01$), because the worst scenarios have low demand, earns less than it up to $h=0.10$, and gains 2\% only from 0.267; $\Gamma\le1$ plans ($\Gamma=1$ starts the same wafers as $\Gamma=0$, which ignores yield risk) gain 2\% only from 0.266. In worst-case profit, every non-deterministic plan gains 2\% between $h=0.195$ and 0.200. At a tenfold wafer cost the RP's crossing moves to 0.256 and the box plans stay within 0.09\% of the RP. The threshold thus depends on the paradigm, here moving later, not earlier, which supports the third part of our message: the number does not transfer, the hedging mechanism does.
+
+\subsection{Uncertain Capacity}
+\label{sec:extA-capacity}
+
+Following the two-stage form of~\cite{geng2009stochastic}, we made the outsourced FE capacity $L_G$, or separately the in-house FE capacity, two-point random ($\pm\delta$, $\delta\le30\%$), independent of yields and demand (16 scenarios). In-house shortfalls cut the wafers processed; the deterministic plan uses mean capacity, split in proportion to fab capacity.
+
+Uncertain outsourcing brings both thresholds in (at $\pm30\%$: 2\% crossing 0.118, gap onset 0.058; all levels in Section~\mbox{S-XV}). Condition~\eqref{eq:cliff} still predicts the onset within 0.00005 once $L_G$ is replaced by its low value; with the mean $L_G$ it would miss by up to 0.102. A fab should compute $\rho$ with the outsourced capacity it can count on, in line with the role of supply uncertainty in outsourcing decisions~\cite{kouvelis2002outsourcing}. Uncertain in-house capacity leaves the deterministic cliff in place (that plan starts 10.50 wafers near the onset, below the reduced 12.60) but limits the stochastic hedge: the RP's own shortfall starts at $h=0.28$ instead of 0.46, and the 2\% crossing moves out to 0.217. The split between fabs now matters: with the solver's split (FE1 first) the deterministic plan loses over 2\% at every spread for $\delta\ge10\%$. Capacity uncertainty thus refines the cliff check rather than breaking it.
+
+\subsection{Demand on the Decision Map}
+\label{sec:extA-demand}
+
+Demand forecasts are uncertain, and manufacturers invest in modeling that uncertainty~\cite{wu2010intel}. Fig.~\ref{fig:extA-demand} adds demand to the decision map: demand half-ranges of 0 to 300 units at means $\bar q$ of 675, 750 (base), and 825; the $\bar q=750$ panel reproduces the Step~8 runs.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig_extA_demand_map.pdf}
+\caption{\%VSS (color) over FE and demand half-ranges at three demand means. Hatched: service gap above one unit. Dots: solved gap onset; dashed: onset by~\eqref{eq:cliff}; crosses: 2\% crossing ($h=0$: exceeded at every spread).}
+\label{fig:extA-demand}
+\end{figure}
+
+The gap onset ranges from $h=0.061$ ($\bar q=675$, demand half-range 150 or more) to 0.282 ($\bar q=675$, no demand spread), and the 2\% crossing from every spread to 0.269. Condition~\eqref{eq:cliff} locates the onset in all 15 settings within 0.00004: a low mean with a wide spread sizes the deterministic plan for few dies ($\bar N=806$) while $N_{\max}$ stays at 1{,}050, raising $\rho$ from 0.744 to 0.930. A fab can place itself on the demand axis by computing $\rho$ from its own forecast. Demand moves where the cliff lies, not how it arises, which refines the second part of our message.
+
+\subsection{Scenarios Estimated from Limited Data}
+\label{sec:extA-data}
+
+We took the Beta FE yield of Section~\ref{sec:calibration} (mean 0.875, standard deviation 0.15; true VSS \$164.82, 2.60\%) as the truth and drew $n$ lot yields, 200 replications per $n$. The scenario set was built by sample average approximation (SAA)~\cite{kleywegt2002} and by bootstrap~\cite{efron1993bootstrap}; the stochastic plan and the deterministic plan (from the sample mean) were evaluated exactly under the truth.
+
+The optimizer's curse~\cite{smith2006curse} is clear: with five lots the stochastic plan's in-sample profit overstates its realized profit by \$42.1, and it realizes a VSS of \$148.1, 90\% of the attainable (all sample sizes in Section~\mbox{S-XV}). The in-sample VSS is not significantly above the realized VSS at any $n$, since the deterministic plan is overstated on the same sample by almost as much, and in all 2{,}000 replications the stochastic plan beat the deterministic plan under the truth. The larger risk is the decision: with a true \%VSS of 2.60\%, only 38\% of five-lot and 73\% of twenty-lot samples show more than 2\%, because small samples understate the spread of this skewed distribution. Nor can a fab bound its error from its own data: the gap bound of~\cite{mak1999monte,bayraksan2006assessing} covers the true gap in at least 96\% of replications with batches from the truth, but in 26.5\% to 95\% with bootstrap batches. Scenario-based planning is thus only as accurate as its data: Step~2 of Section~\ref{sec:howto} needs a long lot history (here 87\% correct verdicts at 50 lots), while the cliff check of Step~1 needs no scenario set.
+
+Overall, the extensions support the message on the mechanism and the cliff check, refine it on the numbers, and limit it where yield data are scarce.

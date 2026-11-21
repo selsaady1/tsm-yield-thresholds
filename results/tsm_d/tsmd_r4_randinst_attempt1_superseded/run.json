@@ -1,0 +1,41 @@
+{
+ "prompt_id": "tsm_d",
+ "run_id": "tsmd_r4_randinst",
+ "purpose": "T6 (R2.4, R1.2, R1.0a): random instances by Latin hypercube; rho cliff check and 2% threshold per instance",
+ "command": "nice -n 10 python code/tsm_d/r4_randinst.py --n 200 --workers 2",
+ "cwd": "/Users/saifelsaady/Developer/Projects/PhD Research Project/TSM-26-0314_work/tsm_d",
+ "seed": 20261113,
+ "started_at": "2026-11-13T16:08:10-07:00",
+ "finished_at": "2026-11-13T16:12:35-07:00",
+ "runtime_s": 265.13,
+ "status": "PARTIAL",
+ "python": "3.14.5",
+ "pulp": "3.3.0",
+ "cbc": "2.10.13 (/Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/.venv/lib/python3.14/site-packages/pulp/apis/../solverdir/cbc/osx/i64/cbc -> /opt/homebrew/Cellar/cbc/2.10.13/bin/cbc)",
+ "solver_options": {
+  "solver": "PULP_CBC_CMD",
+  "msg": 0,
+  "threads": 1,
+  "gapRel": "CBC default (0, problems are LPs or MILPs with inert binaries; all solved to proven optimality)",
+  "timeLimit": null
+ },
+ "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+ "input_files": {
+  "repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50",
+  "repo/src/step2_freeze_model.py": "cb210b9ef872806920bcda74934957e341eeea75aad55d3f25e4fdeaf9643e87",
+  "code/tsm_d/tsmd_common.py": "e5150d7a2e6bb30ba4550192d2b2d0043fa66b82a0040e0ae051c0e2f04598ac"
+ },
+ "output_files": {
+  "results/tsm_d/tsmd_r4_randinst/instances_sampled.csv": "2a1840938390ba2b29bfe12116f98be7373a5fbe4bc87af549a3d73b2acba92f",
+  "results/tsm_d/tsmd_r4_randinst/instances_results.csv": "2d77e70580d6a1f8b52876277d2cc4b47bbbf5bba5df39a991e114245fe863f4",
+  "results/tsm_d/tsmd_r4_randinst/instances_results.jsonl": "84fcc9e1a3a7e51406eff4446156821e1b2502f0911f7123a0aa0604c16d7cb6"
+ },
+ "git_commit": "none (not a git repo)",
+ "code_sha256": {
+  "code/tsm_d/r4_randinst.py": "719262558bbd33eb8e088e5c2745e73307456f991d42802cb7b7eb4a78f104bc",
+  "repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50",
+  "repo/src/step2_freeze_model.py": "cb210b9ef872806920bcda74934957e341eeea75aad55d3f25e4fdeaf9643e87",
+  "code/tsm_d/tsmd_common.py": "e5150d7a2e6bb30ba4550192d2b2d0043fa66b82a0040e0ae051c0e2f04598ac"
+ },
+ "notes": "instance 0 = base instance (sanity check, excluded from the 200); non-optimal solves: 842"
+}

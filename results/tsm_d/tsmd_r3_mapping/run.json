@@ -1,0 +1,39 @@
+{
+ "prompt_id": "tsm_d",
+ "run_id": "tsmd_r3_mapping",
+ "purpose": "T5 (R2.1-R2.3): worst-case-yield threshold and rho under one-factor changes",
+ "command": "nice -n 10 python code/tsm_d/r3_mapping.py",
+ "cwd": "/Users/saifelsaady/Developer/Projects/PhD Research Project/TSM-26-0314_work/tsm_d",
+ "seed": "none (deterministic)",
+ "started_at": "2026-11-13T16:20:45-07:00",
+ "finished_at": "2026-11-13T16:22:07-07:00",
+ "runtime_s": 81.87,
+ "status": "OK",
+ "python": "3.14.5",
+ "pulp": "3.3.0",
+ "cbc": "2.10.13 (/Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/.venv/lib/python3.14/site-packages/pulp/apis/../solverdir/cbc/osx/i64/cbc -> /opt/homebrew/Cellar/cbc/2.10.13/bin/cbc)",
+ "solver_options": {
+  "solver": "PULP_CBC_CMD",
+  "msg": 0,
+  "threads": 1,
+  "gapRel": "CBC default (0, problems are LPs or MILPs with inert binaries; all solved to proven optimality)",
+  "timeLimit": null
+ },
+ "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+ "input_files": {
+  "repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50",
+  "repo/src/step2_freeze_model.py": "cb210b9ef872806920bcda74934957e341eeea75aad55d3f25e4fdeaf9643e87",
+  "code/tsm_d/tsmd_common.py": "c133423290cdbcca72777175f9cf0eedbe24322f03c5a41191e15e52e658d118"
+ },
+ "output_files": {
+  "results/tsm_d/tsmd_r3_mapping/mapping_table.csv": "36cc7b688253b1d14870afaf4ad7f6e7fc9a6690ef38995a1a927927409a3352"
+ },
+ "git_commit": "none (not a git repo)",
+ "code_sha256": {
+  "code/tsm_d/r3_mapping.py": "19f7ad09a52bc24363d7c84b2a2f8c6862780c9cef4556293a8b20f02a07d630",
+  "repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50",
+  "repo/src/step2_freeze_model.py": "cb210b9ef872806920bcda74934957e341eeea75aad55d3f25e4fdeaf9643e87",
+  "code/tsm_d/tsmd_common.py": "c133423290cdbcca72777175f9cf0eedbe24322f03c5a41191e15e52e658d118"
+ },
+ "notes": "non-optimal solves: 0; factor levels are those of Step 8 (Table S-IV)"
+}

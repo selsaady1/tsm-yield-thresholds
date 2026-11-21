@@ -1,0 +1,28 @@
+capacity_cliff_sweep.py  (FULL grid)  -> /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/CapacityCliff
+  self-check vs step2_freeze_model: max objective deviation = 0.00e+00
+   outs_fe_capacity=0      gap onset half=0.0001 (pred 0.0001)  gap>1 at above_at_first_grid_point  RP saturates FE at 0.2917  RP unmet rises at 0.2917
+   outs_fe_capacity=100    gap onset half=0.0001 (pred 0.0001)  gap>1 at above_at_first_grid_point  RP saturates FE at 0.2917  RP unmet rises at 0.3472
+   outs_fe_capacity=200    gap onset half=0.0486 (pred 0.0486)  gap>1 at 0.0597  RP saturates FE at 0.2917  RP unmet rises at 0.4028
+   outs_fe_capacity=300    gap onset half=0.1607 (pred 0.1607)  gap>1 at 0.1792  RP saturates FE at 0.2917  RP unmet rises at 0.4583
+   outs_fe_capacity=400    gap onset half=0.3098 (pred 0.3098)  gap>1 at 0.3252  RP saturates FE at 0.2917  RP unmet rises at NA
+   outs_fe_capacity=500    gap onset half=0.4350 (pred 0.4350)  gap>1 at 0.4480  RP saturates FE at 0.2917  RP unmet rises at NA
+   outs_fe_capacity=600    gap onset half=NA (pred NA)  gap>1 at no_crossing  RP saturates FE at 0.2917  RP unmet rises at NA
+   fe_capacity_mult=0.5    gap onset half=NA (pred 0.0417)  gap>1 at no_crossing  RP saturates FE at 0.0001  RP unmet rises at 0.0417
+   fe_capacity_mult=0.6    gap onset half=0.1607 (pred 0.1607)  gap>1 at 0.1792  RP saturates FE at 0.0001  RP unmet rises at 0.1806
+   fe_capacity_mult=0.7    gap onset half=0.1607 (pred 0.1607)  gap>1 at 0.1792  RP saturates FE at 0.0417  RP unmet rises at 0.2798
+   fe_capacity_mult=0.8    gap onset half=0.1607 (pred 0.1607)  gap>1 at 0.1792  RP saturates FE at 0.1458  RP unmet rises at 0.3542
+   fe_capacity_mult=0.9    gap onset half=0.1607 (pred 0.1607)  gap>1 at 0.1792  RP saturates FE at 0.2268  RP unmet rises at 0.4120
+   fe_capacity_mult=1      gap onset half=0.1607 (pred 0.1607)  gap>1 at 0.1792  RP saturates FE at 0.2917  RP unmet rises at 0.4583
+   fe_capacity_mult=1.25   gap onset half=0.1607 (pred 0.1607)  gap>1 at 0.1792  RP saturates FE at 0.4084  RP unmet rises at NA
+   fe_capacity_mult=1.5    gap onset half=0.1607 (pred 0.1607)  gap>1 at 0.1792  RP saturates FE at 0.4861  RP unmet rises at NA
+   be_capacity_mult=0.8    gap onset half=0.3879 (pred 0.3878)  gap>1 at 0.3941  RP saturates FE at 0.3917  RP unmet rises at NA
+   be_capacity_mult=0.9    gap onset half=0.2961 (pred 0.2961)  gap>1 at 0.3029  RP saturates FE at 0.3416  RP unmet rises at NA
+   be_capacity_mult=1      gap onset half=0.1607 (pred 0.1607)  gap>1 at 0.1792  RP saturates FE at 0.2917  RP unmet rises at 0.4583
+   be_capacity_mult=1.1    gap onset half=0.0583 (pred 0.0583)  gap>1 at 0.0694  RP saturates FE at 0.2417  RP unmet rises at 0.4084
+   be_capacity_mult=1.25   gap onset half=0.0001 (pred 0.0001)  gap>1 at above_at_first_grid_point  RP saturates FE at 0.1964  RP unmet rises at 0.3631
+  wrote /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/CapacityCliff/cliff_curves.csv (1000 rows)
+  wrote /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/CapacityCliff/cliff_onsets.csv (20 rows)
+  wrote /Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/results/Revision/CapacityCliff/fig_capacity_cliff.png
+  non-optimal solves dropped: none
+done in 77 s
+rc=0
