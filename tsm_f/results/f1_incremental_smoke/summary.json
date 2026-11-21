@@ -1,0 +1,32 @@
+[
+  {
+    "config": "L0_FE0_BE0",
+    "native_critical": 749.9988600611687,
+    "rho": 0.8333320663874103,
+    "baseline_native": 900.0000003749999,
+    "baseline_unmet": 30.0,
+    "abundant_unmet": 30.0,
+    "low_branch_unmet_target": 30.0,
+    "predicted": 0.1607177734375,
+    "high_branch_unmet_at_prediction": 30.0,
+    "high_saturated": true,
+    "observed": 0.16072006225585939,
+    "error": 2.2888183593972045e-06,
+    "hit": true
+  },
+  {
+    "config": "L1_FE1_BE1",
+    "native_critical": 601.6185656189919,
+    "rho": 0.6684650719815672,
+    "baseline_native": 900.00000125,
+    "baseline_unmet": 63.5333325,
+    "abundant_unmet": 52.71428575,
+    "low_branch_unmet_target": 74.35237925,
+    "predicted": 0.37297363281250007,
+    "high_branch_unmet_at_prediction": 52.71428575,
+    "high_saturated": true,
+    "observed": 0.3729751586914062,
+    "error": 1.5258789061167732e-06,
+    "hit": true
+  }
+]

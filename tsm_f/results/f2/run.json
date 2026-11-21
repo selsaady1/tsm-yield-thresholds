@@ -1,0 +1,58 @@
+{
+  "run": "f2",
+  "smoke": false,
+  "seed": 20261120,
+  "started_utc": "2026-11-21T02:02:45.014516+00:00",
+  "python": "3.14.5",
+  "venv": "/Users/saifelsaady/Developer/Projects/PhD Research Project/tsm-yield-thresholds/.venv",
+  "pulp": "3.3.0",
+  "cbc": "2.10.13",
+  "cbc_executable": "/opt/homebrew/Cellar/cbc/2.10.13/bin/cbc",
+  "cbc_sha256": "98f3af6e1da2b9c9b52019c90e7556c0c465be843ad915c18a6fa0ac8b386bc9",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "workers": 1,
+  "nice": 10,
+  "command": [
+    "./run.sh",
+    "f2.py"
+  ],
+  "input_sha256": {
+    "common.py": "ee55c157198acbcafe2a7fa40d20bf493d3004f35e221c6be7eab55f996207fb",
+    "run.sh": "29d88a733e42a330cc0d88dee6b4cecfb352437f4ae4142845b2717163ab369d",
+    "f2.py": "59899781042a5f7aa8c6fc7bc1f6c7a48e6edb200f1b38a9ff20796e4aa29048",
+    "imports/code/tsm_b/tsmb_common.py": "8dd156b8373a700895e6fc9c4eb77e6d7188411cfa883fbd00ea33a331df0260",
+    "imports/code/tsm_b/tsmb_multiperiod.py": "147b7284081c7ee59d3a4691f5ccba92e660eb15ea77880a2c815d0aa5702195",
+    "imports/code/tsm_b/tsmb_static.py": "cf95de6e760d2b014460d33003d0a534a2fa7bb8869482487af35ed8629dac20",
+    "imports/code/tsm_b/tsmb_sweeps.py": "86edac4f81a939c036dad9af7b04b0d8f17874a84cf75e22a5e586ced9e3564c",
+    "imports/code/tsm_d/r4_randinst.py": "7eb7db3aac4dcf391d92959780c8d934e496273f4c8251ef3b0ace53e07a28a6",
+    "imports/code/tsm_d/tsmd_common.py": "c133423290cdbcca72777175f9cf0eedbe24322f03c5a41191e15e52e658d118",
+    "imports/repo/code/tsm_a/tsa_common.py": "2a5bbd077a7d3d8b485832c9ebd243fa3dcbd93237e1b9d2df295e0f5065bd2f",
+    "imports/repo/experiments/revision_common.py": "ec6aac3b9a1420c70b8f819e47eb412a74a7d28e093d3ead90b47ce66808aa50",
+    "imports/repo/src/step2_freeze_model.py": "cb210b9ef872806920bcda74934957e341eeea75aad55d3f25e4fdeaf9643e87",
+    "results/baseline/run.json": "e9eddfd872fb0cbb12e14905280d6defde91c728ce3dd4b6ee17f20b1db3126d",
+    "results/baseline/values.json": "f18ecef70580cb8f2f3b09e1a402ee53e524d7403732329a5992847c2c45b549"
+  },
+  "import_sources": {
+    "imports/code/tsm_b/tsmb_common.py": "TSM-26-0314_work/tsm_b/OUT/code/tsmb_common.py",
+    "imports/code/tsm_b/tsmb_multiperiod.py": "TSM-26-0314_work/tsm_b/OUT/code/tsmb_multiperiod.py",
+    "imports/code/tsm_b/tsmb_static.py": "TSM-26-0314_work/tsm_b/OUT/code/tsmb_static.py",
+    "imports/code/tsm_b/tsmb_sweeps.py": "TSM-26-0314_work/tsm_b/OUT/code/tsmb_sweeps.py",
+    "imports/code/tsm_d/r4_randinst.py": "TSM-26-0314_work/tsm_d/code/tsm_d/r4_randinst.py",
+    "imports/code/tsm_d/tsmd_common.py": "TSM-26-0314_work/tsm_d/code/tsm_d/tsmd_common.py",
+    "imports/repo/code/tsm_a/tsa_common.py": "tsm-yield-thresholds/code/tsm_a/tsa_common.py",
+    "imports/repo/experiments/revision_common.py": "tsm-yield-thresholds/experiments/revision_common.py",
+    "imports/repo/src/step2_freeze_model.py": "tsm-yield-thresholds/src/step2_freeze_model.py"
+  },
+  "solve_count": 14739,
+  "nonoptimal_solve_count": 0,
+  "status": "passed",
+  "runtime_seconds": 247.151,
+  "finished_utc": "2026-11-21T02:06:52.149137+00:00",
+  "output_sha256": {
+    "control.json": "2d15c55d17ad90b9b963911b7c2f623aeec94577dea175d9ce21246b5d209c11",
+    "design.json": "c91b859770b26a74a3f41df80b7d632538f0285f4cc805d12b7379f942ddc34d",
+    "summary.json": "43771e19e58f3246d5e333e58f99d1047125e0dfd40f6f70b1057a921fb0a3bb",
+    "sweep.csv": "24224340e046f8dfe580ba14633bc96d7d555beb371b554222a10d6a8feb2163"
+  }
+}

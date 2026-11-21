@@ -1,0 +1,11 @@
+% Counts by design. Loss means aggregate RP exceeds tool RP by more than one cent. Unroutable is the aggregate optimal mix returned by CBC at h=.075, after optimal fab reassignment.
+\begingroup\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lrrrrrrr}
+\hline
+Set & Cases & Loss$_{.075}$ & Any loss & Unroutable & Median (\$) & Max (\$) & Changed $h_2$ class \\
+\hline
+Designed & \NUM{TSMF_F2_DESIGNED_N} & \NUM{TSMF_F2_DESIGNED_BASE_LOSSES} & \NUM{TSMF_F2_DESIGNED_ANY_LOSSES} & \NUM{TSMF_F2_DESIGNED_BASE_UNROUTABLE} & \NUM{TSMF_F2_DESIGNED_MEDIAN_BASE_LOSS} & \NUM{TSMF_F2_DESIGNED_MAX_BASE_LOSS} & \NUM{TSMF_F2_DESIGNED_CLASS_CHANGES} \\
+Random & \NUM{TSMF_F2_RANDOM_N} & \NUM{TSMF_F2_RANDOM_BASE_LOSSES} & \NUM{TSMF_F2_RANDOM_ANY_LOSSES} & \NUM{TSMF_F2_RANDOM_BASE_UNROUTABLE} & \NUM{TSMF_F2_RANDOM_MEDIAN_BASE_LOSS} & \NUM{TSMF_F2_RANDOM_MAX_BASE_LOSS} & \NUM{TSMF_F2_RANDOM_CLASS_CHANGES} \\
+\hline
+\end{tabular}
+\endgroup

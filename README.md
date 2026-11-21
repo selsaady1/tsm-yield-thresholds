@@ -137,6 +137,10 @@ results/        Per-step CSVs, summary reports, and figures for Steps 1–7,
 logs/           Complete CBC solver logs - every solve "Result - Optimal solution found".
 docs/           RESULTS.md walkthrough, yield-calibration sources, sensitivity note.
 reproduce.sh    One-command reproduction of the headline numbers.
+code/, results/  Revision runs (Steps 8-10, Extensions I and II, TSM-D checks); see
+                "Revision code, second round" below.
+tsm_f/          f1 and f2 revision runs (scripts, results, table fragments); see
+                tsm_f/README.md.
 ```
 
 ---
@@ -194,6 +198,7 @@ This branch adds the scripts and result files behind the revised manuscript. Eve
 | `code/tsm_a/`, `results/tsm_a/` | Extensions I: robust, adjustable robust, budgeted, chance-constrained and CVaR plans (t2); uncertain capacity (t3); demand on the decision map (t4); scenarios estimated from limited data (t5); `figs_tables/numbers.csv` maps every printed number to its source row | VI; Supplement S-XV |
 | `code/tsm_b/`, `results/tsm_b/` | Extensions II: baseline check (r00); lead times and die-bank inventory, two-stage and multistage (r01); tool groups and non-identical fabs (r02); WIP and congestion via a clearing function (r03) | VII; Supplement S-XIII |
 | `code/tsm_d/`, `results/tsm_d/` | Cliff as a capacity effect (r1); matched-variance comparison (r2); how the worst-case-yield threshold moves (r3); 200 random instances by Latin hypercube, seed 20261113 (r4); `summarize.py` | V-B, V-C, V-D, V-F; Fig. 3; Supplement S-XI |
+| `tsm_f/` (scripts and results in one folder) | f1: what counts as a cliff with a BE lead time and FE/BE clearing functions (8 configurations); f2: paired two-product models, wafer-capacity aggregate against tool-hour constrained (18 designed and 30 random instances, seed 20261120); 17,538 solves, all optimal. See [`tsm_f/README.md`](tsm_f/README.md) | Supplement, Extensions II, Subsections D and E |
 
 Run from the repository root with the packages in `requirements.txt` (PuLP 3.3.0 was used):
 
