@@ -1,0 +1,15 @@
+[
+  {
+    "case": "D08",
+    "h": 0.24,
+    "ev_obj_difference": 0.0,
+    "agg_ev_A": 5.7339449,
+    "agg_ev_B": 5.2752294,
+    "agg_cross_eev": 6258.921395238751,
+    "agg_fixed_gap": 0.0,
+    "tools_ev_A": 5.2752294,
+    "tools_ev_B": 5.7339449,
+    "tools_cross_eev": 6249.460384808625,
+    "tools_fixed_gap": 0.0
+  }
+]

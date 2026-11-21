@@ -1,0 +1,350 @@
+[
+  {
+    "config": "L0_FE0_BE0",
+    "node": 0,
+    "outcomes": [
+      [
+        600,
+        0.7
+      ]
+    ],
+    "q_free": 792.85714,
+    "q_at_cG": 792.85714,
+    "unmet_free": 0.0,
+    "unmet_at_cG": 0.0,
+    "native_target": 492.85713999999996
+  },
+  {
+    "config": "L0_FE0_BE0",
+    "node": 1,
+    "outcomes": [
+      [
+        600,
+        0.9
+      ]
+    ],
+    "q_free": 666.6666700000001,
+    "q_at_cG": 650.0,
+    "unmet_free": 0.0,
+    "unmet_at_cG": 0.0,
+    "native_target": 350.0
+  },
+  {
+    "config": "L0_FE0_BE0",
+    "node": 2,
+    "outcomes": [
+      [
+        900,
+        0.7
+      ]
+    ],
+    "q_free": 1050.0,
+    "q_at_cG": 1050.0,
+    "unmet_free": 120.0,
+    "unmet_at_cG": 120.0,
+    "native_target": 750.0
+  },
+  {
+    "config": "L0_FE0_BE0",
+    "node": 3,
+    "outcomes": [
+      [
+        900,
+        0.9
+      ]
+    ],
+    "q_free": 990.0,
+    "q_at_cG": 983.3333299999999,
+    "unmet_free": 0.0,
+    "unmet_at_cG": 0.0,
+    "native_target": 683.3333299999999
+  },
+  {
+    "config": "L0_FE0_BE1",
+    "node": 0,
+    "outcomes": [
+      [
+        600,
+        0.7
+      ]
+    ],
+    "q_free": 792.8571400000001,
+    "q_at_cG": 792.8571400000001,
+    "unmet_free": 0.0,
+    "unmet_at_cG": 0.0,
+    "native_target": 492.8571400000001
+  },
+  {
+    "config": "L0_FE0_BE1",
+    "node": 1,
+    "outcomes": [
+      [
+        600,
+        0.9
+      ]
+    ],
+    "q_free": 650.0,
+    "q_at_cG": 650.0,
+    "unmet_free": 0.0,
+    "unmet_at_cG": 0.0,
+    "native_target": 350.0
+  },
+  {
+    "config": "L0_FE0_BE1",
+    "node": 2,
+    "outcomes": [
+      [
+        900,
+        0.7
+      ]
+    ],
+    "q_free": 982.8,
+    "q_at_cG": 973.76471,
+    "unmet_free": 167.04,
+    "unmet_at_cG": 173.36471,
+    "native_target": 982.8
+  },
+  {
+    "config": "L0_FE0_BE1",
+    "node": 3,
+    "outcomes": [
+      [
+        900,
+        0.9
+      ]
+    ],
+    "q_free": 983.3333299999999,
+    "q_at_cG": 982.8,
+    "unmet_free": 0.0,
+    "unmet_at_cG": 0.48,
+    "native_target": 983.3333299999999
+  },
+  {
+    "config": "L0_FE1_BE0",
+    "node": 0,
+    "outcomes": [
+      [
+        600,
+        0.7
+      ]
+    ],
+    "q_free": 792.85714,
+    "q_at_cG": 792.85714,
+    "unmet_free": 0.0,
+    "unmet_at_cG": 0.0,
+    "native_target": 492.85713999999996
+  },
+  {
+    "config": "L0_FE1_BE0",
+    "node": 1,
+    "outcomes": [
+      [
+        600,
+        0.9
+      ]
+    ],
+    "q_free": 666.6666700000001,
+    "q_at_cG": 650.0,
+    "unmet_free": 0.0,
+    "unmet_at_cG": 0.0,
+    "native_target": 350.0
+  },
+  {
+    "config": "L0_FE1_BE0",
+    "node": 2,
+    "outcomes": [
+      [
+        900,
+        0.7
+      ]
+    ],
+    "q_free": 1050.0,
+    "q_at_cG": 1050.0,
+    "unmet_free": 120.0,
+    "unmet_at_cG": 120.0,
+    "native_target": 750.0
+  },
+  {
+    "config": "L0_FE1_BE0",
+    "node": 3,
+    "outcomes": [
+      [
+        900,
+        0.9
+      ]
+    ],
+    "q_free": 990.0,
+    "q_at_cG": 983.3333299999999,
+    "unmet_free": 0.0,
+    "unmet_at_cG": 0.0,
+    "native_target": 683.3333299999999
+  },
+  {
+    "config": "L0_FE1_BE1",
+    "node": 0,
+    "outcomes": [
+      [
+        600,
+        0.7
+      ]
+    ],
+    "q_free": 792.8571400000001,
+    "q_at_cG": 792.8571400000001,
+    "unmet_free": 0.0,
+    "unmet_at_cG": 0.0,
+    "native_target": 492.8571400000001
+  },
+  {
+    "config": "L0_FE1_BE1",
+    "node": 1,
+    "outcomes": [
+      [
+        600,
+        0.9
+      ]
+    ],
+    "q_free": 650.0,
+    "q_at_cG": 650.0,
+    "unmet_free": 0.0,
+    "unmet_at_cG": 0.0,
+    "native_target": 350.0
+  },
+  {
+    "config": "L0_FE1_BE1",
+    "node": 2,
+    "outcomes": [
+      [
+        900,
+        0.7
+      ]
+    ],
+    "q_free": 982.8,
+    "q_at_cG": 973.76471,
+    "unmet_free": 167.04,
+    "unmet_at_cG": 173.36471,
+    "native_target": 982.8
+  },
+  {
+    "config": "L0_FE1_BE1",
+    "node": 3,
+    "outcomes": [
+      [
+        900,
+        0.9
+      ]
+    ],
+    "q_free": 983.3333299999999,
+    "q_at_cG": 982.8,
+    "unmet_free": 0.0,
+    "unmet_at_cG": 0.48,
+    "native_target": 983.3333299999999
+  },
+  {
+    "config": "L1_FE0_BE0",
+    "node": 0,
+    "outcomes": [
+      [
+        600,
+        0.7
+      ],
+      [
+        600,
+        0.9
+      ],
+      [
+        900,
+        0.7
+      ],
+      [
+        900,
+        0.9
+      ]
+    ],
+    "q_free": 1050.0,
+    "q_at_cG": 983.3333299999999,
+    "unmet_free": 30.0,
+    "unmet_at_cG": 41.6666675,
+    "native_target": 1050.0
+  },
+  {
+    "config": "L1_FE0_BE1",
+    "node": 0,
+    "outcomes": [
+      [
+        600,
+        0.7
+      ],
+      [
+        600,
+        0.9
+      ],
+      [
+        900,
+        0.7
+      ],
+      [
+        900,
+        0.9
+      ]
+    ],
+    "q_free": 955.71429,
+    "q_at_cG": 928.66666,
+    "unmet_free": 52.71428575,
+    "unmet_at_cG": 63.5333325,
+    "native_target": 955.71429
+  },
+  {
+    "config": "L1_FE1_BE0",
+    "node": 0,
+    "outcomes": [
+      [
+        600,
+        0.7
+      ],
+      [
+        600,
+        0.9
+      ],
+      [
+        900,
+        0.7
+      ],
+      [
+        900,
+        0.9
+      ]
+    ],
+    "q_free": 1050.0,
+    "q_at_cG": 983.3333299999999,
+    "unmet_free": 30.0,
+    "unmet_at_cG": 41.6666675,
+    "native_target": 1050.0
+  },
+  {
+    "config": "L1_FE1_BE1",
+    "node": 0,
+    "outcomes": [
+      [
+        600,
+        0.7
+      ],
+      [
+        600,
+        0.9
+      ],
+      [
+        900,
+        0.7
+      ],
+      [
+        900,
+        0.9
+      ]
+    ],
+    "q_free": 955.71429,
+    "q_at_cG": 928.66666,
+    "unmet_free": 52.71428575,
+    "unmet_at_cG": 63.5333325,
+    "native_target": 955.71429
+  }
+]
